@@ -117,6 +117,12 @@ SQLite via `cache.py`); both `api/server.py` (FastAPI + CopilotKit) and the note
 
 To refresh cached real data (3.12 + network): `.venv312/bin/python mock/build_mock_data.py`.
 
+**Production persistence guarantee:** every ticker queried in live mode is fully persisted
+to SQLite (`cache.py: ticker_data` table) so subsequent calls and server restarts never re-hit
+the live API within the TTL (24h for facts/wiki/signals, 6h for news). The Qdrant wiki is
+rebuilt from SQLite on startup — no network required. Cache management API: `GET /api/cache`,
+`DELETE /api/cache/{ticker}`.
+
 ## Conventions
 
 - Notebooks are the single source of truth (no generator scripts). A notebook's first code cell

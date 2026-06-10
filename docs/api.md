@@ -23,9 +23,11 @@ PYTHONPATH=src .venv312/bin/python -m uvicorn ir_copilot.api.server:app --reload
 | GET | `/api/competitor/{ticker}` | peer comparison, `leads`/`lags`, grounded `fact_ids` |
 | GET | `/api/questions/{ticker}` | predicted hard questions + evidence (real transcript URLs) |
 | GET | `/api/draft/{ticker}` | rendered script + deck + Q&A + verification report |
-| GET | `/api/wiki/search?q=&ticker=&k=` | cited transcript passages |
+| GET | `/api/wiki/search?q=&ticker=&k=` | BM25-blend retrieval across all 6 doc types |
 | GET | `/api/run/{ticker}/stream` | **SSE** stream of agent updates, pauses at the human gate |
 | POST | `/api/run/{ticker}/resume` | resume after human approve/edit |
+| GET | `/api/cache` | all cached tickers with fact count and data freshness |
+| DELETE | `/api/cache/{ticker}` | invalidate + evict (forces re-fetch on next call) |
 
 ```bash
 curl -s http://127.0.0.1:8088/api/facts/NVDA | jq '.facts[0]'

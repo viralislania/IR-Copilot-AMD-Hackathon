@@ -4,17 +4,22 @@ Run (Python 3.11+ venv):
     PYTHONPATH=src .venv312/bin/python -m uvicorn ir_copilot.api.server:app --reload --port 8088
 
 REST:
-    GET  /health
-    GET  /api/facts/{ticker}?period=
-    GET  /api/sentiment/{ticker}
-    GET  /api/competitor/{ticker}
-    GET  /api/questions/{ticker}
-    GET  /api/draft/{ticker}
-    GET  /api/wiki/search?q=&ticker=&k=
-    GET  /api/run/{ticker}/stream         (SSE: streams agent updates, pauses at human gate)
-    POST /api/run/{ticker}/resume         (resume after human approve/edit)
+    GET    /health
+    GET    /api/facts/{ticker}?period=
+    GET    /api/sentiment/{ticker}
+    GET    /api/competitor/{ticker}
+    GET    /api/questions/{ticker}
+    GET    /api/draft/{ticker}
+    GET    /api/wiki/search?q=&ticker=&k=
+    GET    /api/run/{ticker}/stream     (SSE: streams agent updates, pauses at human gate)
+    POST   /api/run/{ticker}/resume     (resume after human approve/edit)
+
+Cache management (any ticker, not just pre-cached ones):
+    GET    /api/cache                   list all cached tickers with freshness
+    DELETE /api/cache/{ticker}          invalidate + evict (forces re-fetch on next call)
+
 CopilotKit:
-    POST /copilotkit                      (AG-UI: React frontend connects here)
+    POST /copilotkit                    (AG-UI: React frontend connects here)
 """
 from __future__ import annotations
 
@@ -39,10 +44,12 @@ _graph = build_graph()
 
 @app.get("/health")
 def health():
+    cached = service.list_cached_tickers()
     return {"status": "ok", "ticker": settings.ticker, "period": settings.period,
             "peers": settings.peers, "data": "mock" if settings.use_mock_data else "live",
             "backends": {"qdrant": settings.qdrant_mode, "embeddings": settings.embedding_backend,
-                         "sentiment": settings.sentiment_backend, "llm": settings.llm_backend}}
+                         "sentiment": settings.sentiment_backend, "llm": settings.llm_backend},
+            "cached_tickers": [t["ticker"] for t in cached]}
 
 
 @app.get("/api/facts/{ticker}")
@@ -68,6 +75,22 @@ def questions(ticker: str, period: Optional[str] = None):
 @app.get("/api/draft/{ticker}")
 def draft(ticker: str, period: Optional[str] = None):
     return service.get_draft(ticker.upper(), period)
+
+
+@app.get("/api/cache")
+def cache_list():
+    """All tickers persisted in SQLite with fact counts and data freshness."""
+    return {"cached_tickers": service.list_cached_tickers()}
+
+
+@app.delete("/api/cache/{ticker}")
+def cache_invalidate(ticker: str):
+    """
+    Invalidate all cached data for a ticker (facts + wiki chunks + news + signals).
+    The next request for this ticker will re-fetch from the live API.
+    """
+    result = service.invalidate_ticker(ticker.upper())
+    return {"status": "invalidated", **result}
 
 
 @app.get("/api/wiki/search")
