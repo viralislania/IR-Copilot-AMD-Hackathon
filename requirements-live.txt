@@ -1,0 +1,10 @@
+# Live market data via the real defeatbeta-api (USE_MOCK_DATA=false).
+# Requires Python 3.11+ and network access (downloads a DuckDB extension + HuggingFace parquet
+# on first use). On macOS/Linux dev boxes use a 3.12 venv; see README.md.
+#
+#   python3.12 -m venv .venv312
+#   .venv312/bin/python -m pip install -r requirements.txt -r requirements-live.txt
+#
+# (Offline/mock mode reads cached real data from mock/data/ and does NOT need this.)
+
+defeatbeta-api        # open-source Yahoo-Finance alternative (duckdb 1.5.3, pandas>=3.0)

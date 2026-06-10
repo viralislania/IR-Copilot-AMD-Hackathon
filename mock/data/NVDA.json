@@ -1,0 +1,1107 @@
+{
+  "ticker": "NVDA",
+  "period": "FY2026Q2",
+  "fetched_at": "2026-06-10",
+  "facts": [
+    {
+      "fact_id": "F-0001",
+      "ticker": "NVDA",
+      "metric": "ttm_eps",
+      "period": "FY2026Q2",
+      "value": 6.5299,
+      "unit": "USD",
+      "source": "defeatbeta-api:ttm_eps",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0002",
+      "ticker": "NVDA",
+      "metric": "ttm_pe",
+      "period": "FY2026Q2",
+      "value": 31.88,
+      "unit": "x",
+      "source": "defeatbeta-api:ttm_pe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0003",
+      "ticker": "NVDA",
+      "metric": "market_cap",
+      "period": "FY2026Q2",
+      "value": 5042569990000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:market_capitalization",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0004",
+      "ticker": "NVDA",
+      "metric": "ps_ratio",
+      "period": "FY2026Q2",
+      "value": 19.89,
+      "unit": "x",
+      "source": "defeatbeta-api:ps_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0005",
+      "ticker": "NVDA",
+      "metric": "pb_ratio",
+      "period": "FY2026Q2",
+      "value": 25.8,
+      "unit": "x",
+      "source": "defeatbeta-api:pb_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0006",
+      "ticker": "NVDA",
+      "metric": "peg_ratio",
+      "period": "FY2026Q2",
+      "value": 0.15,
+      "unit": "x",
+      "source": "defeatbeta-api:peg_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0007",
+      "ticker": "NVDA",
+      "metric": "roe",
+      "period": "FY2026Q2",
+      "value": 33.06,
+      "unit": "%",
+      "source": "defeatbeta-api:roe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0008",
+      "ticker": "NVDA",
+      "metric": "roa",
+      "period": "FY2026Q2",
+      "value": 25.019999999999996,
+      "unit": "%",
+      "source": "defeatbeta-api:roa",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0009",
+      "ticker": "NVDA",
+      "metric": "roic",
+      "period": "FY2026Q2",
+      "value": 31.430000000000003,
+      "unit": "%",
+      "source": "defeatbeta-api:roic",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0010",
+      "ticker": "NVDA",
+      "metric": "wacc",
+      "period": "FY2026Q2",
+      "value": 22.7,
+      "unit": "%",
+      "source": "defeatbeta-api:wacc",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0011",
+      "ticker": "NVDA",
+      "metric": "equity_multiplier",
+      "period": "FY2026Q2",
+      "value": 1.32,
+      "unit": "x",
+      "source": "defeatbeta-api:equity_multiplier",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0012",
+      "ticker": "NVDA",
+      "metric": "asset_turnover",
+      "period": "FY2026Q2",
+      "value": 0.35,
+      "unit": "x",
+      "source": "defeatbeta-api:asset_turnover",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0013",
+      "ticker": "NVDA",
+      "metric": "price",
+      "period": "FY2026Q2",
+      "value": 208.19,
+      "unit": "USD",
+      "source": "defeatbeta-api:price.close",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "NVDA",
+      "metric": "gross_margin",
+      "period": "FY2026Q2",
+      "value": 74.92999999999999,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_gross_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0015",
+      "ticker": "NVDA",
+      "metric": "revenue",
+      "period": "FY2026Q2",
+      "value": 81615000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_gross_margin.total_revenue",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0016",
+      "ticker": "NVDA",
+      "metric": "operating_margin",
+      "period": "FY2026Q2",
+      "value": 65.60000000000001,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_operating_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0017",
+      "ticker": "NVDA",
+      "metric": "gross_profit",
+      "period": "FY2026Q2",
+      "value": 61157000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Gross Profit]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0018",
+      "ticker": "NVDA",
+      "metric": "operating_income",
+      "period": "FY2026Q2",
+      "value": 53536000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Operating Income]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0019",
+      "ticker": "NVDA",
+      "metric": "net_income",
+      "period": "FY2026Q2",
+      "value": 58321000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Net Income Common Stockholders]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0020",
+      "ticker": "NVDA",
+      "metric": "rnd_expense",
+      "period": "FY2026Q2",
+      "value": 6321000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Research & Development]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0021",
+      "ticker": "NVDA",
+      "metric": "revenue_segment:Compute and Networking",
+      "period": "FY2026Q2",
+      "value": 74550000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0022",
+      "ticker": "NVDA",
+      "metric": "revenue_segment:Graphics",
+      "period": "FY2026Q2",
+      "value": 7065000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0023",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:China",
+      "period": "FY2026Q2",
+      "value": 4550000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0024",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Other",
+      "period": "FY2026Q2",
+      "value": 1290000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0025",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Singapore",
+      "period": "FY2026Q2",
+      "value": 0.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0026",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Taiwan",
+      "period": "FY2026Q2",
+      "value": 12006000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0027",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:United States",
+      "period": "FY2026Q2",
+      "value": 63769000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    }
+  ],
+  "gaps": [],
+  "news": [
+    {
+      "ticker": "NVDA",
+      "text": "Dow Jones Futures Fall On Iran News After Market Whipsaws; CPI Inflation On Tap",
+      "url": "https://finance.yahoo.com/m/25a6a429-345e-3138-9f10-7360fba3d0d1/dow-jones-futures-fall-on.html",
+      "publisher": "Investor's Business Daily",
+      "date": "2026-06-10",
+      "uuid": "25a6a429-345e-3138-9f10-7360fba3d0d1"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Worried About Which AI Stock to Buy? This Low-Cost ETF Lets You Own the Whole Trade.",
+      "url": "https://finance.yahoo.com/m/336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6/worried-about-which-ai-stock.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-10",
+      "uuid": "336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Why SSR Mining Stock Got Knocked Today",
+      "url": "https://finance.yahoo.com/m/74a09df1-8fb5-3922-91c6-637dc75bbce6/why-ssr-mining-stock-got.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-10",
+      "uuid": "74a09df1-8fb5-3922-91c6-637dc75bbce6"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Taiwan Eyes Curbs on AI Chip Sales to China to Align With US",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/taiwan-eyes-curbs-ai-chip-125854688.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-10",
+      "uuid": "e8b597ff-c8bd-3989-aa02-1c49e47faf91"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "What Lit a Fire Under Qualcomm Stock?",
+      "url": "https://finance.yahoo.com/m/bc430d23-0292-3507-86b3-6533d653238d/what-lit-a-fire-under.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "bc430d23-0292-3507-86b3-6533d653238d"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Palo Alto Networks Hits $10B Revenue Run Rate Beats S&P 500 Across All Timeframes",
+      "url": "https://finance.yahoo.com/m/6ca65a27-1dfb-338b-ac7c-eab452ccb975/palo-alto-networks-hits-%2410b.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "6ca65a27-1dfb-338b-ac7c-eab452ccb975"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Will This Jensen Huang-Endorsed AI Chip Stock Be the Next Trillion-Dollar Company?",
+      "url": "https://finance.yahoo.com/m/9607aab0-d836-3aa2-89f5-43f03add1520/will-this-jensen.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "9607aab0-d836-3aa2-89f5-43f03add1520"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Nebius Shares Jump After NVIDIA-Backed AI Lab Launch",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/nebius-shares-jump-nvidia-backed-170150941.html",
+      "publisher": "GuruFocus.com",
+      "date": "2026-06-09",
+      "uuid": "a491af51-5fcb-3334-891e-90e2113ed25d"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Equities Rise Pre-Bell as Chip Stocks Extend Gains",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/equities-rise-pre-bell-chip-114027869.html",
+      "publisher": "MT Newswires",
+      "date": "2026-06-09",
+      "uuid": "b2709162-8483-3df5-b589-9d3fe5647c6c"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "This AI Storage Stock is Up 560% so Far This Year. Is it Too Late to Buy? (Hint: It's Not Sandisk)",
+      "url": "https://finance.yahoo.com/m/79ef6b22-9bf7-34de-8465-fe90d4d311bc/this-ai-storage-stock-is-up.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "79ef6b22-9bf7-34de-8465-fe90d4d311bc"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "AI Stocks Lead Tech Sector Slide. 'Summer Swoon Has Arrived.'",
+      "url": "https://finance.yahoo.com/m/d29a483e-d9a2-3e5c-beaf-dca4cf94c36a/ai-stocks-lead-tech-sector.html",
+      "publisher": "Investor's Business Daily",
+      "date": "2026-06-09",
+      "uuid": "d29a483e-d9a2-3e5c-beaf-dca4cf94c36a"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Why Nio Stock Skid 12% in May Despite 129% Growth in EV Sales",
+      "url": "https://finance.yahoo.com/m/aa613c00-fcf8-379e-a044-474f0dc257dc/why-nio-stock-skid-12%25-in-may.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "aa613c00-fcf8-379e-a044-474f0dc257dc"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Sector Update: Tech",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/sector-tech-125343434.html",
+      "publisher": "MT Newswires",
+      "date": "2026-06-09",
+      "uuid": "b6f63d27-0cb3-36c5-a680-101e28d364ee"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Greg Abel Is Doing Something at Berkshire Hathaway That Warren Buffett Never Would Have",
+      "url": "https://finance.yahoo.com/m/e621e8d3-0e64-34cf-9a10-a506de69a261/greg-abel-is-doing-something.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "e621e8d3-0e64-34cf-9a10-a506de69a261"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Why Did Red Cat Stock Drop Today?",
+      "url": "https://finance.yahoo.com/m/d169f4ed-937e-31d0-a343-90132ef4d004/why-did-red-cat-stock-drop.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "d169f4ed-937e-31d0-a343-90132ef4d004"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Wall Street Just Downgraded Chipotle Stock. Here's What Investors Should Do Next.",
+      "url": "https://finance.yahoo.com/m/a1675d8a-3393-3956-81c8-fe3d998d9fc7/wall-street-just-downgraded.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "a1675d8a-3393-3956-81c8-fe3d998d9fc7"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Nebius Group Launches Physical AI Living Lab for Robotics Startups in UK, Europe",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/nebius-group-launches-physical-ai-100630163.html",
+      "publisher": "MT Newswires",
+      "date": "2026-06-09",
+      "uuid": "79e5afe2-7ce8-32a0-969d-dfc7dda1e6cb"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "CoreWeave Founders Have Sold $2.3 Billion in Stock Since IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-founders-dumped-2-3-093000394.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-09",
+      "uuid": "6c111cd8-5663-32e0-95ec-fb9eb619081e"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "IBIT vs. FBTC: Which Bitcoin ETF Is Better?",
+      "url": "https://finance.yahoo.com/m/b20e02a4-4ee8-3028-8707-020b371d2185/ibit-vs.-fbtc%3A-which-bitcoin.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "b20e02a4-4ee8-3028-8707-020b371d2185"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Intel Gains as Google Reportedly Eyes Major AI Chip Order",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/intel-gains-google-reportedly-eyes-122222452.html",
+      "publisher": "GuruFocus.com",
+      "date": "2026-06-09",
+      "uuid": "6de19653-1e3f-3049-a2e6-4a43711ace1d"
+    }
+  ],
+  "wiki_chunks": [
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "Joseph Moore",
+      "paragraph": 22,
+      "text": "Great. Thank you for letting me ask a question. I guess I'd like to ask, what drove the change in segmentation? What's the philosophy behind giving us the numbers that way? Can you talk about any competitive differences between the two segments and this kind of surprising CPU number that you talked about? How do you see that across the two segments as well? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=Joseph Moore, para=22)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 29,
+      "text": "That go-to-market is very complex, very diverse. Your understanding of AI has to be extremely diverse. As you know, NVIDIA has the largest suite of acceleration libraries in the world, from computational lithography, to fluid dynamics, to particle physics, to molecular dynamics, to the list goes on. All of those libraries are essential for us to engage the vertical industries that represents the second and the third category. Okay? Anyways, it's really about the fact that our business has now evolved and grown to such a large scale. It's helpful to segment it so that you have a better understa",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=Jensen Huang, para=29)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "Ben Reitzes",
+      "paragraph": 31,
+      "text": "Hey, guys. Thank you so much. I wanted to ask Jensen, I want to ask you about your philosophy on growth. Your Data Center business, ex-China, grew about 120% in the quarter, and then you're guiding about 100%. CapEx at the hyperscalers is forecast by many, including myself, to grow 90%-100% this year. You talked about data center still on track to be $3 trillion-$4 trillion by the end of the decade. I was just wondering, is the goal for the company to grow faster than hyperscaler CapEx? Are you comfortable in kind of endorsing that view? Do you still see hyperscaler CapEx still growing after t",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=Ben Reitzes, para=31)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "CJ Muse",
+      "paragraph": 38,
+      "text": "Good afternoon. Thank you for taking the question. You have Vera Rubin coming soon, and you obviously have great insight into coming updates to frontier models, new techniques to optimize around diverse AI workloads. With investors keenly focused on your market share and inference, how do you see Vera Rubin and your Extreme Co-Engineering impacting your share of the inference market as we look into late 2026, 2027?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=CJ Muse, para=38)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "Timothy Arcuri",
+      "paragraph": 43,
+      "text": "Thanks a lot. Jensen, I wanted to ask about the traction you're getting with some of these custom merchant things you're doing, stuff like CPX and LPX. I just wanted to ask and see, you've talked before about fast instance being, I think, 20% of the market. I would imagine you're getting pretty good traction with LPX. Can you just talk about that and maybe, also how that fits into your broader platform strategy? Thanks.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=Timothy Arcuri, para=43)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2027Q1",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 48,
+      "text": "Thanks for taking my question. Jensen, there's a lot of excitement around CPU for agentic applications and just a lot of noise around the number of CPUs actually exceeding the number of GPUs. I was just hoping that you could give your perspective that first of all, is this an incremental workload? Is this cannibalizing what the GPU would have done otherwise? Then secondly, the $20 billion number that you gave, is that for standalone Vera CPUs or is that already included in that Vera as part of Vera Rubin? Just if you could educate us on the role of CPU versus GPU. Is it cannibalistic? Is it in",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2027Q1, speaker=Vivek Arya, para=48)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 7,
+      "text": "I think you mentioned that you now have growth visibility into calendar '27 also, and I think your purchase commitments kind of reflect that confidence. But Jensen, I'm curious, when you look at your top cloud customers, cloud CapEx close to $700 billion this year, many investors are concerned that it would be harder for this level to grow into next year. And for several of them, their cash flow generation capability is also getting compressed. So I know you're very confident about your road map, right, and your purchase commitments and whatnot, but how confident are you about your customers' ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Vivek Arya, para=7)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Joseph Moore",
+      "paragraph": 10,
+      "text": "Congratulations on the numbers. You talked about some of the strategic investments that you've made into Anthropic and potentially OpenAI, [ CoreWeave ] as well but also partners, Intel, Nokia, Synopsys. You're clearly at the center of everything. Can you talk about the role of those investments? And kind of how do you view the balance sheet as a tool to kind of grow the NVIDIA's position in the ecosystem and participate in that growth?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Joseph Moore, para=10)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Harlan Sur",
+      "paragraph": 13,
+      "text": "Networking continues to rise as a percentage of your overall data center profile, right? Through fiscal '26, your networking revenues accelerated on a year-over-year basis every single quarter, right, with 3.6x growth, as you guys mentioned, year-over-year growth in Q4. Obviously, on the strength of your scale-up and scale-out networking product portfolio, I would seem to remember that first half of last year, your annualized run rate on your Spectrum-X Ethernet switching platform was around $10 billion annualized. It looks like that may have stepped up to around $11 billion, $12 billion in th",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Harlan Sur, para=13)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Christopher Muse",
+      "paragraph": 16,
+      "text": "I guess with CPX for large context Windows and Grok likely adding a decode-specific solution. Curious how we should think about your future road map? Should we be thinking about customized silicon either by workload or customer as an increasing focus by NVIDIA particularly helped by your move to dilate architecture?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Christopher Muse, para=16)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Stacy Rasgon",
+      "paragraph": 19,
+      "text": "Colette, I wanted to dig a little bit into the call for sequential growth through the year. So I mean, you grew this quarter more than $10 billion sequentially in data center and the guidance seems to imply the bulk of the increased $10 billion sequential in data center and so on. How do you see that as we go through the year, especially as Rubin ramps into the back half? Blackwell has been a pretty massive acceleration for sequential growth. Should we expect something similar as we get to Rubin. And then I was also just hoping you could comment on your expectations for Gaming. I understand th",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Stacy Rasgon, para=19)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q4",
+      "role": "analyst",
+      "speaker": "Benjamin Reitzes",
+      "paragraph": 25,
+      "text": "First, let me say kudos on including the stock comp in non-GAAP. I think that's a great move. But that isn't my question. My question is around gross margins and the sustainability of the mid-70s long term. Should we read into the visibility on supply being available into calendar '27 that it's sustainable until then? And then, Jensen, what about after that? Are there innovations in memory consumption you can unveil that makes us feel better about the ability to keep margins at that level for a long time?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q4, speaker=Benjamin Reitzes, para=25)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "Toshiya Hari",
+      "paragraph": 5,
+      "text": "We will now open the call for questions. Operator, would you please poll for questions?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=Toshiya Hari, para=5)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "Joseph Moore",
+      "paragraph": 7,
+      "text": "You talked about the $500 billion of revenue for Blackwell plus Rubin. 'twenty five and 'twenty six at GTC. At that time, you talked about $150 billion of that already having been shipped. So as the quarter's wrapped up, are those still kind of the general parameters that there's $350 billion in the next kind of, you know, fourteen months or so. And, you know, I would assume over that time, you haven't seen all the demand that there is. There's possibility of upside to those numbers as we move forward?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=Joseph Moore, para=7)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "C.J. Muse",
+      "paragraph": 10,
+      "text": "Yes. Good afternoon. Thank you for taking the question. There's clearly a great deal of consternation around the magnitude of AI infrastructure build outs and the ability to fund such plans in the ROI. Yet, you know, at the same time, you're talking about being sold out every stood up GP is taken. The AI world hasn't seen the enormous benefit yet know, from d 300, never mind Rubin. And Gemini three just announced Grok five coming soon. And so the question is this, when you look at that as the backdrop, do you see a realistic path for supply to catch up with demand over the next twelve to eight",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=C.J. Muse, para=10)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 11,
+      "text": "Well, as you know, we've done a really good job planning our supply chain. NVIDIA Corporation's supply chain basically includes every technology company in the world. And TSMC and their packaging and our memory vendors and memory partners and all of our system ODMs have done a really good job planning with us. And we were planning for a big year. You know, we've seen for some time the three transitions that I spoke about just a second ago, accelerated computing, from general-purpose computing and it's really important to recognize that AI is not just agentic AI, but generative AI is transformi",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=Jensen Huang, para=11)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 13,
+      "text": "Thanks for taking my question. I'm curious what are you making on NVIDIA Corporation content per gigawatt? In that $500 billion number? Because we have heard, you know, numbers as low as $25 billion per gigawatt of content to as high as $30 or $40 billion per gigawatt. So I'm curious what power and what dollar per gigawatt assumptions you are making as part of that $500 billion number, And then longer term, Jensen, the three to $4 trillion in data center by 2030 was mentioned. How much of that do you think will require vendor financing, and how much of that can be supported by cash flows of yo",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=Vivek Arya, para=13)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q3",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 14,
+      "text": "In each generation, from Ampere to Hopper, from Hopper to Blackwell, Blackwell to Rubin, we are our a part of the data center increases. And and hock regeneration was probably something along the lines of twenty some odd, twenty to twenty-five. I Blackwell generation, Grace Blackwell particularly, is probably 30 to 30, you know, say 30 plus or minus. And then Rubin is probably higher than that. And and in each one of these generations, the speed up is x factors, And therefore their TCO, the customer TCO, improves by x factors, and the most important thing is in the end, you still only have one",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q3, speaker=Jensen Huang, para=14)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Colette Kress",
+      "paragraph": 3,
+      "text": "We delivered another record quarter while navigating what continues to be a dynamic external environment. Total revenue was $46.7 billion, exceeding our outlook as we grew sequentially across all market platforms. Data center revenue grew 56% year over year. Data center revenue also grew sequentially despite the $4 billion decline in H20 revenue. NVIDIA Corporation's Blackwell platform reached record levels, growing sequentially by 17%. We began production shipments of GB300 in Q2. Our full stack AI solutions for cloud service providers, Neo Clouds, enterprises, and sovereigns are all contribu",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Colette Kress, para=3)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 8,
+      "text": "Colette, just wanted to clarify the $2 billion to $5 billion in China. What needs to happen and what is the sustainable pace of that China business as you get into Q4? And then Jensen, for you on the competitive landscape, several of your large customers already have or are planning many ASIC projects. I think one of your you know, ASIC competitors, Broadcom, signaled that they could grow their AI business almost, you know, 55, 60% next year. Any scenario in which you see the market moving more towards ASICs and away from NVIDIA Corporation GPU? Just what are you hearing from your customers? H",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Vivek Arya, para=8)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Joe Moore",
+      "paragraph": 14,
+      "text": "Great. Thank you. Congratulations on reopening the China opportunity. Can you talk about the long-term prospects there? You have talked about, I think, half of AI software world being there. You know, how much can NVIDIA Corporation grow in that business? And you know, how important is it that you get the Blackwall architecture ultimately licensed there?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Joe Moore, para=14)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Aaron Rakers",
+      "paragraph": 17,
+      "text": "Yes. Thank you for the question. I want to go back to the Spectrum XGS announcement this week and, you know, thinking about the Ethernet product now pushing over $10 billion of annualized revenue. You know, Jess, what is the opportunity set that you see for Spectrum XGS? Do you think about this as kind of the data center interconnect layer? Any thoughts on the sizing of this opportunity? You know, within that Ethernet portfolio? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Aaron Rakers, para=17)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 18,
+      "text": "We now offer three networking technologies. One is for scale-up, one is for scale-out, and one for scale across. Scale-up is so that we could build the largest possible virtual GPU, the virtual compute node. NVLink is revolutionary. NVLink 72 is what made it possible for Blackwell to deliver such an extraordinary generational jump over Hopper's MBLink eight. At a time when we have long-thinking models, agentic AI reasoning systems, the NVLink basically amplifies the memory bandwidth, which is really critical for reasoning systems. And so NVLink 72 is fantastic. We then scale out with networkin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Jensen Huang, para=18)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q2",
+      "role": "analyst",
+      "speaker": "Stacy Rasgon",
+      "paragraph": 20,
+      "text": "Hi, guys. Thanks for taking my question. Have a more tactical question for Colette. So on the guide, we are up, you know, over $7 billion. The vast bulk of that is going to be from data center. How do I think about apportioning that $7 billion out across Blackwell versus Hopper versus networking? I mean, it looks like Blackwell was probably $27 billion in the quarter up from maybe $23 billion last quarter. You know, Hopper is still $6 or $7 billion. Post the H20. Like, do you think the Hopper strength continues? Because how do I think about parsing that $7 billion out across all the three thos",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q2, speaker=Stacy Rasgon, para=20)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Toshiya Hari",
+      "paragraph": 6,
+      "text": "Operator, we will now open the call for questions. Can you please poll for questions?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=Toshiya Hari, para=6)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Joe Moore",
+      "paragraph": 8,
+      "text": "Great. Thank you. You guys have talked about this scaling up of inference around reasoning models for, you know, at least a year now, and we've really seen that come to fruition. As you talked about, we've heard it from your customers. Can you give us a sense for how much of that demand you know, you're able to serve and give us a sense for maybe how big the inference business is for you guys and, you know, do we need full-on NBL72 Rackscale solutions for reasoning inference going forward?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=Joe Moore, para=8)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 11,
+      "text": "Thanks for the question. Just clarification for Colette first. So on the China impact, I think previously it was mentioned that at about $15 billion. So you had the $8 billion in Q2. So is there still some left as a headwind for the remaining quarters? How to model that? And then a question, Jensen, for you. Back at GTC, you had outlined a path towards almost a trillion dollars of AI spending over the next few years. Where are we in that build-out? And do you think it's going to be uniform that you will see every spender, whether it's CSP, sovereign enterprises, or build-out? Should we expect ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=Vivek Arya, para=11)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 13,
+      "text": "In fact, probably the best way to think through it is that AI is several things. Of course, we know that AI is this incredible technology that's going to transform every industry. You know, from, of course, the way we do software to healthcare and financial services to, you know, retail, to, I guess, every industry. Transportation, manufacturing. And we're at the beginning of that. But maybe another way to think about that is where do we need intelligence? Where do we need digital intelligence? And it's in every country. It's in every industry. And we know because of that, we recognize that AI",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=Jensen Huang, para=13)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "C.J. Muse",
+      "paragraph": 15,
+      "text": "Yeah. Good afternoon. Thank you for taking the question. There have been many large GPU cluster investments announced in the last month, and you alluded to a few of them with Saudi Arabia, the UAE. And then also, you know, we've heard from Oracle and XAI, just to name a few. So my question is, are there others that have yet to be announced of the same kind of scale and magnitude? And perhaps more importantly, how are these orders impacting your lead times for Blackwell and your current visibility sitting here today, you know, almost halfway through 2025?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=C.J. Muse, para=15)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Ben Reitzes",
+      "paragraph": 18,
+      "text": "Yeah. Hi. Thanks for the question. I wanted to ask, you know, first to Colette, a little clarification around the guidance and maybe putting it in a different way. The $8 billion for H20 just seems like, you know, it's roughly $3 billion more than most people thought with regard to what you'd be foregoing in the second quarter. So that would mean that, you know, with regard to your guidance, the rest of the business, you know, in order to hit $45 billion, is doing $2 to $3 billion or so better. So, you know, I was wondering if that math made sense to you. And then, you know, in terms of the gu",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2026Q1, speaker=Ben Reitzes, para=18)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "C.J. Muse",
+      "paragraph": 6,
+      "text": "Yeah. Good afternoon. Thank you for taking the question. I guess, for me, Jensen, as test time compute and reinforcement learning shows such promise, we're clearly seeing increasing blurring in the lines between training and inference. What does this mean for the potential future of potentially inference-dedicated clusters? And how do you think about the overall impact to NVIDIA Corporation and your customers? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=C.J. Muse, para=6)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 7,
+      "text": "Yeah. I appreciate that, C.J. There are now multiple scaling laws. There's the pretrained scaling laws. And that's gonna continue to scale because we have multimodality. We have data that came from reasoning that are now used to pretraining. And then the second is post-training scaling law. Using reinforcement learning human feedback, reinforcement learning AI feedback, reinforcement learning verifiable rewards, the amount of computation you use for post-training is actually higher than pretraining. And it's kinda sensible in the sense that you could while you're using reinforcement learning, ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Jensen Huang, para=7)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Joseph Moore",
+      "paragraph": 9,
+      "text": "I wonder if you could talk about GV200 at CES. You sort of talked about the complexity of the rack-level systems and the challenges you have. And then as you said in the prepared remarks, we've seen a lot of general availability. You know, where are you in terms of that ramp? Are there still bottlenecks to consider at a systems level above and beyond the chip level? And just you know, have you maintained your enthusiasm for the NVLink 72 platforms?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Joseph Moore, para=9)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 12,
+      "text": "Thank you for taking my question. Could I just you wouldn't mind confirming if Q1 is the bottom for gross margins? And then, Jensen, my question is for you. What is on your dashboard to give you the confidence that the strong demand can sustain into next year and has DeepSeq and whatever innovations they came up with, has that changed that view in any way? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Vivek Arya, para=12)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Matt Ramsay",
+      "paragraph": 16,
+      "text": "Yeah. Good afternoon. Thanks for taking my question. Your next generation Blackwell Ultra is set to launch in the second half of this year. In line with the team's annual product cadence. Jensen, can you help us understand the demand dynamics for Ultra given that you'll still be ramping the current generation Blackwell solutions? How do your customers and the supply chain also manage the simultaneous ramps of these two products and is the team still on track to execute Blackwell Ultra in the second half of this year?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Matt Ramsay, para=16)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Jensen Huang",
+      "paragraph": 17,
+      "text": "Yes. Blackwell Ultra is second half. As you know, the first Blackwell was have we had a hiccup? That probably cost us a couple of months. We're fully recovered, of course. The team did an amazing job recovery. And all of our supply chain partners and just so many people helped us recover at the speed of light. And so now we've successfully ramped production of Blackwell. But that doesn't stop the next train. The next train is you know, it's on an annual rhythm. And, Blackwell Ultra with, new networking, new memories, and, of course, new processors and all of that is coming online. We've been w",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Jensen Huang, para=17)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "financial",
+      "modality": "table",
+      "period": "FY2026Q2",
+      "text": "NVDA FY2026Q2 income statement (2026-04-30): Total revenue $81.61B (+85% YoY); Gross profit $61.16B (+129% YoY); Operating income $53.54B (+147% YoY); Net income $58.32B (+211% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_income_statement NVDA)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Segment (2026-04-26): Compute and Networking revenue $74.55B (+88% YoY); Graphics revenue $7.07B (+58% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "geo",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Geography (2026-04-26): United States revenue $63.77B (+207% YoY); Taiwan revenue $12.01B (+68% YoY); China revenue $4.55B (-18% YoY); Other revenue $1.29B (-21% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Market Platform (2026-04-26): Data Center Revenue $75.25B (+92% YoY); Hyperscale revenue $37.87B; AI Clouds, Industrial, & Enterprise revenue $37.38B; Edge Computing revenue $6.37B.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Market Platform)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-26",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2026-05-20 (period 2026-04-26).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-20",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-20 (period 2026-05-20).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-07",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-08 (period 2026-05-07).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000028"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-24",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-04-27 (period 2026-04-24).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000026"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-03-02",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-03-06 (period 2026-03-02).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000024"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-25",
+      "text": "NVDA SEC 10-K \u2014 Annual Report filed 2026-02-25 (period 2026-01-25).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-02-25",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-02-25 (period 2026-02-25).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-20",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-01-23 (period 2026-01-20).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000003"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-11-19",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2025-11-19 (period 2025-11-19).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-10-26",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2025-11-19 (period 2025-10-26).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-07-27",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2025-08-27 (period 2025-07-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000209"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-08-27",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2025-08-27 (period 2025-08-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Dow Jones Futures Fall On Iran News After Market Whipsaws; CPI Inflation On Tap \u2014 The stock market had a wild Tuesday, skidding but also coming off lows on AI fears and Trump's Iran threats. CPI inflation is on tap.",
+      "source_url": "https://finance.yahoo.com/m/25a6a429-345e-3138-9f10-7360fba3d0d1/dow-jones-futures-fall-on.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Worried About Which AI Stock to Buy? This Low-Cost ETF Lets You Own the Whole Trade. \u2014 Picking the right artificial intelligence (AI) stock is hard, and the past week made that especially clear. Chip stocks tumbled in early June, dragging the Nasdaq Composite down about 4% on June 5 for its worst session since the tariff turmoil of early 2025. Names that had carried the market higher for months -- Advanced Micro Devices, Intel, and others tied to AI hardware -- gave back chunks of enormous gains in a matter of days. And some AI stocks fell far more sharply than others.\nFor an investor trying t",
+      "source_url": "https://finance.yahoo.com/m/336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6/worried-about-which-ai-stock.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Why SSR Mining Stock Got Knocked Today \u2014 Gold and silver are eternally attractive metals, but lately they haven't been ideal investments. On recent declines in the prices of the two, SSR Mining (NASDAQ: SSRM) -- which mines both metals -- saw its stock price decrease by more than 3% on Tuesday. The rout in precious metals started last Friday, just after the federal government's Bureau of Labor Statistics released its latest monthly employment report. The striking feature of this digest was the 172,000 new jobs created in May, far higher than the consensus estimate of 80,000. Immediately, and u",
+      "source_url": "https://finance.yahoo.com/m/74a09df1-8fb5-3922-91c6-637dc75bbce6/why-ssr-mining-stock-got.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Taiwan Eyes Curbs on AI Chip Sales to China to Align With US \u2014 (Bloomberg) -- Taiwan authorities are considering much stricter export controls on AI chip sales to China to further align with US measures, according to people familiar with the matter, an effort to address semiconductor smuggling that risks drawing a rebuke from Beijing.\nMost Read from Bloomberg\nHouse Republican Says Hegseth\u2019s D-Day Remarks \u2018Inappropriate\u2019\nStocks Pare Tech-Led Drop as Rotation Gains Speed: Markets Wrap\nUS Launches Strikes Against Iran After Helicopter Shot Down\nOpenAI Joins a Massive AI IPO Pipeline Now Worth $3.",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/taiwan-eyes-curbs-ai-chip-125854688.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "What Lit a Fire Under Qualcomm Stock? \u2014 The chipmaker has been a market laggard for years, so what suddenly convinced investors it was time to get on board?\nIf you blinked, you might have missed it. Between March 10, 2026, and June 8, 2026, shares of Qualcomm (QCOM) quietly staged a monster rally, jumping 61.7%. For perspective, that lapped the S&P 500\u2019s 9.5% return and left most of its semiconductor peers like Broadcom in the dust.\nSo, what happened? For years, the story around this company was stuck in a loop: smartphone cycles, China demand, and its complicated relationship with Apple. But ",
+      "source_url": "https://finance.yahoo.com/m/bc430d23-0292-3507-86b3-6533d653238d/what-lit-a-fire-under.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Palo Alto Networks Hits $10B Revenue Run Rate Beats S&P 500 Across All Timeframes \u2014 PANW crushed the S&P 500 over 10 years, turning $1,000 into $12,174 with a 1,117% total return.\nCyberArk (CYBR) added identity security to PANW's platformization stack, but a P/E near 191 and $183M GAAP operating loss demand cautious scaling.\nNext-Gen Security ARR surged 60% to $8B with $18.4B in RPO backlog, supporting Arora's case that AI threats expand cybersecurity's terminal value.\nAct now: the analyst who called NVIDIA in 2010 just named his top 10 AI stocks \u2014 and Palo Alto Networks didn't make the cut. G",
+      "source_url": "https://finance.yahoo.com/m/6ca65a27-1dfb-338b-ac7c-eab452ccb975/palo-alto-networks-hits-%2410b.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Will This Jensen Huang-Endorsed AI Chip Stock Be the Next Trillion-Dollar Company? \u2014 \"The next trillion-dollar company, ladies and gentlemen,\" said Nvidia CEO Jensen Huang of Marvell Technology (NASDAQ: MRVL), turning to Marvell's CEO during an onstage appearance at the Computex conference in Taipei last week. The endorsement, from arguably the most influential figure in artificial intelligence (AI), set off one of the most dramatic stretches the chip designer's stock has ever seen.\nThe day after Huang's remark, Marvell shares jumped about 32% (the biggest one-day gain in the company's history",
+      "source_url": "https://finance.yahoo.com/m/9607aab0-d836-3aa2-89f5-43f03add1520/will-this-jensen.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Nebius Shares Jump After NVIDIA-Backed AI Lab Launch \u2014 This article first appeared on GuruFocus.\nShares of Nebius Group (NASDAQ:NBIS) jumped more than 5% on Tuesday after the AI cloud company launched a new Physical AI Living Lab with NVIDIA (NVDA), expanding its efforts to support robotics startups across the UK and Europe.\nNebius said the six-month program will provide selected startups with access to NVIDIA's physical AI software tools and Nebius AI Cloud infrastructure. The initiative is designed to help companies accelerate the transition from virtual testing environments to real-world de",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/nebius-shares-jump-nvidia-backed-170150941.html"
+    }
+  ],
+  "signals": [
+    {
+      "label": "Data Center Revenue (Revenue by Market Platform)",
+      "series": "Data Center Revenue",
+      "metric": "revenue_platform",
+      "change_pct": 92.4,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Market Platform)"
+    },
+    {
+      "label": "Compute and Networking revenue (Revenue by Segment)",
+      "series": "Compute and Networking revenue",
+      "metric": "revenue_segment",
+      "change_pct": 88.3,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "label": "Taiwan revenue (Revenue by Geography)",
+      "series": "Taiwan revenue",
+      "metric": "revenue_geo",
+      "change_pct": 67.7,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "label": "Graphics revenue (Revenue by Segment)",
+      "series": "Graphics revenue",
+      "metric": "revenue_segment",
+      "change_pct": 57.9,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "label": "Other revenue (Revenue by Geography)",
+      "series": "Other revenue",
+      "metric": "revenue_geo",
+      "change_pct": -20.7,
+      "direction": "down",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "label": "China revenue (Revenue by Geography)",
+      "series": "China revenue",
+      "metric": "revenue_geo",
+      "change_pct": -17.6,
+      "direction": "down",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    }
+  ]
+}

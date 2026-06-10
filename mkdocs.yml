@@ -1,0 +1,75 @@
+site_name: IR-Copilot
+site_description: >-
+  Autonomous Earnings Call Script, Deck & Q&A Cheat-Sheet — a grounded multi-agent
+  Investor-Relations workflow on AMD MI300X (ROCm + vLLM).
+site_author: IR-Copilot Team
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Agent Workflow: agents.md
+  - Data & Knowledge:
+      - Data Sources: data-sources.md
+      - Knowledge Wiki (RAG at scale): wiki-ingestion.md
+      - Grounding & Evidence: grounding.md
+  - Intelligence:
+      - Market Sentiment: sentiment.md
+      - Competitor Comparison: competitor.md
+      - Fine-tuning (Unsloth) ⭐: finetuning.md
+  - Platform:
+      - AMD MI300X + vLLM: rocm-vllm.md
+      - LangGraph Orchestration: orchestration.md
+      - HTTP API (FastAPI + CopilotKit): api.md
+      - UI (CopilotKit + optional Flutter): ui.md
+  - Delivery:
+      - 4-Day Roadmap: roadmap.md
+      - Evaluation: evaluation.md
+      - Demo Script: demo.md
+  - Running these docs: setup.md

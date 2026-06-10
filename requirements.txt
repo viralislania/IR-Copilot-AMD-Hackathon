@@ -1,0 +1,38 @@
+# IR-Copilot — core dependencies.
+#   Offline/dev runs on Python 3.9+; the API server + live defeatbeta-api need Python 3.11+.
+# Install:  python -m pip install -r requirements.txt
+# GPU/ROCm-only deps (vLLM, unsloth, whisper) are in requirements-gpu.txt (MI300X node only).
+# Live market data:  pip install -r requirements-live.txt  (Python 3.11+; see docs/data-sources.md)
+
+# --- Config ---
+python-dotenv>=1.0
+pydantic>=2.6
+
+# --- Data / persistence (sqlite is stdlib — no parquet/duckdb needed by IR-Copilot) ---
+pandas>=2.1
+
+# --- Orchestration & agents ---
+langgraph>=0.2.0
+langchain>=0.2.0
+langchain-openai>=0.1.0
+openai>=1.30
+
+# --- RAG / vector store / embeddings (clients are cross-platform) ---
+qdrant-client>=1.9
+sentence-transformers>=3.0      # real embeddings (EMBEDDING_BACKEND=sentence-transformers)
+
+# --- Sentiment (FinBERT — default; needs torch, provided by ROCm on the MI300X) ---
+transformers>=4.41
+
+# --- API server (FastAPI + CopilotKit AG-UI) ---
+fastapi>=0.110
+uvicorn>=0.29
+sse-starlette>=2.0
+copilotkit                       # AG-UI bridge to LangGraph (LangGraphAGUIAgent)
+
+# --- Notebooks / tooling ---
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.10
+nbconvert>=7.16
+tabulate>=0.9
