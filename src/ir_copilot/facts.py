@@ -197,7 +197,10 @@ def allowed_values(store: FactStore) -> set[float]:
     return vals
 
 
-def ungrounded_numbers(text: str, store: FactStore, tol: float = 0.02) -> list[float]:
-    allowed = allowed_values(store)
+def ungrounded_against(text: str, allowed: set[float], tol: float = 0.02) -> list[float]:
     return [n for n in extract_numbers(text)
             if not any(abs(n - a) <= tol * max(1.0, abs(a)) for a in allowed)]
+
+
+def ungrounded_numbers(text: str, store: FactStore, tol: float = 0.02) -> list[float]:
+    return ungrounded_against(text, allowed_values(store), tol)

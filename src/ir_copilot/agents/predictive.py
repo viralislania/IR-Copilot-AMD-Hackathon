@@ -1,8 +1,13 @@
 """Predictive Analyst agent (docs/agents.md, docs/finetuning.md) — the fine-tune target.
 
-Predicts the hardest investor questions from: peer lags, negative sentiment themes, and
-retrieved precedent analyst questions (RAG over the wiki). Every question carries evidence.
-Mock mode = deterministic, grounded templates; vllm mode = the (fine-tuned) model phrases/ranks.
+Predicts the hardest investor questions from peer lags, segment/geo swings, market sentiment, and
+real precedent analyst questions retrieved from the wiki.
+
+Two paths, both grounded:
+  * LLM (LLM_BACKEND=vllm): the model is handed a tagged, cited evidence brief and *authors* the
+    questions in natural English, citing the evidence tag for each. Any question containing an
+    ungrounded number is dropped. This is the production / fine-tuned path.
+  * Offline (chat=None): deterministic grounded templates — used when no LLM endpoint is set.
 """
 from __future__ import annotations
 
@@ -10,8 +15,12 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-from ..facts import FactStore, format_value
+from pydantic import ValidationError
+
+from ..facts import FactStore, ungrounded_against
+from .briefing import allowed_question_numbers, build_evidence, fact_catalog, parse_json
 from .competitor import PeerComparison
+from .schemas import PredictedQuestionsLLM
 from .sentiment import SentimentSnapshot
 
 _METRIC_LABEL = {
@@ -115,33 +124,81 @@ def _attach_precedent(questions: List[Question], wiki, ticker: str) -> None:
             q.rationale += f" Precedent: \"{hits[0]['text'][:90]}...\""
 
 
-def predict_questions(store: FactStore, sentiment: SentimentSnapshot,
-                      peer: PeerComparison, wiki=None, chat=None,
-                      signals=None, top_k: int = 8) -> List[Question]:
+def _retrieve_precedents(wiki, ticker: str, k: int = 6) -> List[dict]:
+    if wiki is None:
+        return []
+    seed = "gross margin guidance revenue growth competition demand supply capital allocation risk"
+    out = []
+    for h in wiki.search(seed, ticker=ticker, k=k, doc_type="transcript"):
+        out.append({"text": _question_sentence(h["text"]), "period": h.get("period", "prior"),
+                    "source_url": h.get("source_url", "")})
+    return out
+
+
+def _deterministic(store, sentiment, peer, wiki, signals, top_k) -> List[Question]:
     questions = (_from_signals(signals) + _from_lags(store, peer) + _from_sentiment(sentiment)
                  + _from_wiki(wiki, store.ticker))
     _attach_precedent(questions, wiki, store.ticker)
-
-    # de-dup, rank by difficulty
     seen, ranked = set(), []
     for q in sorted(questions, key=lambda x: -x.difficulty):
         if q.text in seen:
             continue
         seen.add(q.text)
         ranked.append(q)
-
-    if chat is not None and ranked:
-        # vllm path: let the (fine-tuned) model refine phrasing/ordering. Grounding unchanged.
-        bullet = "\n".join(f"- {q.text}" for q in ranked[:top_k])
-        try:
-            refined = chat.complete(
-                system="You are an IR analyst. Rewrite each investor question to be sharp and "
-                       "specific. Keep the same order and count. Return one question per line.",
-                user=bullet)
-            lines = [ln.strip("-* ").strip() for ln in refined.splitlines() if ln.strip()]
-            for q, line in zip(ranked, lines):
-                q.text = line
-        except Exception as e:  # pragma: no cover
-            print(f"[predictive] vllm refine failed ({e}); keeping templated questions.")
-
     return ranked[:top_k]
+
+
+def _llm_questions(chat, store: FactStore, sentiment: SentimentSnapshot, peer: PeerComparison,
+                   signals, precedents, top_k: int) -> List[Question]:
+    """The model authors the hardest questions from a grounded, cited evidence brief."""
+    brief, tagmap = build_evidence(store, peer, sentiment, signals, precedents)
+    system = (
+        "You are a top-ranked sell-side equity analyst preparing the toughest, most specific "
+        "questions institutional investors will press company management on during the earnings "
+        "call. Probe guidance risk, margin durability, segment concentration, competitive "
+        "pressure, demand sustainability, and capital allocation. Use ONLY the evidence and "
+        "figures provided — never invent facts. When you reference a number, use the exact figure "
+        "shown in the evidence. Return a JSON object {\"questions\": [...]} where each item is "
+        '{"question": string, "evidence": "<tag e.g. S1/L1/C1/Q1>", "difficulty": number 0..1}, '
+        f"hardest question first. Produce up to {top_k} sharp, natural questions a real analyst "
+        "would ask on the call.")
+    user = f"Company: {store.ticker}   Reporting period: {store.period}\n\n{brief}\n\nFIGURES:\n{fact_catalog(store)}"
+    try:
+        resp = chat.complete(system, user, max_tokens=1400, response_model=PredictedQuestionsLLM)
+    except Exception as e:  # pragma: no cover
+        print(f"[predictive] LLM call failed ({e}); using deterministic fallback.")
+        return []
+
+    data = parse_json(resp)
+    if isinstance(data, list):                  # tolerate a bare array
+        data = {"questions": data}
+    try:
+        parsed = PredictedQuestionsLLM.model_validate(data)
+    except ValidationError:
+        return []
+
+    allowed = allowed_question_numbers(store, peer, signals)
+    out: List[Question] = []
+    for d in parsed.questions:
+        text = d.question.strip()
+        if not text or ungrounded_against(text, allowed):   # drop ungrounded figures
+            continue
+        url = tagmap.get(d.evidence.strip(), "")
+        out.append(Question(text=text, difficulty=round(min(1.0, max(0.0, d.difficulty)), 2),
+                            rationale=f"Analyst-LLM, grounded in evidence [{d.evidence}]."
+                                      if d.evidence else
+                                      "Analyst-LLM, grounded in the reported figures.",
+                            evidence=[url] if url else []))
+    return out[:top_k]
+
+
+def predict_questions(store: FactStore, sentiment: SentimentSnapshot,
+                      peer: PeerComparison, wiki=None, chat=None,
+                      signals=None, top_k: int = 8) -> List[Question]:
+    precedents = _retrieve_precedents(wiki, store.ticker)
+    if chat is not None:
+        llm = _llm_questions(chat, store, sentiment, peer, signals, precedents, top_k)
+        if llm:
+            return llm
+        print("[predictive] LLM produced no usable questions; using grounded templates.")
+    return _deterministic(store, sentiment, peer, wiki, signals, top_k)

@@ -48,10 +48,17 @@ hard question, e.g. *"Your gross margin trails AMD by 600 bps — why?"*).
 
 ## 4. Predictive Analyst Agent ⭐
 
-The headline-intelligence step and the target of [fine-tuning](finetuning.md). It retrieves
-similar historical Q&A from the [wiki](wiki-ingestion.md), combines them with the financial
-deltas, sentiment, and peer gaps, and emits a ranked list of likely questions — each with a
-*why* and supporting evidence chips.
+The headline-intelligence step and the target of [fine-tuning](finetuning.md). It assembles a
+**tagged, cited evidence brief** — segment/geo YoY swings, peer lags, sentiment concerns, and
+real precedent analyst questions from the [wiki](wiki-ingestion.md) — then:
+
+- **LLM path** (`LLM_BACKEND=vllm`): the model **authors** the hardest, most natural questions
+  from that evidence, citing the evidence tag for each. Any question containing a number not in
+  the allowed set (facts + peer values + signal %) is dropped, so questions never carry an
+  invented figure. This is the production / fine-tuned path (`agents/briefing.py`).
+- **Offline path** (`chat=None`): deterministic grounded templates from the same evidence.
+
+Either way it emits a ranked list of `Question`s, each with a *why* and evidence chips.
 
 ```python
 class Question(BaseModel):
@@ -73,9 +80,14 @@ class DraftBundle(BaseModel):
     qa_cheat_sheet: list[Question]  # question → suggested answer → backing facts
 ```
 
-The model writes **slots** (`{{F-0012}}`) for every figure; a deterministic renderer
-substitutes verified values from the Fact Store. The model controls *prose*, never *numbers*.
-See [Grounding](grounding.md).
+- **LLM path** (`LLM_BACKEND=vllm`): the model **writes** the prepared remarks, deck bullets,
+  and CEO/CFO answers in natural prose, inserting a **slot token** (`{{F-0012}}`) for every
+  figure. The rendered bundle is grounding-checked before use; if the model leaks an ungrounded
+  number, drafting **falls back to the grounded templates** automatically.
+- **Offline path** (`chat=None`): deterministic grounded templates.
+
+In both paths a deterministic renderer substitutes verified values from the Fact Store — the
+model controls *prose*, never *numbers*. See [Grounding](grounding.md).
 
 ## 6. Grounding Verifier
 

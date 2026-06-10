@@ -1,18 +1,27 @@
-"""Drafting agent (docs/agents.md) — script + deck outline + Q&A cheat sheet.
+"""Drafting agent (docs/agents.md) — earnings-call script + deck outline + Q&A cheat sheet.
 
-Numbers are SLOTTED ({{F-00xx}}), never generated. The renderer substitutes verified values,
-so the draft is grounded by construction. Mock mode templates; vllm mode would draft prose but
-is held to the same slot discipline.
+Numbers are SLOTTED ({{F-00xx}}), never written as digits. `render_slots()` substitutes the
+verified values, so the draft is grounded by construction.
+
+Two paths, both grounded:
+  * LLM (LLM_BACKEND=vllm): the model *writes* the prepared remarks, deck bullets, and CEO/CFO
+    answers in natural English, using slot tokens for every figure. The output is grounding-checked
+    before use; if the model leaks an ungrounded number, we fall back to templates.
+  * Offline (chat=None): deterministic grounded templates.
 """
 from __future__ import annotations
 
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
+from pydantic import ValidationError
+
 from ..facts import FactStore, render_slots
+from .briefing import fact_catalog, narrative_context, parse_json
 from .competitor import PeerComparison
 from .predictive import Question
+from .schemas import LLMDraft
 from .sentiment import SentimentSnapshot
 
 
@@ -52,7 +61,7 @@ class DraftBundle(BaseModel):
     qa_cheat_sheet: List[Question]
 
 
-def _script(store: FactStore, peer: PeerComparison) -> List[ScriptSection]:
+def _template_script(store: FactStore, peer: PeerComparison) -> List[ScriptSection]:
     s = store
     lead = ", ".join(label(m) for m in peer.leads) or "several metrics"
     return [
@@ -71,7 +80,7 @@ def _script(store: FactStore, peer: PeerComparison) -> List[ScriptSection]:
     ]
 
 
-def _deck(store: FactStore, peer: PeerComparison, sentiment: SentimentSnapshot) -> List[Slide]:
+def _template_deck(store: FactStore, peer: PeerComparison, sentiment: SentimentSnapshot) -> List[Slide]:
     s = store
     comp_bullets = []
     for pm in peer.metrics:
@@ -108,13 +117,81 @@ def _answer(q: Question, store: FactStore, peer: PeerComparison) -> str:
             f"ROIC of {store.slot('roic')}.")
 
 
+def _template_bundle(store, sentiment, peer, questions) -> DraftBundle:
+    qa = [q.model_copy(update={"suggested_answer": _answer(q, store, peer)}) for q in questions]
+    return DraftBundle(script=_template_script(store, peer),
+                       deck_outline=_template_deck(store, peer, sentiment), qa_cheat_sheet=qa)
+
+
+def _is_grounded(bundle: DraftBundle, store: FactStore) -> bool:
+    """True if the rendered bundle contains no ungrounded number (excludes Safe-Harbor boilerplate)."""
+    from .verify import verify
+    return not verify(render_bundle(bundle, store), store).numeric_violations
+
+
+def _llm_draft(chat, store: FactStore, sentiment: SentimentSnapshot, peer: PeerComparison,
+               questions: List[Question]) -> Optional[DraftBundle]:
+    """The model writes the script, deck, and CEO/CFO answers in natural prose, slotting numbers."""
+    qlist = "\n".join(f"{i + 1}. {q.text}" for i, q in enumerate(questions))
+    system = (
+        "You are a senior investor-relations speechwriter producing materials for the CEO and CFO "
+        "of a public company's quarterly earnings call. Write natural, confident, compliant prose "
+        "in the company's voice (use 'we'/'our'). "
+        "CRITICAL GROUNDING RULE: for EVERY number you state, insert the matching slot token from "
+        "the FIGURES list exactly as written (e.g. {{F-0007}}) — NEVER write the digits yourself, "
+        "and use only figures that appear in the list. "
+        "Open the script with a 'Safe Harbor' forward-looking-statements section. "
+        "Answer each provided investor question the way a polished CFO would: direct, specific, "
+        "reassuring, and grounded in the figures. "
+        "Return ONLY JSON of the form: "
+        '{"script": [{"heading": str, "text": str}], '
+        '"deck": [{"title": str, "bullets": [str]}], '
+        '"answers": [str]}  where "answers" aligns 1:1 with the numbered questions.')
+    user = (f"Company: {store.ticker}   Reporting period: {store.period}\n"
+            f"{narrative_context(store, peer, sentiment)}\n\n"
+            f"FIGURES (use these slot tokens for all numbers):\n{fact_catalog(store)}\n\n"
+            f"INVESTOR QUESTIONS TO ANSWER (in order):\n{qlist}")
+    try:
+        resp = chat.complete(system, user, max_tokens=2200, response_model=LLMDraft)
+    except Exception as e:  # pragma: no cover
+        print(f"[drafting] LLM call failed ({e}); using grounded templates.")
+        return None
+
+    data = parse_json(resp)
+    try:
+        out = LLMDraft.model_validate(data)
+    except ValidationError:
+        return None
+
+    script = [ScriptSection(heading=s.heading.strip(), text=s.text)
+              for s in out.script if s.text.strip()]
+    deck = [Slide(title=sl.title.strip(), bullets=[b for b in sl.bullets if b.strip()])
+            for sl in out.deck if sl.title.strip()]
+    if not script or not deck:
+        return None
+    if not any("safe harbor" in s.heading.lower() for s in script):
+        script.insert(0, ScriptSection(heading="Safe Harbor", text=SAFE_HARBOR))
+
+    qa = []
+    for i, q in enumerate(questions):
+        ans = out.answers[i].strip() if i < len(out.answers) and out.answers[i].strip() \
+            else _answer(q, store, peer)
+        qa.append(q.model_copy(update={"suggested_answer": ans}))
+
+    bundle = DraftBundle(script=script, deck_outline=deck, qa_cheat_sheet=qa)
+    if not _is_grounded(bundle, store):
+        print("[drafting] LLM draft contained an ungrounded number; using grounded templates.")
+        return None
+    return bundle
+
+
 def draft(store: FactStore, sentiment: SentimentSnapshot, peer: PeerComparison,
           questions: List[Question], chat=None) -> DraftBundle:
-    qa = []
-    for q in questions:
-        qa.append(q.model_copy(update={"suggested_answer": _answer(q, store, peer)}))
-    return DraftBundle(script=_script(store, peer), deck_outline=_deck(store, peer, sentiment),
-                       qa_cheat_sheet=qa)
+    if chat is not None:
+        bundle = _llm_draft(chat, store, sentiment, peer, questions)
+        if bundle is not None:
+            return bundle
+    return _template_bundle(store, sentiment, peer, questions)
 
 
 def render_bundle(bundle: DraftBundle, store: FactStore) -> dict:
