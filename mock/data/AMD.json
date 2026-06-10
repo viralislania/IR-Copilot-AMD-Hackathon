@@ -1,0 +1,697 @@
+{
+  "ticker": "AMD",
+  "period": "FY2026Q1",
+  "fetched_at": "2026-06-10",
+  "facts": [
+    {
+      "fact_id": "F-0001",
+      "ticker": "AMD",
+      "metric": "ttm_eps",
+      "period": "FY2026Q1",
+      "value": 3.047,
+      "unit": "USD",
+      "source": "defeatbeta-api:ttm_eps",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0002",
+      "ticker": "AMD",
+      "metric": "ttm_pe",
+      "period": "FY2026Q1",
+      "value": 156.06,
+      "unit": "x",
+      "source": "defeatbeta-api:ttm_pe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0003",
+      "ticker": "AMD",
+      "metric": "market_cap",
+      "period": "FY2026Q1",
+      "value": 775358738303.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:market_capitalization",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0004",
+      "ticker": "AMD",
+      "metric": "ps_ratio",
+      "period": "FY2026Q1",
+      "value": 20.7,
+      "unit": "x",
+      "source": "defeatbeta-api:ps_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0005",
+      "ticker": "AMD",
+      "metric": "pb_ratio",
+      "period": "FY2026Q1",
+      "value": 12.03,
+      "unit": "x",
+      "source": "defeatbeta-api:pb_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0006",
+      "ticker": "AMD",
+      "metric": "peg_ratio",
+      "period": "FY2026Q1",
+      "value": 1.69,
+      "unit": "x",
+      "source": "defeatbeta-api:peg_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0007",
+      "ticker": "AMD",
+      "metric": "roe",
+      "period": "FY2026Q1",
+      "value": 2.17,
+      "unit": "%",
+      "source": "defeatbeta-api:roe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0008",
+      "ticker": "AMD",
+      "metric": "roa",
+      "period": "FY2026Q1",
+      "value": 1.77,
+      "unit": "%",
+      "source": "defeatbeta-api:roa",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0009",
+      "ticker": "AMD",
+      "metric": "roic",
+      "period": "FY2026Q1",
+      "value": 2.08,
+      "unit": "%",
+      "source": "defeatbeta-api:roic",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0010",
+      "ticker": "AMD",
+      "metric": "wacc",
+      "period": "FY2026Q1",
+      "value": 25.21,
+      "unit": "%",
+      "source": "defeatbeta-api:wacc",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0011",
+      "ticker": "AMD",
+      "metric": "equity_multiplier",
+      "period": "FY2026Q1",
+      "value": 1.23,
+      "unit": "x",
+      "source": "defeatbeta-api:equity_multiplier",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0012",
+      "ticker": "AMD",
+      "metric": "asset_turnover",
+      "period": "FY2026Q1",
+      "value": 0.13,
+      "unit": "x",
+      "source": "defeatbeta-api:asset_turnover",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0013",
+      "ticker": "AMD",
+      "metric": "gross_margin",
+      "period": "FY2026Q1",
+      "value": 52.82,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_gross_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "AMD",
+      "metric": "revenue",
+      "period": "FY2026Q1",
+      "value": 10253000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_gross_margin.total_revenue",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0015",
+      "ticker": "AMD",
+      "metric": "operating_margin",
+      "period": "FY2026Q1",
+      "value": 14.399999999999999,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_operating_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    }
+  ],
+  "gaps": [],
+  "news": [
+    {
+      "ticker": "AMD",
+      "text": "Worried About Which AI Stock to Buy? This Low-Cost ETF Lets You Own the Whole Trade.",
+      "url": "https://finance.yahoo.com/m/336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6/worried-about-which-ai-stock.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-10",
+      "uuid": "336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Broadcom Stock And The Ninety-Billion-Dollar Roadmap",
+      "url": "https://finance.yahoo.com/m/a16f5472-b066-313d-b44b-cd31e53307bd/broadcom-stock-and-the.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "a16f5472-b066-313d-b44b-cd31e53307bd"
+    },
+    {
+      "ticker": "AMD",
+      "text": "AI Stocks Lead Tech Sector Slide. 'Summer Swoon Has Arrived.'",
+      "url": "https://finance.yahoo.com/m/d29a483e-d9a2-3e5c-beaf-dca4cf94c36a/ai-stocks-lead-tech-sector.html",
+      "publisher": "Investor's Business Daily",
+      "date": "2026-06-09",
+      "uuid": "d29a483e-d9a2-3e5c-beaf-dca4cf94c36a"
+    },
+    {
+      "ticker": "AMD",
+      "text": "China Preps $295 Billion Plan to Fund Nationwide AI Buildout",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/china-prepares-295-billion-plan-081310126.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-09",
+      "uuid": "643c9c80-0be7-3f1a-acf6-f77bf84ab4e4"
+    },
+    {
+      "ticker": "AMD",
+      "text": "OpenAI\u2019s Paradox: ChatGPT Owner Files for IPO But Wants to Stay Private for \u2018A While\u2019",
+      "url": "https://finance.yahoo.com/m/5dd308d2-03bf-3acc-952c-a739ebec2ff6/openai%E2%80%99s-paradox%3A-chatgpt.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "5dd308d2-03bf-3acc-952c-a739ebec2ff6"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Nvidia Is Doubling Down on the CPU Market. That's Bad News for AMD and Intel Stock Investors",
+      "url": "https://finance.yahoo.com/m/d9d7f571-3621-3fd8-a9ca-cb0f30ae72a3/nvidia-is-doubling-down-on.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "d9d7f571-3621-3fd8-a9ca-cb0f30ae72a3"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Shoals, Rocket Lab, and Blink Charging Shares Are Soaring, What You Need To Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/shoals-rocket-lab-blink-charging-004550387.html",
+      "publisher": "StockStory",
+      "date": "2026-06-09",
+      "uuid": "27087f78-ce58-3975-9cae-c060ba60aee1"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Tech stocks tumble again",
+      "url": "https://finance.yahoo.com/m/182e30fa-96fb-39fc-91d1-0c4a111fd44b/tech-stocks-tumble-again.html",
+      "publisher": "Axios",
+      "date": "2026-06-09",
+      "uuid": "182e30fa-96fb-39fc-91d1-0c4a111fd44b"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Why Oracle Stock Needs a Successful OpenAI IPO\u2014and Microsoft Doesn\u2019t",
+      "url": "https://finance.yahoo.com/m/f6111b49-5b4e-3d23-9e95-32f4d200658e/why-oracle-stock-needs-a.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "f6111b49-5b4e-3d23-9e95-32f4d200658e"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Nvidia Finally Lands Apple as an AI Customer. Why the Stock Is Dropping.",
+      "url": "https://finance.yahoo.com/m/8f50567b-4c3d-3bd3-ae41-9e3ca5b5dcf2/nvidia-finally-lands-apple-as.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "8f50567b-4c3d-3bd3-ae41-9e3ca5b5dcf2"
+    },
+    {
+      "ticker": "AMD",
+      "text": "China Weighs $295 Billion AI Data Center Buildout Over Five Years",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/china-weighs-295-billion-ai-195727474.html",
+      "publisher": "GuruFocus.com",
+      "date": "2026-06-09",
+      "uuid": "a82b485e-a34a-3a9e-b491-0a42b46ee016"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Micron Stock And The Two-Year Sellout",
+      "url": "https://finance.yahoo.com/m/b1a968f4-38e7-33bb-91da-8ee96e08581f/micron-stock-and-the-two-year.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "b1a968f4-38e7-33bb-91da-8ee96e08581f"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Stock Market Today, June 9: Risk-Off Sentiment Pressures Nasdaq",
+      "url": "https://finance.yahoo.com/m/0a4ce294-457c-3daf-81bb-330387e45b1f/stock-market-today%2C-june-9%3A.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "0a4ce294-457c-3daf-81bb-330387e45b1f"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Penguin Solutions, AMD, and Impinj Stocks Trade Down, What You Need To Know",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/penguin-solutions-amd-impinj-stocks-211814542.html",
+      "publisher": "StockStory",
+      "date": "2026-06-09",
+      "uuid": "9674f3b0-047c-3573-a818-d2d71b111459"
+    },
+    {
+      "ticker": "AMD",
+      "text": "AMD Sinks 9%, Intel Slides 8% as Chip Stocks Pull the NASDAQ 100 Down",
+      "url": "https://finance.yahoo.com/m/eacda748-45b6-3c12-accf-5ee630796ff9/amd-sinks-9%25%2C-intel-slides-8%25.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "eacda748-45b6-3c12-accf-5ee630796ff9"
+    },
+    {
+      "ticker": "AMD",
+      "text": "JPMorgan Chase Tests Tokenized Deposits And Quantum AI For Future Payments",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/jpmorgan-chase-tests-tokenized-deposits-001914709.html",
+      "publisher": "Simply Wall St.",
+      "date": "2026-06-09",
+      "uuid": "f51cd626-80e8-3471-baeb-98f8008eee01"
+    },
+    {
+      "ticker": "AMD",
+      "text": "UniDoc Connect Surpasses One Million Patient Visits",
+      "url": "https://finance.yahoo.com/sectors/healthcare/articles/unidoc-connect-surpasses-one-million-113000648.html",
+      "publisher": "ACCESS Newswire",
+      "date": "2026-06-09",
+      "uuid": "04306c67-4ae8-3a9d-9d4a-bdbb8a849259"
+    },
+    {
+      "ticker": "AMD",
+      "text": "The Tell-Tale Rally in Micron's Stock",
+      "url": "https://finance.yahoo.com/m/211e0fd2-42e7-3401-8f0a-a114b69ccf6a/the-tell-tale-rally-in.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "211e0fd2-42e7-3401-8f0a-a114b69ccf6a"
+    },
+    {
+      "ticker": "AMD",
+      "text": "What Lit a Fire Under Qualcomm Stock?",
+      "url": "https://finance.yahoo.com/m/bc430d23-0292-3507-86b3-6533d653238d/what-lit-a-fire-under.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "bc430d23-0292-3507-86b3-6533d653238d"
+    },
+    {
+      "ticker": "AMD",
+      "text": "Stock Market Today, June 9: Chipmakers Drag Nasdaq Down at Midday",
+      "url": "https://finance.yahoo.com/m/16aa3c83-0d34-3e56-b769-fdcef689b16e/stock-market-today%2C-june-9%3A.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "16aa3c83-0d34-3e56-b769-fdcef689b16e"
+    }
+  ],
+  "transcript_chunks": [
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 31,
+      "text": "You know, with that, we've looked at it both, you know, bottoms up, you know, in terms of talking to customers and having them, you know, give us longer term forecasts, as well as just doing, some, you know, clear workload analysis. Yeah, I mean, it's a very exciting TAM. I think it's exciting to see, you know, CPUs growing, you know, greater than 35%, to, you know, over $120 billion. You know, when you think about, you know, AMD in the context of that, I mean, you know, CPUs are critical for so many tasks that you are seeing, a lot more discussion about CPUs in the market. We actually, you kn",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Lisa Su, para=31)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Joshua Buchalter",
+      "paragraph": 34,
+      "text": "Okay. Thank you for all the color there. I wanted to ask about the Instinct side. In the press release, you mentioned that MI450 and Helios engagements are strengthening with customer forecasts exceeding the expectations and the pipeline growing. You know, you certainly have the big public OpenAI and Meta deals. Was this comment referring to those engagements upsizing versus the announced initial deployments, or was it other customers? Maybe is the increase on the MI450 timeline or is it MI500 and beyond? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Joshua Buchalter, para=34)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Thomas O'Malley",
+      "paragraph": 39,
+      "text": "Hey, guys. Thanks for taking my question. Lisa, if I, if I get your numbers correct here in the March quarter, it sounds like, you know, the server processor side of the CPU side grew over 50%. If you take it just at the word, it looks like maybe the data center GPU side actually grew in Q1. I was curious around the cadence of this year. Kind of previously, you had talked about really a back half weighted and then kind of more so Q4 weighted year. Could you talk about if that's changed at all? The second part of the question is, as you go into 2027, clearly you're pointing out a lot of upside ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Thomas O'Malley, para=39)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Thomas O'Malley",
+      "paragraph": 40,
+      "text": "When you look at supply, that's a major issue in the ecosystem today. Could you talk about where you're concerned on supply, if you are, and then any gating factors as you look into next year, whether that be power, data center buildouts, et cetera, or do you feel really good about the ability to grow? Thank you very much.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Thomas O'Malley, para=40)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Ross Seymore",
+      "paragraph": 51,
+      "text": "Thanks for that. I guess for my follow-up, maybe more for Jean on the gross margin side of things. It's nice to see the gross margin popping up in the second quarter guide, but I just wanted to get some trends longer term, maybe not specific numbers. How should we think about when Helios and the Instinct side really ramps in the fourth quarter and more so next year? I could see some offsets with that carrying a below corporate average gross margin, but then everything that Lisa talked about with the EPYC side of things being significantly stronger might be more of an offset than it was in the ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Ross Seymore, para=51)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Jean Hu",
+      "paragraph": 52,
+      "text": "Yeah, Ross, thanks for the question. We are very pleased with how our gross margin is trending. It came in really strong in Q1. Also, as you mentioned, we guided the Q2 higher at the 56%. I think as we think about the second half quarter-over-quarter, as you know, there are some puts and the takes, right? I would just say from a tailwind perspective, we actually have a multiple tailwinds, really are going to help our gross margin. First, is the server CPU. You know, Lisa talked about the server CPU to expected to grow more than 70% in Q2 and, you know, continue to be really strong in second ha",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2026Q1, speaker=Jean Hu, para=52)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 4,
+      "text": "Now I'll turn the call over to Jean to provide additional color on our fourth quarter results and full year results. Jean?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Lisa Su, para=4)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Aaron Rakers",
+      "paragraph": 8,
+      "text": "Yeah. Thanks for taking the question. Lisa, at your Analyst Day back in November, you seem to kind of endorse the high $20 billion AI revenue expectation that was out there on the street for 2027. I know today you're reaffirming the path to strong double-digit growth. So I guess my question is, can you talk a little bit about what you've seen as far as customer engagements, how those might have expanded? I think you've alluded to in the past multiple multi-gigawatt opportunities. Just any double click on what you've seen for the MI455 and Helios platform from a demand shaping perspective as we",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Aaron Rakers, para=8)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Tim Arcuri",
+      "paragraph": 11,
+      "text": "Thanks a lot. Jean, I'm wondering if you can maybe give us a little bit of detail under the hood for the March guidance. I know you basically told us that, you told us about what, embedded is gonna be up a bit year over year. You know, client sounds like it's down seasonally, which I take to be maybe down 10. Can you give us a sense maybe of the other pieces? And then also, can you give us a sense of how, you know, data center GPU is gonna ramp through the year? I know it's, you know, back half of the year, but I think people are thinking at least are somewhere in the $14 billion range this ye",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Tim Arcuri, para=11)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 16,
+      "text": "Thank you. First, just a clarification on what you're assuming for your China MI308 sales beyond Q1? And then Lisa, specific to 2026, can your data center revenue grow at your target 60% plus growth rate. I realize that that's a multi-target, but do you think that there are enough drivers, whether it's on the server CPU side or GPU side, for you to grow at that target base even in 2026. Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Vivek Arya, para=16)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "CJ Muse",
+      "paragraph": 21,
+      "text": "I'm curious, on the server CPU side of the house, and given the dramatic tightness, curious your ability to source incremental capacity from TSMC and elsewhere. And I guess how long will it take for that to see wafers out and how should we think about the implications for kind of the growth throughout all of calendar 2026? And I guess as part of that, if you could speak to how we should be thinking about inflection in pricing as well, that would be very helpful.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=CJ Muse, para=21)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Operator",
+      "paragraph": 23,
+      "text": "Hey, CJ, do you have a follow-up question?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Operator, para=23)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 3,
+      "text": "Thank you, Matt, and good afternoon to all those listening today. We delivered an outstanding quarter with record revenue and profitability, reflecting broad-based demand across our data center AI, server and PC businesses. Revenue grew 36% year-over-year to $9.2 billion. Net income rose 31%, and free cash flow more than tripled led by record EPYC, Ryzen and Instinct processor sales. Our record third quarter performance marks a clear step-up in our growth trajectory as the combination of our expanding compute franchise and rapidly scaling data center AI business drives significant revenue and ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Lisa Su, para=3)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 7,
+      "text": "I had a near-term and a medium-term question. For the near term, Lisa, I was hoping if you could give us some sense of the CPU, GPU mix in Q3 and Q4. And just tactically, how are you managing this transition from your MI355 towards MI400 in the second half of next year? Can you continue to grow in the first half of next year from these Q4 levels? Or should we expect some kind of pause or digestion before customers get onboard the MI400 Series?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Vivek Arya, para=7)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 9,
+      "text": "And for my follow-up, there is some industry debate, Lisa, about OpenAI's ability to kind of simultaneously engage with all 3 merchants and the ASIC suppliers, just given the constraints around power and CapEx and their existing kind of CSP partners and so forth. So how are you thinking about that? Like what is your level of visibility in the initial engagement and then more importantly how it kind of broadens out into '27? Is there a way that one can model what the allocation would be? Or just how should we think about the level of visibility in this very important customer?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Vivek Arya, para=9)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Thomas O'Malley",
+      "paragraph": 12,
+      "text": "Congrats on the good results. I had a first question on Helios. Obviously, with the announcement at OCP, customer interaction has to be growing. Could you talk about into next year what your view is on discrete sales versus system sales? When do you see that crossover kind of happening? And just what initial responses have been from customers after getting a better look at it at the shelf?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Thomas O'Malley, para=12)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Thomas O'Malley",
+      "paragraph": 14,
+      "text": "Super helpful. And then as my follow-up, it's a broader question as well and similar to kind of what Vivek asked. But if you look at the power requirements that are out there for some of the early announcements into next year, they're pretty substantial. And then you also have component issues that you're seeing across interconnected memory. Just from your perspective as an industry leader, where do you think that the constraint will be? Will it come first with components not being available? Or do you think that both data center footprint in terms of infrastructure and/or power is the gating ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Thomas O'Malley, para=14)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Joshua Buchalter",
+      "paragraph": 17,
+      "text": "Actually, wanted to start on the CPU side. So you and your largest competitor in that space have talked about near-term strength, supporting AI workloads on general purpose servers from agentic. Maybe you could speak to the sustainability of these trends. And they called out supply constraints. Are you seeing any of those in your supply chain? And like are we in a period where we should think about the CPU business on the data center side as being a seasonal or should we expect normal seasonality in the first half of next year?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q3, speaker=Joshua Buchalter, para=17)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Lisa T. Su",
+      "paragraph": 3,
+      "text": "Thank you, Matt, and good afternoon to all those listening today. We delivered very strong second quarter results, with revenue exceeding the midpoint of guidance as higher EPYC and Ryzen processor sales more than offset headwinds from export controls that impacted Instinct sales. We set records for both EPYC and Ryzen CPU sales, reflecting the broad-based demand for our differentiated high-performance data center, PC and embedded processors. Second quarter revenue increased 32% year-over-year to a record $7.7 billion, and we delivered over $1 billion in free cash flow. Excluding the $800 mill",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Lisa T. Su, para=3)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Matthew D. Ramsay",
+      "paragraph": 5,
+      "text": "Operator, will you please poll the audience for questions? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Matthew D. Ramsay, para=5)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Thomas James O'Malley",
+      "paragraph": 7,
+      "text": "Lisa, I want to start on the Client business. So you had previously laid out a second half outlook that was roughly flattish with the first half as you're kind of protecting against some pull forwards. So first, do you think that your Q2 results included some pull forwards and the second half should still be flattish? And longer term after the Intel commentary regarding 18A, maybe what that means as a knee-jerk reaction just right away for AMD longer term in terms of share and ASPs?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Thomas James O'Malley, para=7)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Thomas James O'Malley",
+      "paragraph": 9,
+      "text": "Super helpful. And then secondly, I was hopeful you could provide us a little more color on China. So the guide doesn't include MI308, but perhaps you could comment on when you get approval, if the supply chain is ready, what's currently in inventory? And maybe compare what you think the contribution will look like versus the $700 million in Q2 and the $800 million for the second half you spoke about in April.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Thomas James O'Malley, para=9)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 12,
+      "text": "Lisa, if we look into 2026, right, that's when I think the sovereign opportunity could get quite meaningful for AMD. What is the right way to size that? What does this JV structure mean with some of the contracts that you signed? And would you consider this incremental to the kind of growth rate that you're seeing with your current MI business or would this be instead of? So just if you could give us a way to size what is that incremental opportunity from sovereign customers when it comes to '26. Like is it dependent on MI400, right, in which case it might be more [ back half weighted ], et ce",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Vivek Arya, para=12)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Vivek Arya",
+      "paragraph": 14,
+      "text": "Got it. And for my follow-up, I wanted to ask about gross margins for your MI product. So I understand in the early days, right, it has been dilutive. What kind of sales level is required for it to start becoming additive to margins? And let's say if I fast forward to Q4 and assume that your Q4 sales are growing year-on-year roughly the same rate as Q3 sales, should we expect gross margins to kind of stay at these Q3 levels? Or are there other plus/minus drivers we should think about in terms of gross margins as you go into Q4?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q2, speaker=Vivek Arya, para=14)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 4,
+      "text": "Thank you, Matt, and good afternoon to all those listening today. We delivered an outstanding start to the year, despite the evolving dynamics related to tariffs and the regulatory environment. Growth accelerated for the fourth consecutive quarter year-over-year, driven by strength in our core businesses and expanding data center and AI momentum. Revenue and EPS both exceeded consensus estimates as Instinct AI Accelerator, Epic, and Ryzen CPU sales grew significantly year-over-year. As a result, first quarter revenue increased 36% year-over-year to $7.4 billion, as our data center and client a",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Lisa Su, para=4)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Matt Ramsey",
+      "paragraph": 6,
+      "text": "Thank you very much, Jean. John, can you go ahead and pull the callers for the Q&A session, please? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Matt Ramsey, para=6)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Joshua Buchalter",
+      "paragraph": 8,
+      "text": "Thank you. Thank you for taking my questions, and congrats on the results. I was hoping you may expand on the drivers of upside in both the print and in particular the guide. How should we think about Q2 growth by segment? And I wanted to double-click on client in particular. That business is up 67% year-over-year in the first quarter, and there's obviously a lot of concerns on pull-ins. So, I was hoping you could walk through some of the drivers of the strength in client in particular and how you're thinking about that in Q2. Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Joshua Buchalter, para=8)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Joshua Buchalter",
+      "paragraph": 11,
+      "text": "Thank you for all that color. To follow up, I wanted to ask about how the ex-China, ex-308 Instinct family performed in the quarter and how you're thinking about the back half of the year. I think you mentioned in the prepared remarks, significant double digit year-over-year. Could you maybe provide some color on how Instinct did in the first quarter, how you're thinking about the first half ahead of the 350 ramp in next month? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Joshua Buchalter, para=11)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Timothy Arcuri",
+      "paragraph": 14,
+      "text": "Thanks a lot. Lisa, you said that data center GPU grew significant double digit, but it was like $600 million last March. So I would think that, I mean, I think a lot of us thought it was going to be like 1.7 to 1.75. So is that the wrong way to sort of interpret that? Because it seems like it went up triple digits at least. So can you help us there? And also, I'm curious, the additional $800 million that sort of has to come out from the ban, does that all come out in September or is there some remnants of that that have to come out in the fourth quarter as well?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Timothy Arcuri, para=14)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 15,
+      "text": "Yes, so again, what I would say is the data center GPU business did perform very well in the first quarter. I think we have to go back and look at what you had for first quarter 2024. But overall standpoint, it performed right where we would expect. Relative to your conversation as to where does it come out? I would say the vast majority comes out in the September quarter. So think about, Jean mentioned $1.5 billion, you would see the majority of it in Q2 and Q3 with very little in Q4. So we had always expected that the fourth quarter, because it would be very focused on the MI350 family would",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q1, speaker=Lisa Su, para=15)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Matt Ramsey",
+      "paragraph": 2,
+      "text": "Thank you, and welcome to AMD's fourth quarter and full year 2024 financial results conference call. By now, you should have had the opportunity to review a copy of our earnings press release and accompanying slides. If you have not had the chance to review these materials, they can be found on the Investor Relations page of amd.com. We will refer primarily to non-GAAP financial measures during today's call. The full non-GAAP to GAAP reconciliations are available in today's press release and slides posted on our website. Participants in today's conference call are Dr. Lisa Su, our Chair and Ch",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Matt Ramsey, para=2)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 3,
+      "text": "Thank you, Matt, and good afternoon to all those listening today. 2024 was a transformative year for AMD. We successfully established our multi-billion dollar data center AI franchise. Launched a broad set of leadership products and gained significant server and PC market share. As a result, we delivered record annual revenue, grew net income 26% for the year and more than doubled free cash flow from 2023. Importantly, the data center segment contributed roughly 50% of annual revenue, as Instinct and EPYC processor adoption expanded significantly with cloud, enterprise and supercomputing custo",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Lisa Su, para=3)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Aaron Rakers",
+      "paragraph": 7,
+      "text": "Yeah. Thanks for taking the question. I guess I'll just ask it right out of the gate is, as we think about the GPU business, and I appreciate you talked about delivering north of $5 billion of revenue, which is extremely impressive in 2024. I'm curious if you -- how we should think about framing the GPU, the instinct business, as we think about 2025? And any kind of color you can provide us as far as kind of the progression of revenue, the pace of revenue first half versus second half as we think about some of the product cycle dynamics. Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Aaron Rakers, para=7)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Aaron Rakers",
+      "paragraph": 9,
+      "text": "Yes. Thank you very much. And as a quick follow-up, just thinking about the guidance overall relative to that down 7% sequential I know you mentioned seasonality across the business segments. Are you assuming that you are down sequentially in data center in total in 1Q? And how do I frame that relative to seasonality? Thank you.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Aaron Rakers, para=9)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Timothy Arcuri",
+      "paragraph": 14,
+      "text": "Thanks a lot. And then, Jean can you just give us a sense of where data center GPU came in for December? I'm thinking it's probably in the $2 billion range. And then is it assumed to be down, flat or up, would you be willing to give a number for March? Thanks.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Timothy Arcuri, para=14)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Lisa Su",
+      "paragraph": 19,
+      "text": "Sure. So Vivek, thanks for the question. I think what we look at is certainly for the first year of the data center GPU business, we wanted to give some clear progression as it was going. The business is now at scale, actually now at over $5 billion. And as we go into 2025, I think our guidance will be more at the segment level with some color as to some qualitative color as to what's going on between the two businesses. And relative to your question about long-term growth rates, you are absolutely right. I mean I believe that the demand for AI compute is strong. And we've talked about a data ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Lisa Su, para=19)"
+    }
+  ]
+}

@@ -14,26 +14,16 @@ from typing import Optional
 import pandas as pd
 from pydantic import BaseModel
 
-# (metric, defeatbeta-api Ticker method, unit) — confirmed in docs/data-sources.md
-SPECS: list[tuple[str, str, str]] = [
-    ("ttm_eps", "ttm_eps", "USD"),
-    ("ttm_pe", "ttm_pe", "x"),
-    ("market_cap", "historical_market_cap", "USD"),
-    ("ps_ratio", "historical_ps_ratio", "x"),
-    ("pb_ratio", "historical_pb_ratio", "x"),
-    ("peg_ratio", "historical_peg_ratio", "x"),
-    ("roe", "historical_roe", "%"),
-    ("roa", "historical_roa", "%"),
-    ("roic", "historical_roic", "%"),
-    ("wacc", "historical_wacc", "%"),
-    ("equity_multiplier", "historical_equity_multiplier", "x"),
-    ("asset_turnover", "historical_asset_turnover", "x"),
-]
+# Display units per metric. The actual defeatbeta-api method names + value columns live in
+# live.py (verified against the real package).
+UNITS = {
+    "ttm_eps": "USD", "ttm_pe": "x", "market_cap": "USD", "ps_ratio": "x", "pb_ratio": "x",
+    "peg_ratio": "x", "roe": "%", "roa": "%", "roic": "%", "wacc": "%",
+    "equity_multiplier": "x", "asset_turnover": "x",
+    "revenue": "USD", "gross_margin": "%", "operating_margin": "%",
+}
 
-UNITS = {m: u for m, _, u in SPECS} | {
-    "revenue": "USD", "gross_margin": "%", "operating_margin": "%"}
-
-MOCK_URL = "https://huggingface.co/datasets/defeat-beta/yahoo-finance-data"
+MOCK_URL = "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data"
 
 # Deterministic demo snapshots (illustrative). Used when use_mock or a live call fails.
 MOCK_SNAPSHOTS: dict[str, dict[str, float]] = {
@@ -117,58 +107,40 @@ class FactStore:
     def to_dataframe(self) -> pd.DataFrame:
         return pd.DataFrame([f.model_dump() for f in self._facts])
 
-    def save(self, directory: Path) -> tuple[Path, Path]:
+    def to_records(self) -> list[dict]:
+        return [json.loads(f.model_dump_json()) for f in self._facts]
+
+    def save_json(self, directory: Path) -> Path:
         directory.mkdir(parents=True, exist_ok=True)
-        pq = directory / f"{self.ticker}_{self.period}.parquet"
         js = directory / f"{self.ticker}_{self.period}.json"
-        self.to_dataframe().to_parquet(pq, index=False)
-        js.write_text(json.dumps([json.loads(f.model_dump_json()) for f in self._facts], indent=2))
-        return pq, js
+        js.write_text(json.dumps(self.to_records(), indent=2))
+        return js
 
 
-def _latest_numeric(obj) -> float:
-    """Best-effort: most recent numeric value from a defeatbeta-api result."""
-    df = getattr(obj, "data", obj)
-    if isinstance(df, pd.DataFrame) and not df.empty:
-        num = df.select_dtypes("number")
-        if num.shape[1]:
-            return float(num.iloc[-1, -1])
-    if isinstance(obj, (int, float)):
-        return float(obj)
-    raise ValueError(f"could not parse numeric from {type(obj).__name__}")
+def _snapshot_store(ticker: str, period: str) -> FactStore:
+    """Last-resort offline store from a hard-coded snapshot (tickers without cached real data)."""
+    store = FactStore(ticker, period)
+    snap = MOCK_SNAPSHOTS.get(ticker.upper(), {})
+    for metric, value in snap.items():
+        store.add(metric, value, UNITS.get(metric, "x"),
+                  source="snapshot:builtin", source_url=MOCK_URL)
+    if not snap:
+        store.record_gap("_all", f"no cached/live data for {ticker}")
+    return store
 
 
 def build_fact_store(ticker: str, period: str, use_mock: bool = True) -> FactStore:
-    """Build a FactStore from defeatbeta-api, falling back to the mock snapshot per metric."""
-    store = FactStore(ticker, period)
-    mock = MOCK_SNAPSHOTS.get(ticker.upper(), {})
+    """Build a FactStore.
 
-    ticker_obj = None
-    if not use_mock:
-        try:
-            from defeatbeta_api.data.ticker import Ticker
-            ticker_obj = Ticker(ticker)
-        except Exception as e:  # pragma: no cover - network/runtime dependent
-            store.record_gap("_init", f"defeatbeta-api unavailable: {e}")
-
-    for metric, method, unit in SPECS:
-        if ticker_obj is not None:
-            try:
-                val = _latest_numeric(getattr(ticker_obj, method)())
-                store.add(metric, val, unit, source=f"defeatbeta-api:{method}")
-                continue
-            except Exception as e:  # pragma: no cover
-                store.record_gap(metric, f"live fetch failed: {e}")
-        if metric in mock:
-            store.add(metric, mock[metric], unit, source="mock:defeatbeta-snapshot", source_url=MOCK_URL)
-        else:
-            store.record_gap(metric, "no live value and no mock")
-
-    for metric in ("revenue", "gross_margin", "operating_margin"):
-        if store.get(metric) is None and metric in mock:
-            store.add(metric, mock[metric], UNITS[metric],
-                      source="mock:defeatbeta-snapshot", source_url=MOCK_URL)
-    return store
+    use_mock=True  -> cached REAL defeatbeta-api data from mock/data/ (snapshot only if absent)
+    use_mock=False -> live defeatbeta-api (Python 3.11+, network)
+    """
+    if use_mock:
+        from . import mockdata
+        store = mockdata.load_fact_store(ticker, period)
+        return store if store is not None else _snapshot_store(ticker, period)
+    from .live import fetch_facts
+    return fetch_facts(ticker, period)
 
 
 # ---- Slot rendering (the model writes {{F-00xx}}; we substitute verified values) ----

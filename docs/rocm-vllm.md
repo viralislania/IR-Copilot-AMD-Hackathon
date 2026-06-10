@@ -5,15 +5,18 @@
     OpenAI-compatible server. LangGraph/LangChain talk to it over plain HTTP, so there is zero
     vendor lock-in above the model node.
 
-## Why MI300X changes the design
+## Why a single MI300X is enough
 
-The **MI300X has 192 GB of HBM3e per GPU** (8 per node typical). That means:
+We target **one AMD MI300X for all needs**. Its **192 GB of HBM3e** is the reason a single GPU
+covers the whole workload:
 
-- **No quantization required** — run 70B-class models in `float16`/`bf16` for top draft
-  quality.
-- **Multiple models co-resident** — drafting (70B), reasoning (8B + LoRA), embeddings, ASR,
-  and sentiment can be served concurrently.
+- **No quantization required** — run a 70B-class drafting model in `bf16` for top quality.
+- **All models co-resident on one card** — drafting (70B), reasoning (8B + LoRA), embeddings
+  (bge), sentiment (**FinBERT, the default**), and ASR (Whisper) fit together in 192 GB, served
+  concurrently. No multi-GPU, no multi-node.
 - **Long context** comfortably (full transcripts + filings + peer context in one prompt).
+- `--tensor-parallel-size 1` everywhere (single device); models are separated by port, not by
+  GPU. Use `--gpu-memory-utilization` per server to share the one card.
 
 ## Bring-up
 

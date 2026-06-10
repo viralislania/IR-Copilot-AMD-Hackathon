@@ -1,64 +1,49 @@
-"""Small demo corpus so notebooks run offline: transcript chunks, news, social posts.
+"""Evidence corpus — REAL defeatbeta-api data (no placeholder URLs).
 
-In production these come from defeatbeta-api / custom PDF/audio ingestion (docs/wiki-ingestion.md).
-Here they are compact, realistic stand-ins for a reproducible demo.
+Offline (USE_MOCK_DATA=true): reads cached real data from mock/data/ (built by
+mock/build_mock_data.py). Live (false): fetches fresh from defeatbeta-api. Either way every
+news item carries its real article link and every transcript chunk carries real provenance
+(ticker / fiscal period / speaker / paragraph + the HF dataset).
 """
 from __future__ import annotations
 
-# Earnings-call transcript chunks (target + peers). role: exec (prepared) / analyst (Q&A).
-TRANSCRIPT_CHUNKS = [
-    {"ticker": "NVDA", "doc_type": "transcript", "period": "FY2025Q4", "role": "analyst",
-     "source_url": "https://example.com/nvda/fy25q4#qa1",
-     "text": "Analyst: Your data center gross margin expanded sharply. How sustainable is this "
-             "gross margin level given rising competition in AI accelerators?"},
-    {"ticker": "NVDA", "doc_type": "transcript", "period": "FY2025Q4", "role": "analyst",
-     "source_url": "https://example.com/nvda/fy25q4#qa2",
-     "text": "Analyst: Can you discuss supply constraints and lead times for your latest GPU "
-             "platform, and when supply will meet the very strong demand?"},
-    {"ticker": "NVDA", "doc_type": "transcript", "period": "FY2025Q3", "role": "analyst",
-     "source_url": "https://example.com/nvda/fy25q3#qa1",
-     "text": "Analyst: How should we think about customer concentration risk as a few large "
-             "cloud customers drive a large share of data center revenue?"},
-    {"ticker": "NVDA", "doc_type": "transcript", "period": "FY2025Q4", "role": "exec",
-     "source_url": "https://example.com/nvda/fy25q4#prep1",
-     "text": "CFO: Revenue grew across data center as customers ramped AI training and inference. "
-             "We expect continued sequential growth and remain supply constrained."},
-    {"ticker": "AMD", "doc_type": "transcript", "period": "FY2025Q4", "role": "analyst",
-     "source_url": "https://example.com/amd/fy25q4#qa1",
-     "text": "Analyst: Your gross margin trails the leader by a wide gap. What is the roadmap to "
-             "close the gross margin gap with competing AI accelerators?"},
-    {"ticker": "AMD", "doc_type": "transcript", "period": "FY2025Q4", "role": "analyst",
-     "source_url": "https://example.com/amd/fy25q4#qa2",
-     "text": "Analyst: How is your AI GPU ramp progressing against the dominant incumbent, and "
-             "what software ecosystem gaps remain?"},
-    {"ticker": "INTC", "doc_type": "transcript", "period": "FY2025Q4", "role": "analyst",
-     "source_url": "https://example.com/intc/fy25q4#qa1",
-     "text": "Analyst: With negative operating margin this quarter, what is the path back to "
-             "profitability and positive return on invested capital?"},
-]
+from typing import List
 
-# Recent news headlines per ticker.
-NEWS_HEADLINES = [
-    {"ticker": "NVDA", "date": "2026-05-30", "url": "https://example.com/news/1",
-     "text": "NVIDIA data center demand stays red-hot but investors fret about AI capex digestion."},
-    {"ticker": "NVDA", "date": "2026-05-28", "url": "https://example.com/news/2",
-     "text": "Analysts raise NVIDIA targets on strong gross margin and record revenue guidance."},
-    {"ticker": "NVDA", "date": "2026-05-25", "url": "https://example.com/news/3",
-     "text": "Rising competition and customer in-house chips spark concern over NVIDIA market share."},
-    {"ticker": "NVDA", "date": "2026-05-22", "url": "https://example.com/news/4",
-     "text": "Supply constraints ease for NVIDIA's latest GPU platform, boosting optimism."},
-    {"ticker": "NVDA", "date": "2026-05-20", "url": "https://example.com/news/5",
-     "text": "Regulatory scrutiny over export rules weighs on NVIDIA shares."},
-]
+from .config import settings
+from . import mockdata
 
-# Social posts (stand-in for a stock-tweets dataset).
-SOCIAL_POSTS = [
-    {"ticker": "NVDA", "url": "https://example.com/post/1",
-     "text": "Margins look amazing, demand is insane. Long $NVDA."},
-    {"ticker": "NVDA", "url": "https://example.com/post/2",
-     "text": "Worried about competition and customers building their own chips. $NVDA overvalued?"},
-    {"ticker": "NVDA", "url": "https://example.com/post/3",
-     "text": "Export restrictions are a real risk for $NVDA guidance."},
-    {"ticker": "NVDA", "url": "https://example.com/post/4",
-     "text": "Record revenue again, guidance strong. Bullish $NVDA."},
-]
+
+def news_items(ticker: str) -> List[dict]:
+    """Recent news headlines with real article links — the sentiment + evidence source."""
+    if settings.use_mock_data:
+        return mockdata.load_news(ticker)
+    from .live import fetch_news
+    return fetch_news(ticker, limit=20)
+
+
+def transcript_chunks(ticker: str) -> List[dict]:
+    """Analyst Q&A transcript chunks with real provenance — the wiki source."""
+    if settings.use_mock_data:
+        return mockdata.load_transcript_chunks(ticker)
+    from .live import fetch_transcript_qa
+    import datetime as dt
+    return fetch_transcript_qa(ticker, since_year=dt.date.today().year - 5)
+
+
+def wiki_chunks_for(tickers: List[str]) -> List[dict]:
+    out: List[dict] = []
+    for tk in tickers:
+        out.extend(transcript_chunks(tk))
+    return out
+
+
+# Backward-compatible module attrs (real cached data), precomputed only in offline mode so
+# importing this module never triggers live network fetches. Used by notebooks.
+if settings.use_mock_data:
+    _TK = mockdata.available_tickers()
+    TRANSCRIPT_CHUNKS: List[dict] = wiki_chunks_for(_TK)
+    NEWS_HEADLINES: List[dict] = [it for tk in _TK for it in news_items(tk)]
+else:
+    TRANSCRIPT_CHUNKS = []
+    NEWS_HEADLINES = []
+SOCIAL_POSTS: List[dict] = []  # no real social source wired; sentiment uses real news only

@@ -66,6 +66,7 @@ nav:
   - Platform:
       - AMD MI300X + vLLM: rocm-vllm.md
       - LangGraph Orchestration: orchestration.md
+      - HTTP API (FastAPI + CopilotKit): api.md
       - UI (CopilotKit + optional Flutter): ui.md
   - Delivery:
       - 4-Day Roadmap: roadmap.md

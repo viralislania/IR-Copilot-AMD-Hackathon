@@ -1,18 +1,15 @@
-# IR-Copilot — core dependencies (cross-platform: macOS / Linux / dev machines)
+# IR-Copilot — core dependencies.
+#   Offline/dev runs on Python 3.9+; the API server + live defeatbeta-api need Python 3.11+.
 # Install:  python -m pip install -r requirements.txt
-# GPU/ROCm-only deps (vLLM, torch-rocm, unsloth, whisper) live in requirements-gpu.txt
-# and are installed ONLY on the AMD MI300X node.
+# GPU/ROCm-only deps (vLLM, unsloth, whisper) are in requirements-gpu.txt (MI300X node only).
+# Live market data:  pip install -r requirements-live.txt  (Python 3.11+; see docs/data-sources.md)
 
 # --- Config ---
 python-dotenv>=1.0
 pydantic>=2.6
 
-# --- Data layer (defeatbeta-api primary, yfinance fallback) ---
-defeatbeta-api          # Yahoo-Finance alternative; data on HF + DuckDB (Python 3.11+)
-yfinance>=0.2.40
+# --- Data / persistence (sqlite is stdlib — no parquet/duckdb needed by IR-Copilot) ---
 pandas>=2.1
-pyarrow>=15.0
-duckdb>=0.10
 
 # --- Orchestration & agents ---
 langgraph>=0.2.0
@@ -22,15 +19,16 @@ openai>=1.30
 
 # --- RAG / vector store / embeddings (clients are cross-platform) ---
 qdrant-client>=1.9
-sentence-transformers>=3.0
+sentence-transformers>=3.0      # real embeddings (EMBEDDING_BACKEND=sentence-transformers)
 
-# --- Sentiment (FinBERT inference client) ---
+# --- Sentiment (FinBERT — default; needs torch, provided by ROCm on the MI300X) ---
 transformers>=4.41
 
-# --- UI backend (CopilotKit + FastAPI) ---
-copilotkit              # AG-UI protocol bridge to LangGraph
+# --- API server (FastAPI + CopilotKit AG-UI) ---
 fastapi>=0.110
 uvicorn>=0.29
+sse-starlette>=2.0
+copilotkit                       # AG-UI bridge to LangGraph (LangGraphAGUIAgent)
 
 # --- Notebooks / tooling ---
 jupyter>=1.0

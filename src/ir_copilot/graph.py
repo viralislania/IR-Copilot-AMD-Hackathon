@@ -33,18 +33,20 @@ from .agents.verify import verify
 
 MAX_DRAFT_RETRIES = 2
 
-# Process-level wiki (Qdrant client isn't serializable, so it can't live in graph state).
-_WIKI: Optional[WikiStore] = None
+# Process-level wiki cache keyed by ticker set (Qdrant client isn't serializable → not in state).
+_WIKI: dict[frozenset, WikiStore] = {}
 
 
-def _get_wiki() -> WikiStore:
-    global _WIKI
-    if _WIKI is None:
+def _get_wiki(tickers: list[str]) -> WikiStore:
+    key = frozenset(t.upper() for t in tickers)
+    if key not in _WIKI:
         w = WikiStore(get_embedder())
-        w.ensure_collection()
-        w.upsert([WikiChunk(chunk_id=str(i), **c) for i, c in enumerate(corpus.TRANSCRIPT_CHUNKS)])
-        _WIKI = w
-    return _WIKI
+        w.ensure_collection(recreate=True)
+        chunks = corpus.wiki_chunks_for(sorted(key))
+        if chunks:
+            w.upsert([WikiChunk(chunk_id=str(i), **c) for i, c in enumerate(chunks)])
+        _WIKI[key] = w
+    return _WIKI[key]
 
 
 class IRState(TypedDict, total=False):
@@ -82,14 +84,17 @@ def n_extract(state: IRState) -> dict:
             "messages": [("ai", f"Extracted {len(store.facts)} grounded facts; {len(peers)} peers.")]}
 
 
+def _wiki_tickers(state: IRState) -> list[str]:
+    return [state["ticker"], *settings.peers]
+
+
 def n_wiki(state: IRState) -> dict:
-    wiki = _get_wiki()
+    wiki = _get_wiki(_wiki_tickers(state))
     return {"wiki_ready": True, "messages": [("ai", f"Indexed wiki ({wiki.mode}).")]}
 
 
 def n_sentiment(state: IRState) -> dict:
-    items = [it for it in (corpus.NEWS_HEADLINES + corpus.SOCIAL_POSTS)
-             if it["ticker"] == state["ticker"]]
+    items = corpus.news_items(state["ticker"])
     snap = analyze_sentiment(state["ticker"], items)
     return {"sentiment": snap,
             "messages": [("ai", f"Net sentiment {snap.net_score}; {len(snap.negative_themes)} concerns.")]}
@@ -104,7 +109,7 @@ def n_compare(state: IRState) -> dict:
 
 def n_predict(state: IRState) -> dict:
     qs = predict_questions(_store(state), state["sentiment"], state["peer_comparison"],
-                           wiki=_get_wiki(), chat=get_chat("analyst"))
+                           wiki=_get_wiki(_wiki_tickers(state)), chat=get_chat("analyst"))
     return {"predicted_questions": qs, "messages": [("ai", f"Predicted {len(qs)} hard questions.")]}
 
 

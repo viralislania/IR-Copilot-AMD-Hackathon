@@ -12,18 +12,19 @@ protocol**, with real-time state sync and built-in human-in-the-loop.
 ### Backend (Python)
 
 ```python
-from copilotkit import LangGraphAgent, CopilotKitRemoteEndpoint
+from copilotkit import CopilotKitRemoteEndpoint, LangGraphAGUIAgent
 from copilotkit.integrations.fastapi import add_fastapi_endpoint
-from fastapi import FastAPI
 
-app = FastAPI()
 sdk = CopilotKitRemoteEndpoint(agents=[
-    LangGraphAgent(name="ir_copilot", description="Earnings-call IR workflow", graph=graph),
+    LangGraphAGUIAgent(name="ir_copilot", description="Earnings-call IR workflow",
+                       graph=build_graph()),
 ])
 add_fastapi_endpoint(app, sdk, "/copilotkit")
 ```
 
-Packages: `pip install copilotkit langgraph`.
+Packages: `pip install copilotkit langgraph`. This is implemented in
+`api/server.py` — see the [HTTP API](api.md) page for the full
+endpoint list (REST + SSE) that the frontend also uses.
 
 ### Frontend (React)
 

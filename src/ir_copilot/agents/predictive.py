@@ -61,11 +61,37 @@ def _from_sentiment(sentiment: SentimentSnapshot) -> List[Question]:
     return qs
 
 
+def _question_sentence(text: str) -> str:
+    """Extract the actual question from an analyst paragraph (last sentence ending in '?')."""
+    import re
+    sentences = re.split(r"(?<=[.?!])\s+", text.strip())
+    qs = [s for s in sentences if s.endswith("?")]
+    return (qs[-1] if qs else text).strip()[:240]
+
+
+def _from_wiki(wiki, ticker: str, k: int = 6) -> List[Question]:
+    """Predict from REAL analyst questions asked on past calls (retrieved from the wiki)."""
+    if wiki is None:
+        return []
+    seed = "gross margin guidance revenue growth competition demand supply capital allocation risk"
+    out = []
+    for h in wiki.search(seed, ticker=ticker, k=k, doc_type="transcript"):
+        out.append(Question(
+            text=_question_sentence(h["text"]),
+            difficulty=round(min(1.0, 0.55 + max(0.0, h.get("score", 0.0)) / 2), 2),
+            rationale=f"Asked by an analyst on the {h.get('period','prior')} call.",
+            evidence=[h.get("source_url", "")],
+        ))
+    return out
+
+
 def _attach_precedent(questions: List[Question], wiki, ticker: str) -> None:
-    """Enrich each question with a retrieved precedent analyst question (RAG), if wiki given."""
+    """Enrich lag/sentiment questions with a retrieved precedent analyst question (RAG)."""
     if wiki is None:
         return
     for q in questions:
+        if q.evidence and any("earning_call_transcripts" in e for e in q.evidence):
+            continue  # already a wiki-sourced question
         hits = wiki.search(q.text, ticker=ticker, k=1, doc_type="transcript")
         if hits:
             q.evidence.append(hits[0].get("source_url", ""))
@@ -75,7 +101,7 @@ def _attach_precedent(questions: List[Question], wiki, ticker: str) -> None:
 def predict_questions(store: FactStore, sentiment: SentimentSnapshot,
                       peer: PeerComparison, wiki=None, chat=None,
                       top_k: int = 8) -> List[Question]:
-    questions = _from_lags(store, peer) + _from_sentiment(sentiment)
+    questions = _from_lags(store, peer) + _from_sentiment(sentiment) + _from_wiki(wiki, store.ticker)
     _attach_precedent(questions, wiki, store.ticker)
 
     # de-dup, rank by difficulty

@@ -10,7 +10,7 @@ __pycache__/
 .eggs/
 build/
 dist/
-.venv/
+.venv*/
 venv/
 env/
 .python-version
@@ -21,6 +21,9 @@ env/
 
 # ---- Generated artifacts (do NOT push) ----
 data/
+!mock/
+!mock/data/
+!mock/data/**
 artifacts/
 outputs/
 *.parquet

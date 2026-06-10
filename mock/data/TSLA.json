@@ -1,0 +1,697 @@
+{
+  "ticker": "TSLA",
+  "period": "FY2026Q1",
+  "fetched_at": "2026-06-10",
+  "facts": [
+    {
+      "fact_id": "F-0001",
+      "ticker": "TSLA",
+      "metric": "ttm_eps",
+      "period": "FY2026Q1",
+      "value": 1.0946,
+      "unit": "USD",
+      "source": "defeatbeta-api:ttm_eps",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0002",
+      "ticker": "TSLA",
+      "metric": "ttm_pe",
+      "period": "FY2026Q1",
+      "value": 362.4,
+      "unit": "x",
+      "source": "defeatbeta-api:ttm_pe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0003",
+      "ticker": "TSLA",
+      "metric": "market_cap",
+      "period": "FY2026Q1",
+      "value": 1489820556652.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:market_capitalization",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0004",
+      "ticker": "TSLA",
+      "metric": "ps_ratio",
+      "period": "FY2026Q1",
+      "value": 15.22,
+      "unit": "x",
+      "source": "defeatbeta-api:ps_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0005",
+      "ticker": "TSLA",
+      "metric": "pb_ratio",
+      "period": "FY2026Q1",
+      "value": 17.71,
+      "unit": "x",
+      "source": "defeatbeta-api:pb_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0006",
+      "ticker": "TSLA",
+      "metric": "peg_ratio",
+      "period": "FY2026Q1",
+      "value": 22.64,
+      "unit": "x",
+      "source": "defeatbeta-api:peg_ratio",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0007",
+      "ticker": "TSLA",
+      "metric": "roe",
+      "period": "FY2026Q1",
+      "value": 0.5700000000000001,
+      "unit": "%",
+      "source": "defeatbeta-api:roe",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0008",
+      "ticker": "TSLA",
+      "metric": "roa",
+      "period": "FY2026Q1",
+      "value": 0.33999999999999997,
+      "unit": "%",
+      "source": "defeatbeta-api:roa",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0009",
+      "ticker": "TSLA",
+      "metric": "roic",
+      "period": "FY2026Q1",
+      "value": 0.6,
+      "unit": "%",
+      "source": "defeatbeta-api:roic",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0010",
+      "ticker": "TSLA",
+      "metric": "wacc",
+      "period": "FY2026Q1",
+      "value": 19.15,
+      "unit": "%",
+      "source": "defeatbeta-api:wacc",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0011",
+      "ticker": "TSLA",
+      "metric": "equity_multiplier",
+      "period": "FY2026Q1",
+      "value": 1.68,
+      "unit": "x",
+      "source": "defeatbeta-api:equity_multiplier",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0012",
+      "ticker": "TSLA",
+      "metric": "asset_turnover",
+      "period": "FY2026Q1",
+      "value": 0.16,
+      "unit": "x",
+      "source": "defeatbeta-api:asset_turnover",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0013",
+      "ticker": "TSLA",
+      "metric": "gross_margin",
+      "period": "FY2026Q1",
+      "value": 21.08,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_gross_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "TSLA",
+      "metric": "revenue",
+      "period": "FY2026Q1",
+      "value": 22387000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_gross_margin.total_revenue",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0015",
+      "ticker": "TSLA",
+      "metric": "operating_margin",
+      "period": "FY2026Q1",
+      "value": 4.2,
+      "unit": "%",
+      "source": "defeatbeta-api:quarterly_operating_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    }
+  ],
+  "gaps": [],
+  "news": [
+    {
+      "ticker": "TSLA",
+      "text": "Elon Musk, after DOGE and politics, bets on SpaceX IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doge-politics-bets-013142887.html",
+      "publisher": "AFP",
+      "date": "2026-06-10",
+      "uuid": "c1ef1617-a1f7-39b1-9505-4a044e876ea9"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "GM Follows Tesla\u2019s Playbook \u2014 Expands Into Energy Storage With Peak Partnership",
+      "url": "https://finance.yahoo.com/m/2f00466f-4df9-3454-ba51-b54afc37e74f/gm-follows-tesla%E2%80%99s-playbook-%E2%80%94.html",
+      "publisher": "Stocktwits",
+      "date": "2026-06-10",
+      "uuid": "2f00466f-4df9-3454-ba51-b54afc37e74f"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Why Cathie Wood Seemingly Can\u2019t Get Enough of Kratos Defense Stock",
+      "url": "https://finance.yahoo.com/m/e1983764-f566-34b6-bf46-d223754a8e15/why-cathie-wood-seemingly.html",
+      "publisher": "Barchart",
+      "date": "2026-06-09",
+      "uuid": "e1983764-f566-34b6-bf46-d223754a8e15"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "ASML Weighs Musk Terafab Talks Against Valuation And Governance Questions",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-weighs-musk-terafab-talks-001808775.html",
+      "publisher": "Simply Wall St.",
+      "date": "2026-06-09",
+      "uuid": "2a50ba19-156c-3d38-baeb-44d841e9fe5c"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Tesla's China Sales Just Snapped a 2-Month Slump With a 22% Jump. Is the Turnaround Real?",
+      "url": "https://finance.yahoo.com/m/ee6f0237-149f-3c00-84f6-f7084779f6ee/tesla%27s-china-sales-just.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "ee6f0237-149f-3c00-84f6-f7084779f6ee"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "The Model 3 Era at Rivian Begins. Its Lower-Price EV Is Here.",
+      "url": "https://finance.yahoo.com/m/f4e6f811-762f-3cc6-b499-2ea0f8d3d896/the-model-3-era-at-rivian.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "f4e6f811-762f-3cc6-b499-2ea0f8d3d896"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "The SpaceX IPO Is Days Away. Here's How to Prepare.",
+      "url": "https://finance.yahoo.com/m/63dea876-9532-3cba-9914-71d952efc1d0/the-spacex-ipo-is-days-away..html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "63dea876-9532-3cba-9914-71d952efc1d0"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Rivian Launches the R2 to Chase Tesla",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/rivian-launches-r2-chase-tesla-170138937.html",
+      "publisher": "GuruFocus.com",
+      "date": "2026-06-09",
+      "uuid": "04a91b52-789e-3750-b389-7763d24438cc"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Elon Musk Reveals Insane Plan to Double American Chip Production in a Single Plant",
+      "url": "https://finance.yahoo.com/m/fef0906f-3ccb-30ea-923b-c04168fcef24/elon-musk-reveals-insane-plan.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "fef0906f-3ccb-30ea-923b-c04168fcef24"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "How Dutch Safety Data Could Open Europe for Tesla",
+      "url": "https://finance.yahoo.com/m/1bc9cf5e-be78-39a1-8cb9-f3db3997ece6/how-dutch-safety-data-could.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "1bc9cf5e-be78-39a1-8cb9-f3db3997ece6"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "SpaceX IPO: A Tesla-Like Opportunity or a $1.75 Trillion Trap?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-ipo-tesla-opportunity-1-144800601.html",
+      "publisher": "Zacks",
+      "date": "2026-06-09",
+      "uuid": "f060061c-acc7-37b0-80ca-77ac00809a89"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Solidion Strengthens Battery Moat with 7 New Patents",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/solidion-strengthens-battery-moat-7-142833032.html",
+      "publisher": "IPO-Edge.com",
+      "date": "2026-06-09",
+      "uuid": "2a0a1b46-0e0c-3ccb-b307-71ebd6dd9011"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Elon Musk Says He\u2019s Building a Chip \u201c2 to 3 Times\u201d Better Than NVIDIA at 10% The Cost. Is He Bluffing?",
+      "url": "https://finance.yahoo.com/m/5bc4f594-dd5c-3732-982b-2473af8bf581/elon-musk-says-he%E2%80%99s-building.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "5bc4f594-dd5c-3732-982b-2473af8bf581"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Rob Arnott: Will SpaceX Create The Biggest Bubble Ever?",
+      "url": "https://finance.yahoo.com/m/b2fe71eb-2399-37aa-b390-abe6984d4685/rob-arnott%3A-will-spacex.html",
+      "publisher": "etf.com",
+      "date": "2026-06-09",
+      "uuid": "b2fe71eb-2399-37aa-b390-abe6984d4685"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Stock Market Today, June 9: Aurora Innovation Falls After Uber Block Sale Weighs on Autonomous Trucking Stocks",
+      "url": "https://finance.yahoo.com/m/7c54e2f7-68d3-312f-b580-97b3e65f4478/stock-market-today%2C-june-9%3A.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "7c54e2f7-68d3-312f-b580-97b3e65f4478"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "TSLA Stock: Cathie Wood Slaps $75 Robotaxi Ticket Into ARK\u2019s Bull Case",
+      "url": "https://finance.yahoo.com/m/dc8b60a6-2897-3e74-bb3b-f96fb36116b1/tsla-stock%3A-cathie-wood-slaps.html",
+      "publisher": "Stocktwits",
+      "date": "2026-06-09",
+      "uuid": "dc8b60a6-2897-3e74-bb3b-f96fb36116b1"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Stocks making big moves yesterday: Marvell Technology, Intel, Teradyne, JFrog, and Tesla",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-200614526.html",
+      "publisher": "StockStory",
+      "date": "2026-06-09",
+      "uuid": "c74fb64b-d5a3-39e3-b3a5-e0a4047979b7"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Fluence Scores Independent Validation of Industry-Leading Battery Storage Reliability",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/fluence-scores-independent-validation-industry-221148794.html",
+      "publisher": "IPO-Edge.com",
+      "date": "2026-06-09",
+      "uuid": "6c9cba55-8dc2-376d-84ca-ce818d43d664"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Energy Transition Update - CIP Boosts Energy Transition With Battery Storage Project",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/energy-transition-cip-boosts-energy-113751111.html",
+      "publisher": "Simply Wall St.",
+      "date": "2026-06-09",
+      "uuid": "831c2b88-f088-3625-9704-9df5d3a0a7ba"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Why Elon Musk's track record of unfilled promises matters for investors",
+      "url": "https://finance.yahoo.com/video/why-elon-musks-track-record-of-unfilled-promises-matters-for-investors-203515177.html",
+      "publisher": "Yahoo Finance Video",
+      "date": "2026-06-09",
+      "uuid": "76b04b4f-8812-4d7d-9357-2a75afa124dd"
+    }
+  ],
+  "transcript_chunks": [
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 19,
+      "text": "Thank you very much, Vaibhav. Now we're going to go to investor questions, starting with a question from Say.com. The first question is: when will we have the Optimus 3 reveal? Which we already touched on, but the rest of the question is: when will Optimus production start, since we ended the Model X and S production earlier mid-year? And then, what's the expected Optimus production rate exiting this year, and what are the initial targeted scales?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=19)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 24,
+      "text": "Great. Thank you, Elon. The next question is, what milestones are you targeting for unsupervised FSD and Robotaxi expansion beyond Austin this year, and how will that drive recurring revenue?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=24)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 26,
+      "text": "Great. Thank you very much. The next question is, when do you expect FSD unsupervised to reach customer cars?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=26)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 28,
+      "text": "Great. The next question is, how will Hardware 3 cars reach unsupervised FSD?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=28)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 32,
+      "text": "Great. Thank you very much. The next question is, what enabled you to finish the AI5 tape-out early, and were there any changes to the original vision? Last week, Elon said AI5 will go into Optimus and the supercomputer, but one month ago said it would go into the Robotaxi. Has AI5 been dropped from the vehicle roadmap?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=32)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2026Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 35,
+      "text": "Great. The next question is, now that FSD has been approved in the Netherlands and is expected to launch across Europe this summer, can you discuss your robotaxi strategy for the region?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2026Q1, speaker=Travis Axelrod, para=35)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 1,
+      "text": "Good afternoon, everyone, and welcome to Tesla's fourth quarter 2025 Q&A webcast. My name is Travis Axelrod of Investor Relations. I am joined today by Elon Musk, Vaibhav Taneja, and a number of other executives. Our Q4 results were announced at about 3 PM Central time in the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward-looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number of risks and uncertainties, inclu",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=1)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 5,
+      "text": "Great. Thank you very much, Vaibhav. Now we're going to head over to investor questions. As always, we will start with questions from say.com. The first question is, today there are approximately 90 million cars sold globally each year. Does Tesla have a view, based on its robotaxi ambition, what this number will be in five or ten years? And how does this impact Tesla's EV strategy to have more models?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=5)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 9,
+      "text": "Great. Thank you so much. Next question, a bit related. Are there still plans to launch new models to address different price segments and vehicle types which could materially expand the TAM for Tesla?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=9)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 12,
+      "text": "Great. The next question is, historically, Tesla has spoken about gross margin per model. Are there standalone gross margin targets for the current models excluding the benefits for FSD sales?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=12)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 15,
+      "text": "Fantastic. The next question we unfortunately have to skip because it's not related to Tesla. We would like to remind folks who use the say platform to please focus these questions on Tesla. With that in mind, we're going to move on to the next question. Which is what is the current bottleneck to increased Robotaxi deployment and personal use unsupervised FSD? Is it the safety and performance of the most recent models or is it people to monitor the robotaxis in car, or remotely? Or is there some other blocker? Ashok, if you want to kick off on this one.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=15)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 18,
+      "text": "Great. Moving on to the next question. After the unveil of the Cybertruck, Elon stated that if it didn't sell well, Tesla would build a more conventional-looking pickup. How practical would it be to create this new design on the Cybertruck architecture, and could it be conveniently built on the existing production lines?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q4, speaker=Travis Axelrod, para=18)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 1,
+      "text": "Good afternoon, everyone, and welcome to Tesla's third quarter 2025 Q&A Webcast. My name is Travis Axelrod, Head of Investor Relations. I am joined today by Elon Musk, Vaibhav Taneja, and a number of other executives. Our Q3 results were announced at about 3 PM Central Time in the Update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward-looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number of risks and uncertainties, ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Travis Axelrod, para=1)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 5,
+      "text": "From say.com, the first question is, what are the latest robo taxi metrics fleet size, cumulative miles, rides completed, intervention rates, when will safety drivers be removed? What are the obstacles still preventing unsupervised FSD from being deployed to customer vehicles?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Travis Axelrod, para=5)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 6,
+      "text": "I'll start off with that, and then Ashok can elaborate. We are expecting to have no safety drivers in at least large parts of Austin by the end of this year. So within a few months, we expect to have no safety drivers at all in at least parts of Austin. We're obviously being very cautious about the deployment. Our goal is to be actually paranoid about deployment because, obviously, even one accident will be front-page headline news worldwide. It's better for us to take a cautious approach here. But we do expect to have no safety drivers in the car in Austin within a few months. I think that's ",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Elon Musk, para=6)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 8,
+      "text": "Great. The next question is, what is the demand and backlog for Megapack, Powerwall, solar, or energy storage systems? With the current AI boom, is Tesla planning to supply power to other hyperscalers?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Travis Axelrod, para=8)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 11,
+      "text": "Great. Thank you, Mike. Unfortunately, the next question is related to future products. This is not the appropriate venue to cover that, so we're going to have to skip it. The question after that is, what are the present challenges in bringing Optimus to market considering app control software engineering hardware, training general mobility models, training task-specific models, training voice models, implementing manufacturing, and establishing supply chains?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Travis Axelrod, para=11)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q3",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 12,
+      "text": "Yeah. I mean, bringing Optimus to market is an incredibly difficult task, to be clear. It's not like some walk in the park. At some point, I mean, actually, technically, Optimus can walk in the park right now. We do have Optimus robots that walk around our offices at our engineering headquarters in Palo Alto, California, basically twenty-four hours a day, seven days a week. Any visitors that come by can actually stop one of the Optimus robots and ask it to take them somewhere, and it'll literally take them to that meeting room or that location in the building. I don't want to downplay the diff",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q3, speaker=Elon Musk, para=12)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 1,
+      "text": "Good afternoon, everyone, and welcome to Tesla's Second Quarter 2025 Q&A Webcast. My name is Travis Axelrod, Head of Investor Relations, and I'm joined today by Elon Musk, Vaibhav Taneja and a number of other executives. Our Q2 results were announced at about 3:00 p.m. Central Time, and the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward-looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number of risks and uncer",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Travis Axelrod, para=1)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Elon R. Musk",
+      "paragraph": 2,
+      "text": "Thanks, Travis. So we've had a very exciting quarter. We were able to successfully launch robotaxi, so providing our first drives with no one in the driver seat with paying customers in Austin. And as some may have noted, we've already expanded our service area in Austin. It's bigger and longer. And it's going to get even bigger and longer. We were expecting to really greatly increase the Austin service area to well in excess of what competitors are doing. And that's hopefully in a week or so, 2 weeks?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Elon R. Musk, para=2)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Elon R. Musk",
+      "paragraph": 4,
+      "text": "A couple of weeks or so. And we're getting the regulatory permission to launch in the Bay Area, Nevada, Arizona, Florida, and a number of other places. So as we get the approvals and we prove out safety, then we will be launching autonomous ride-hailing in most of the country. And I think we'll probably have autonomous ride-hailing in probably half the population of the U.S. by the end of the year. That's at least our goal, subject to regulatory approvals. I think we'll technically be able to do it. So assuming we get regulatory approvals, it's probably addressing half of the population in the",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Elon R. Musk, para=4)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 7,
+      "text": "Great. Thank you very much, Vaibhav. So now we're going to move on to say.com questions. The first question is, can you give us some insight how robotaxis have been performing so far? And what rate do you expect to expand in terms of vehicles, geofence, cities and supervisors?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Travis Axelrod, para=7)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 9,
+      "text": "Great. Thank you very much, Ashok. The next question is, what are the key technical and regulatory hurdles still remaining for unsupervised FSD to be available for personal use? Can you provide a time line?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Travis Axelrod, para=9)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q2",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 17,
+      "text": "Great. Thank you, guys. The next question is, what specific factory tasks is Optimus currently performing? And what is the expected time line for scaling production to enable external sales? How does Tesla envision Optimus contributing to revenue in the next 2 to 3 years?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q2, speaker=Travis Axelrod, para=17)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Operator",
+      "paragraph": 2,
+      "text": "Good afternoon, everyone, and welcome to Tesla's First Quarter 2025 Q&A Webcast. My name is Travis Axelrod, Head of Investor Relations, and I'm joined today by Elon Musk, Vaibhav Taneja, and a number of other executives. Our Q1 results were announced at about 3 p.m. Central Time in the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number of risks and uncertaint",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Operator, para=2)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 3,
+      "text": "Hello, everyone. Well, there\u2019s never a dull moment these days. Thanks for sure. Every day is going to be exciting. As some people know, there's been some blowback for the time that I've been spending in government with the Department of Government Efficiency or DOGE. I think the work that we're doing there is actually very important for trying to sprain in the insane deficit that is leading our country, the United States, to destruction. And the DOGE team has made a lot of progress in addressing waste and fraud. The natural blowback from that is those who were receiving the wasteful dollars an",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Elon Musk, para=3)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "A - Travis Axelrod",
+      "paragraph": 9,
+      "text": "Now, we will move on to investor questions. We will start with questions from say.com. First question is, what are the highest risk items on the critical path to robotaxi launch and scaling?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=A - Travis Axelrod, para=9)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 12,
+      "text": "Sure. Well, just to talk about the -- disambiguate Cybercab from robotaxi once again. So, the -- when will -- the Tesla's because the Tesla's that will be fully autonomous in June in Austin are probably Model Ys. So, that is currently on track to be able to do paid rides fully autonomously in Austin in June and then to be in many other cities in the US by the end of this year. It's very difficult to predict the exact ramp sort of week by week and month by month except that it will ramp up very quickly. So, it's going to be like some basically an S curve where it's very difficult to predict the",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Elon Musk, para=12)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 29,
+      "text": "Great. Thank you very much. The next question is, when will FSD Unsupervised be available for personal use on personally-owned cars?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Travis Axelrod, para=29)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2025Q1",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 30,
+      "text": "Before the end of this year. Not necessarily -- I say within the US, like we do want to test -- at Tesla, we're absolutely hardcore about safety. We go to great lengths to make the safest car in the world and have the lowest accidents per mile in. So -- and look, fewest lives lost. So we want to be very careful. So we want autonomy to be definitively safer than manual driving. So it's not enough that it just be as safe. It needs to be meaningfully safer than if it's cars mainly driven. And we want to confirm that there's not something -- we just want to be cautious with the rollout. We don't w",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Elon Musk, para=30)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Operator",
+      "paragraph": 1,
+      "text": "Good afternoon, everyone and welcome to Tesla's Fourth Quarter 2024 Q&A Webcast. My name is Travis Axelrod, the Head of Investor Relations here at Tesla, and I am joined today by Elon Musk and Vaibhav Taneja and a number of other executives. Our Q4 results were announced at about 3.00 p.m. Central Time in the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward-looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Operator, para=1)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Elon Musk",
+      "paragraph": 2,
+      "text": "Thank you. So, in summary, in Q4, we set a record and delivered vehicles at an annualized rate of nearly 2 million a year. So, congratulations to the Tesla team on excellent work, achieving record production and deliveries. Model Y was the best-selling vehicle of any kind for 2024. That's worth noting. Not just the best electric vehicle, the best vehicle of any kind on earth, number one was Model Y. We're staying focused on maximizing volumes and obviously doubling down for, I don't know what, it really, I was going to say doubling down on autonomy, but really it's like autonomy is like 10x-in",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Elon Musk, para=2)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 5,
+      "text": "Great. Thank you very much, Vaibhav. Now, we will move over to investor questions and we'll start with say.com. The first question is, is unsupervised FSD still planned to be released in Texas and California this year? What hurdles still exist to make that happen? You addressed the Texas piece, I think, already, so...",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=5)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 9,
+      "text": "Great. Thank you very much. The next question is, are there any discussions with other auto companies about licensing FSD?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=9)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 11,
+      "text": "Great. Thank you very much. The next question is, is Optimus now mostly design locked for 2025 production?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=11)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 19,
+      "text": "Great, thank you. The next question is also Optimus related. When will Tesla start selling Optimus, and what will the price be?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=19)"
+    }
+  ]
+}

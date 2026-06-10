@@ -1,7 +1,8 @@
 # Data Sources
 
-Financial data comes primarily from **`defeatbeta-api`** (an open-source Yahoo-Finance
-alternative), with **`yfinance`** as a fallback for any gap.
+Financial data comes from **`defeatbeta-api`** (an open-source Yahoo-Finance alternative). It
+covers every metric we need for NVDA/AMD/TSLA; `yfinance` remains an optional gap-filler but is
+not currently wired.
 
 ## defeatbeta-api
 
@@ -16,71 +17,60 @@ from defeatbeta_api.data.ticker import Ticker
 t = Ticker("NVDA")
 ```
 
-### Methods we use
+### Methods we use (verified against the real package)
 
-| Metric | Method |
-|---|---|
-| Stock price (OHLCV) | `t.price()` |
-| TTM EPS | `t.ttm_eps()` |
-| TTM PE | `t.ttm_pe()` |
-| Market cap (historical) | `t.historical_market_cap()` |
-| PS ratio | `t.historical_ps_ratio()` |
-| PB ratio | `t.historical_pb_ratio()` |
-| PEG ratio | `t.historical_peg_ratio()` |
-| ROE | `t.historical_roe()` |
-| ROA | `t.historical_roa()` |
-| ROIC | `t.historical_roic()` |
-| WACC | `t.historical_wacc()` |
-| Equity multiplier | `t.historical_equity_multiplier()` |
-| Asset turnover | `t.historical_asset_turnover()` |
-| Quarterly income statement | `t.quarterly_income_statement()` (`.print_pretty_table()`) |
-| Earnings-call transcripts | `t.earning_call_transcripts()` → `.get_transcripts_list()`, `.get_transcript(year, quarter)` |
-| SEC filings | `t.sec_filing()` |
-| Stock news | `t.stock_news()` |
-| Revenue by segment | `t.revenue_by_segment()` |
-| Revenue by geography | `t.revenue_by_geography()` |
+The method names below are the **actual** `Ticker` API (confirmed against the local
+defeatbeta-api source — earlier guesses like `historical_roe()` were wrong). Each returns a
+pandas DataFrame; the value is the last column of the most recent `report_date` row. Ratios and
+margins come back as **fractions (0..1)** and are converted to percent in `live.py`.
 
-### Extraction → Fact Store
+| Metric | Method | Value column | Unit |
+|---|---|---|---|
+| TTM EPS | `t.ttm_eps()` | `tailing_eps` | USD |
+| TTM PE | `t.ttm_pe()` | `ttm_pe` | x |
+| Market cap | `t.market_capitalization()` | `market_capitalization` | USD |
+| PS ratio | `t.ps_ratio()` | `ps_ratio` | x |
+| PB ratio | `t.pb_ratio()` | `pb_ratio` | x |
+| PEG ratio | `t.peg_ratio()` | `peg_ratio` | x |
+| ROE | `t.roe()` | `roe` (fraction) | % |
+| ROA | `t.roa()` | `roa` (fraction) | % |
+| ROIC | `t.roic()` | `roic` (fraction) | % |
+| WACC | `t.wacc()` | `wacc` (fraction) | % |
+| Equity multiplier | `t.equity_multiplier()` | `equity_multiplier` | x |
+| Asset turnover | `t.asset_turnover()` | `asset_turnover` | x |
+| Gross margin + revenue | `t.quarterly_gross_margin()` | `gross_margin` (frac), `total_revenue` | %, USD |
+| Operating margin | `t.quarterly_operating_margin()` | `operating_margin` (frac) | % |
+| Earnings-call transcripts | `t.earning_call_transcripts()` → `.get_transcripts_list()` (`symbol, fiscal_year, fiscal_quarter, report_date`), `.get_transcript(y, q)` (`paragraph_number, speaker, content`) | — | — |
+| Stock news | `t.news()` → `.get_news_list()` (`uuid, title, publisher, report_date, type, link`), `.get_news(uuid)` | — | — |
+| SEC filings | `t.sec_filing()` | — | — |
+| Revenue breakdown | `t.quarterly_revenue_by_breakdown()` | segment/geography | USD |
 
-```python
-def extract_facts(ticker: str, period: str) -> list[FinancialFact]:
-    t = Ticker(ticker)
-    raw = {
-        "ttm_eps": t.ttm_eps(), "ttm_pe": t.ttm_pe(),
-        "market_cap": t.historical_market_cap(),
-        "ps_ratio": t.historical_ps_ratio(), "pb_ratio": t.historical_pb_ratio(),
-        "peg_ratio": t.historical_peg_ratio(),
-        "roe": t.historical_roe(), "roa": t.historical_roa(),
-        "roic": t.historical_roic(), "wacc": t.historical_wacc(),
-        "equity_multiplier": t.historical_equity_multiplier(),
-        "asset_turnover": t.historical_asset_turnover(),
-        "income_stmt": t.quarterly_income_statement(),
-        "revenue_segment": t.revenue_by_segment(),
-        "revenue_geo": t.revenue_by_geography(),
-    }
-    return [to_fact(metric, df, period, ticker) for metric, df in raw.items()]
-```
+Implementation: `src/ir_copilot/live.py` (`fetch_facts`,
+`fetch_news`, `fetch_transcript_qa`). Each fact records `value`, `unit`, `period`, `source`
+(e.g. `defeatbeta-api:roe`), `source_url` (the HF dataset), `as_of`, and a stable `fact_id` —
+see [Grounding & Evidence](grounding.md).
 
-Each `to_fact(...)` records `value`, `unit`, `period`, `source`, `source_url`, `as_of`, and a
-stable `fact_id`. See [Grounding & Evidence](grounding.md) for the schema and why this matters.
+### Requirements & offline cache
 
-## yfinance fallback
+- **Python 3.11+** and network: defeatbeta-api downloads a DuckDB `cache_httpfs` extension and
+  HuggingFace parquet on first use. Use a 3.12 venv (see README).
+- **Offline = real cached data.** `mock/build_mock_data.py` fetches facts + news (with real
+  article links) + analyst-Q&A transcript chunks for **NVDA / AMD / TSLA** over ~5 years into
+  `mock/data/*.json`. With `USE_MOCK_DATA=true`, IR-Copilot reads those — so even offline the
+  evidence is real, cited defeatbeta-api data (no placeholder URLs).
 
-If a `defeatbeta-api` call is empty or rate-limited, fall back to `yfinance` for the same
-field and tag the fact's `source` accordingly, so provenance stays honest.
+## Persistence & caching (SQLite)
 
-```python
-import yfinance as yf
-def fallback_market_cap(ticker: str) -> float | None:
-    info = yf.Ticker(ticker).fast_info
-    return getattr(info, "market_cap", None)
-```
+IR-Copilot persists with **SQLite** (`artifacts/ir_copilot.sqlite`,
+`cache.py`) — a relational `facts` table (grounded financials are
+queryable with plain SQL) plus a JSON-blob table for agent outputs. There is **no parquet/duckdb
+in IR-Copilot itself**; `duckdb` only appears transitively inside defeatbeta-api. The service
+layer checks the SQLite cache before any (re)fetch, so repeated calls and the demo are fast and
+reproducible.
 
-## Caching for a reliable demo
-
-- Pre-fetch the demo ticker(s) into a local **DuckDB** cache so the live demo never depends on
-  network latency or upstream availability.
-- Cache embeddings and a recorded transcript too (see [Wiki](wiki-ingestion.md)).
+> Missing metrics are recorded as explicit `gaps` (never silently dropped). All listed metrics
+> return for NVDA/AMD/TSLA, so no `yfinance` fallback is currently wired; it remains an option if
+> a future ticker has gaps.
 
 ## Demo / fine-tune datasets (Hugging Face & Kaggle)
 

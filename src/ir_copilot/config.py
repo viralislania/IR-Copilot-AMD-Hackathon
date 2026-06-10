@@ -96,7 +96,7 @@ def get_settings() -> Settings:
         embedding_dim=int(_get("EMBEDDING_DIM", "384")),
         embedding_base_url=_get("EMBEDDING_BASE_URL", "http://mi300x-node:8002/v1"),
         embedding_model=_get("EMBEDDING_MODEL", "BAAI/bge-base-en-v1.5"),
-        sentiment_backend=_get("SENTIMENT_BACKEND", "lexicon").lower(),
+        sentiment_backend=_get("SENTIMENT_BACKEND", "finbert").lower(),
         llm_backend=_get("LLM_BACKEND", "mock").lower(),
         openai_api_key=_get("OPENAI_API_KEY", "EMPTY"),
         drafting_base_url=_get("DRAFTING_BASE_URL", "http://mi300x-node:8000/v1"),
