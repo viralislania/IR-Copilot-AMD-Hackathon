@@ -1,0 +1,26 @@
+# IR-Copilot — AMD MI300X (ROCm) node ONLY.
+# Do NOT install on macOS / CPU dev machines.
+#
+# 1) Install the ROCm PyTorch build first from the ROCm wheel index, e.g.:
+#      python -m pip install --index-url https://download.pytorch.org/whl/rocm6.2 torch
+#    (or use AMD's prebuilt `rocm/vllm` Docker image, which already bundles torch+vLLM)
+# 2) Then install the rest:
+#      python -m pip install -r requirements-gpu.txt
+
+# --- Serving ---
+vllm                    # ROCm build (rocm/vllm image, or build from source for gfx942)
+
+# --- Fine-tuning (PRIMARY: Predictive-Analyst LoRA) ---
+transformers>=4.41
+accelerate>=0.30
+peft>=0.11
+trl>=0.9                # QLoRA fallback path if Unsloth ROCm kernels unavailable
+datasets>=2.19
+bitsandbytes            # ROCm fork where available (4-bit QLoRA)
+unsloth                 # primary fine-tune path (CUDA-first; fall back to trl+peft on ROCm)
+
+# --- Fine-tuning (STRETCH: finance-tuned embedding model) ---
+sentence-transformers>=3.0
+
+# --- Multimodal wiki ingestion ---
+openai-whisper          # audio/video transcript ASR (or swap faster-whisper)

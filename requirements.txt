@@ -1,0 +1,40 @@
+# IR-Copilot — core dependencies (cross-platform: macOS / Linux / dev machines)
+# Install:  python -m pip install -r requirements.txt
+# GPU/ROCm-only deps (vLLM, torch-rocm, unsloth, whisper) live in requirements-gpu.txt
+# and are installed ONLY on the AMD MI300X node.
+
+# --- Config ---
+python-dotenv>=1.0
+pydantic>=2.6
+
+# --- Data layer (defeatbeta-api primary, yfinance fallback) ---
+defeatbeta-api          # Yahoo-Finance alternative; data on HF + DuckDB (Python 3.11+)
+yfinance>=0.2.40
+pandas>=2.1
+pyarrow>=15.0
+duckdb>=0.10
+
+# --- Orchestration & agents ---
+langgraph>=0.2.0
+langchain>=0.2.0
+langchain-openai>=0.1.0
+openai>=1.30
+
+# --- RAG / vector store / embeddings (clients are cross-platform) ---
+qdrant-client>=1.9
+sentence-transformers>=3.0
+
+# --- Sentiment (FinBERT inference client) ---
+transformers>=4.41
+
+# --- UI backend (CopilotKit + FastAPI) ---
+copilotkit              # AG-UI protocol bridge to LangGraph
+fastapi>=0.110
+uvicorn>=0.29
+
+# --- Notebooks / tooling ---
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.10
+nbconvert>=7.16
+tabulate>=0.9
