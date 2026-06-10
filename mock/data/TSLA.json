@@ -138,6 +138,17 @@
     {
       "fact_id": "F-0013",
       "ticker": "TSLA",
+      "metric": "price",
+      "period": "FY2026Q1",
+      "value": 396.68,
+      "unit": "USD",
+      "source": "defeatbeta-api:price.close",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "TSLA",
       "metric": "gross_margin",
       "period": "FY2026Q1",
       "value": 21.08,
@@ -147,7 +158,7 @@
       "as_of": "2026-03-31"
     },
     {
-      "fact_id": "F-0014",
+      "fact_id": "F-0015",
       "ticker": "TSLA",
       "metric": "revenue",
       "period": "FY2026Q1",
@@ -158,7 +169,7 @@
       "as_of": "2026-03-31"
     },
     {
-      "fact_id": "F-0015",
+      "fact_id": "F-0016",
       "ticker": "TSLA",
       "metric": "operating_margin",
       "period": "FY2026Q1",
@@ -167,18 +178,120 @@
       "source": "defeatbeta-api:quarterly_operating_margin",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
       "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0017",
+      "ticker": "TSLA",
+      "metric": "gross_profit",
+      "period": "FY2026Q1",
+      "value": 4720000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Gross Profit]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0018",
+      "ticker": "TSLA",
+      "metric": "operating_income",
+      "period": "FY2026Q1",
+      "value": 941000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Operating Income]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0019",
+      "ticker": "TSLA",
+      "metric": "net_income",
+      "period": "FY2026Q1",
+      "value": 477000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Net Income Common Stockholders]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0020",
+      "ticker": "TSLA",
+      "metric": "rnd_expense",
+      "period": "FY2026Q1",
+      "value": 1946000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Research & Development]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0021",
+      "ticker": "TSLA",
+      "metric": "revenue_segment:Auto",
+      "period": "FY2026Q1",
+      "value": 16234000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0022",
+      "ticker": "TSLA",
+      "metric": "revenue_segment:Energy and Storage",
+      "period": "FY2026Q1",
+      "value": 2408000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0023",
+      "ticker": "TSLA",
+      "metric": "revenue_segment:Services and Other",
+      "period": "FY2026Q1",
+      "value": 3745000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0024",
+      "ticker": "TSLA",
+      "metric": "revenue_geo:China",
+      "period": "FY2026Q1",
+      "value": 4184000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0025",
+      "ticker": "TSLA",
+      "metric": "revenue_geo:Other",
+      "period": "FY2026Q1",
+      "value": 7526000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0026",
+      "ticker": "TSLA",
+      "metric": "revenue_geo:United States",
+      "period": "FY2026Q1",
+      "value": 10677000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
     }
   ],
   "gaps": [],
   "news": [
-    {
-      "ticker": "TSLA",
-      "text": "Elon Musk, after DOGE and politics, bets on SpaceX IPO",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doge-politics-bets-013142887.html",
-      "publisher": "AFP",
-      "date": "2026-06-10",
-      "uuid": "c1ef1617-a1f7-39b1-9505-4a044e876ea9"
-    },
     {
       "ticker": "TSLA",
       "text": "GM Follows Tesla\u2019s Playbook \u2014 Expands Into Energy Storage With Peak Partnership",
@@ -189,19 +302,11 @@
     },
     {
       "ticker": "TSLA",
-      "text": "Why Cathie Wood Seemingly Can\u2019t Get Enough of Kratos Defense Stock",
-      "url": "https://finance.yahoo.com/m/e1983764-f566-34b6-bf46-d223754a8e15/why-cathie-wood-seemingly.html",
-      "publisher": "Barchart",
-      "date": "2026-06-09",
-      "uuid": "e1983764-f566-34b6-bf46-d223754a8e15"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "ASML Weighs Musk Terafab Talks Against Valuation And Governance Questions",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-weighs-musk-terafab-talks-001808775.html",
-      "publisher": "Simply Wall St.",
-      "date": "2026-06-09",
-      "uuid": "2a50ba19-156c-3d38-baeb-44d841e9fe5c"
+      "text": "Elon Musk, after DOGE and politics, bets on SpaceX IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doge-politics-bets-013142887.html",
+      "publisher": "AFP",
+      "date": "2026-06-10",
+      "uuid": "c1ef1617-a1f7-39b1-9505-4a044e876ea9"
     },
     {
       "ticker": "TSLA",
@@ -213,83 +318,11 @@
     },
     {
       "ticker": "TSLA",
-      "text": "The Model 3 Era at Rivian Begins. Its Lower-Price EV Is Here.",
-      "url": "https://finance.yahoo.com/m/f4e6f811-762f-3cc6-b499-2ea0f8d3d896/the-model-3-era-at-rivian.html",
-      "publisher": "Barrons.com",
-      "date": "2026-06-09",
-      "uuid": "f4e6f811-762f-3cc6-b499-2ea0f8d3d896"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "The SpaceX IPO Is Days Away. Here's How to Prepare.",
-      "url": "https://finance.yahoo.com/m/63dea876-9532-3cba-9914-71d952efc1d0/the-spacex-ipo-is-days-away..html",
-      "publisher": "Motley Fool",
-      "date": "2026-06-09",
-      "uuid": "63dea876-9532-3cba-9914-71d952efc1d0"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "Rivian Launches the R2 to Chase Tesla",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/rivian-launches-r2-chase-tesla-170138937.html",
-      "publisher": "GuruFocus.com",
-      "date": "2026-06-09",
-      "uuid": "04a91b52-789e-3750-b389-7763d24438cc"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "Elon Musk Reveals Insane Plan to Double American Chip Production in a Single Plant",
-      "url": "https://finance.yahoo.com/m/fef0906f-3ccb-30ea-923b-c04168fcef24/elon-musk-reveals-insane-plan.html",
-      "publisher": "24/7 Wall St.",
-      "date": "2026-06-09",
-      "uuid": "fef0906f-3ccb-30ea-923b-c04168fcef24"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "How Dutch Safety Data Could Open Europe for Tesla",
-      "url": "https://finance.yahoo.com/m/1bc9cf5e-be78-39a1-8cb9-f3db3997ece6/how-dutch-safety-data-could.html",
-      "publisher": "Barrons.com",
-      "date": "2026-06-09",
-      "uuid": "1bc9cf5e-be78-39a1-8cb9-f3db3997ece6"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "SpaceX IPO: A Tesla-Like Opportunity or a $1.75 Trillion Trap?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-ipo-tesla-opportunity-1-144800601.html",
-      "publisher": "Zacks",
-      "date": "2026-06-09",
-      "uuid": "f060061c-acc7-37b0-80ca-77ac00809a89"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "Solidion Strengthens Battery Moat with 7 New Patents",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/solidion-strengthens-battery-moat-7-142833032.html",
-      "publisher": "IPO-Edge.com",
-      "date": "2026-06-09",
-      "uuid": "2a0a1b46-0e0c-3ccb-b307-71ebd6dd9011"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "Elon Musk Says He\u2019s Building a Chip \u201c2 to 3 Times\u201d Better Than NVIDIA at 10% The Cost. Is He Bluffing?",
-      "url": "https://finance.yahoo.com/m/5bc4f594-dd5c-3732-982b-2473af8bf581/elon-musk-says-he%E2%80%99s-building.html",
-      "publisher": "24/7 Wall St.",
-      "date": "2026-06-09",
-      "uuid": "5bc4f594-dd5c-3732-982b-2473af8bf581"
-    },
-    {
-      "ticker": "TSLA",
       "text": "Rob Arnott: Will SpaceX Create The Biggest Bubble Ever?",
       "url": "https://finance.yahoo.com/m/b2fe71eb-2399-37aa-b390-abe6984d4685/rob-arnott%3A-will-spacex.html",
       "publisher": "etf.com",
       "date": "2026-06-09",
       "uuid": "b2fe71eb-2399-37aa-b390-abe6984d4685"
-    },
-    {
-      "ticker": "TSLA",
-      "text": "Stock Market Today, June 9: Aurora Innovation Falls After Uber Block Sale Weighs on Autonomous Trucking Stocks",
-      "url": "https://finance.yahoo.com/m/7c54e2f7-68d3-312f-b580-97b3e65f4478/stock-market-today%2C-june-9%3A.html",
-      "publisher": "Motley Fool",
-      "date": "2026-06-09",
-      "uuid": "7c54e2f7-68d3-312f-b580-97b3e65f4478"
     },
     {
       "ticker": "TSLA",
@@ -301,11 +334,35 @@
     },
     {
       "ticker": "TSLA",
-      "text": "Stocks making big moves yesterday: Marvell Technology, Intel, Teradyne, JFrog, and Tesla",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-200614526.html",
-      "publisher": "StockStory",
+      "text": "The Capex Signal That Will Make or Break IGPT in the Next 12 Months",
+      "url": "https://finance.yahoo.com/m/bb507553-9e19-3c4f-9211-59a35bf75e51/the-capex-signal-that-will.html",
+      "publisher": "24/7 Wall St.",
       "date": "2026-06-09",
-      "uuid": "c74fb64b-d5a3-39e3-b3a5-e0a4047979b7"
+      "uuid": "bb507553-9e19-3c4f-9211-59a35bf75e51"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "SpaceX, Anthropic, OpenAI Can Rewrite History for Megacap IPOs",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-anthropic-openai-rewrite-history-134201711.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-09",
+      "uuid": "7f54ef87-cb94-35e7-a874-8e12e3769ac2"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Why Elon Musk's track record of unfilled promises matters for investors",
+      "url": "https://finance.yahoo.com/video/why-elon-musks-track-record-of-unfilled-promises-matters-for-investors-203515177.html",
+      "publisher": "Yahoo Finance Video",
+      "date": "2026-06-09",
+      "uuid": "76b04b4f-8812-4d7d-9357-2a75afa124dd"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Stock Market Today, June 9: Aurora Innovation Falls After Uber Block Sale Weighs on Autonomous Trucking Stocks",
+      "url": "https://finance.yahoo.com/m/7c54e2f7-68d3-312f-b580-97b3e65f4478/stock-market-today%2C-june-9%3A.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "7c54e2f7-68d3-312f-b580-97b3e65f4478"
     },
     {
       "ticker": "TSLA",
@@ -325,17 +382,82 @@
     },
     {
       "ticker": "TSLA",
-      "text": "Why Elon Musk's track record of unfilled promises matters for investors",
-      "url": "https://finance.yahoo.com/video/why-elon-musks-track-record-of-unfilled-promises-matters-for-investors-203515177.html",
-      "publisher": "Yahoo Finance Video",
+      "text": "ASML Weighs Musk Terafab Talks Against Valuation And Governance Questions",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-weighs-musk-terafab-talks-001808775.html",
+      "publisher": "Simply Wall St.",
       "date": "2026-06-09",
-      "uuid": "76b04b4f-8812-4d7d-9357-2a75afa124dd"
+      "uuid": "2a50ba19-156c-3d38-baeb-44d841e9fe5c"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Stocks making big moves yesterday: Marvell Technology, Intel, Teradyne, JFrog, and Tesla",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-200614526.html",
+      "publisher": "StockStory",
+      "date": "2026-06-09",
+      "uuid": "c74fb64b-d5a3-39e3-b3a5-e0a4047979b7"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "The Model 3 Era at Rivian Begins. Its Lower-Price EV Is Here.",
+      "url": "https://finance.yahoo.com/m/f4e6f811-762f-3cc6-b499-2ea0f8d3d896/the-model-3-era-at-rivian.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "f4e6f811-762f-3cc6-b499-2ea0f8d3d896"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Elon Musk Says He\u2019s Building a Chip \u201c2 to 3 Times\u201d Better Than NVIDIA at 10% The Cost. Is He Bluffing?",
+      "url": "https://finance.yahoo.com/m/5bc4f594-dd5c-3732-982b-2473af8bf581/elon-musk-says-he%E2%80%99s-building.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "5bc4f594-dd5c-3732-982b-2473af8bf581"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "The SpaceX IPO Is Days Away. Here's How to Prepare.",
+      "url": "https://finance.yahoo.com/m/63dea876-9532-3cba-9914-71d952efc1d0/the-spacex-ipo-is-days-away..html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "63dea876-9532-3cba-9914-71d952efc1d0"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Solidion Strengthens Battery Moat with 7 New Patents",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/solidion-strengthens-battery-moat-7-142833032.html",
+      "publisher": "IPO-Edge.com",
+      "date": "2026-06-09",
+      "uuid": "2a0a1b46-0e0c-3ccb-b307-71ebd6dd9011"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "SpaceX IPO: A Tesla-Like Opportunity or a $1.75 Trillion Trap?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-ipo-tesla-opportunity-1-144800601.html",
+      "publisher": "Zacks",
+      "date": "2026-06-09",
+      "uuid": "f060061c-acc7-37b0-80ca-77ac00809a89"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "Why Cathie Wood Seemingly Can\u2019t Get Enough of Kratos Defense Stock",
+      "url": "https://finance.yahoo.com/m/e1983764-f566-34b6-bf46-d223754a8e15/why-cathie-wood-seemingly.html",
+      "publisher": "Barchart",
+      "date": "2026-06-09",
+      "uuid": "e1983764-f566-34b6-bf46-d223754a8e15"
+    },
+    {
+      "ticker": "TSLA",
+      "text": "How Dutch Safety Data Could Open Europe for Tesla",
+      "url": "https://finance.yahoo.com/m/1bc9cf5e-be78-39a1-8cb9-f3db3997ece6/how-dutch-safety-data-could.html",
+      "publisher": "Barrons.com",
+      "date": "2026-06-09",
+      "uuid": "1bc9cf5e-be78-39a1-8cb9-f3db3997ece6"
     }
   ],
-  "transcript_chunks": [
+  "wiki_chunks": [
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -346,6 +468,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -356,6 +479,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -366,6 +490,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -376,6 +501,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -386,6 +512,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -396,6 +523,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -406,6 +534,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -416,6 +545,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -426,6 +556,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -436,6 +567,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -446,6 +578,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -456,6 +589,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -466,6 +600,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -476,6 +611,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -486,6 +622,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -496,6 +633,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -506,6 +644,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -516,6 +655,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -526,6 +666,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Elon R. Musk",
@@ -536,6 +677,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Elon R. Musk",
@@ -546,6 +688,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -556,6 +699,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -566,6 +710,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -576,16 +721,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
-      "period": "FY2025Q1",
-      "role": "analyst",
-      "speaker": "Operator",
-      "paragraph": 2,
-      "text": "Good afternoon, everyone, and welcome to Tesla's First Quarter 2025 Q&A Webcast. My name is Travis Axelrod, Head of Investor Relations, and I'm joined today by Elon Musk, Vaibhav Taneja, and a number of other executives. Our Q1 results were announced at about 3 p.m. Central Time in the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number of risks and uncertaint",
-      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Operator, para=2)"
-    },
-    {
-      "ticker": "TSLA",
-      "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -596,6 +732,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "A - Travis Axelrod",
@@ -606,6 +743,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -616,6 +754,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -626,6 +765,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -636,16 +776,18 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
-      "period": "FY2024Q4",
+      "modality": "transcript",
+      "period": "FY2025Q1",
       "role": "analyst",
-      "speaker": "Operator",
-      "paragraph": 1,
-      "text": "Good afternoon, everyone and welcome to Tesla's Fourth Quarter 2024 Q&A Webcast. My name is Travis Axelrod, the Head of Investor Relations here at Tesla, and I am joined today by Elon Musk and Vaibhav Taneja and a number of other executives. Our Q4 results were announced at about 3.00 p.m. Central Time in the update deck we published at the same link as this webcast. During this call, we will discuss our business outlook and make forward-looking statements. These comments are based on our predictions and expectations as of today. Actual events or results could differ materially due to a number",
-      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Operator, para=1)"
+      "speaker": "Travis Axelrod",
+      "paragraph": 31,
+      "text": "Great. Thank you very much. The next question is, is Tesla still on track for releasing more affordable models this year? Or will you be focusing on simplifying versions to enhance affordability similar to the rear-wheel drive Cybertruck?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2025Q1, speaker=Travis Axelrod, para=31)"
     },
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Elon Musk",
@@ -656,6 +798,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -666,6 +809,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -676,6 +820,7 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
@@ -686,12 +831,234 @@
     {
       "ticker": "TSLA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Travis Axelrod",
       "paragraph": 19,
       "text": "Great, thank you. The next question is also Optimus related. When will Tesla start selling Optimus, and what will the price be?",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=19)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "transcript",
+      "modality": "transcript",
+      "period": "FY2024Q4",
+      "role": "analyst",
+      "speaker": "Travis Axelrod",
+      "paragraph": 25,
+      "text": "Great. Thank you very much. The next question is, what is the status on mass production of the Tesla Semi? And how will it impact revenue and scale?",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts TSLA FY2024Q4, speaker=Travis Axelrod, para=25)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "financial",
+      "modality": "table",
+      "period": "FY2026Q1",
+      "text": "TSLA FY2026Q1 income statement (2026-03-31): Total revenue $22.39B (+16% YoY); Gross profit $4.72B (+50% YoY); Operating income $0.94B (+91% YoY); Net income $0.48B (+17% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_income_statement TSLA)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-03-31",
+      "text": "TSLA Revenue by Segment (2026-03-31): Auto revenue $16.23B (+16% YoY); Services and Other revenue $3.75B (+42% YoY); Energy and Storage revenue $2.41B (-12% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown TSLA Revenue by Segment)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "geo",
+      "modality": "table",
+      "period": "2026-03-31",
+      "text": "TSLA Revenue by Geography (2026-03-31): United States revenue $10.68B (+3% YoY); Other revenue $7.53B (+60% YoY); China revenue $4.18B (-3% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown TSLA Revenue by Geography)"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-03-31",
+      "text": "TSLA SEC 10-Q \u2014 Quarterly Report filed 2026-04-23 (period 2026-03-31).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-22",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2026-04-22 (period 2026-04-22).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026551"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-02",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2026-04-02 (period 2026-04-02).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026022956"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-12-31",
+      "text": "TSLA SEC 10-K \u2014 Annual Report filed 2026-01-29 (period 2025-12-31).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-28",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2026-01-28 (period 2026-01-28).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003837"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-02",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2026-01-02 (period 2026-01-02).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026000016"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-11-06",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2025-11-07 (period 2025-11-06).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925108507"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-09-30",
+      "text": "TSLA SEC 10-Q \u2014 Quarterly Report filed 2025-10-23 (period 2025-09-30).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025045968"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-10-22",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2025-10-22 (period 2025-10-22).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025045861"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-10-02",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2025-10-02 (period 2025-10-02).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025043530"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-09-03",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2025-09-05 (period 2025-09-03).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925087862"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-08-03",
+      "text": "TSLA SEC 8-K \u2014 Current Report (Material Events) filed 2025-08-04 (period 2025-08-03).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925073263"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "GM Follows Tesla\u2019s Playbook \u2014 Expands Into Energy Storage With Peak Partnership \u2014 Tesla has found significant success with its energy segment over the past few years.\nFord recently launched its own energy subsidiary.\nGM is also expanding its Redwood Materials collaboration by deploying a 7.2 MWh second-life EV battery system at a Michigan plant.\nGeneral Motors (GM) on Tuesday announced a strategic partnership with startup Peak Energy to develop and manufacture next-generation sodium-ion battery cells for grid-scale energy storage. This marks the automaker\u2019s latest effort to repurpose its batte",
+      "source_url": "https://finance.yahoo.com/m/2f00466f-4df9-3454-ba51-b54afc37e74f/gm-follows-tesla%E2%80%99s-playbook-%E2%80%94.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Elon Musk, after DOGE and politics, bets on SpaceX IPO \u2014 Elon Musk has become the most powerful, prolific and bewildering human on earth and is about to become the world's first trillionaire if his latest brainchild -- the IPO of his rocket and AI company SpaceX -- goes as planned.\nThe Musk of 2026 is a different man than the Tesla and SpaceX chief of a decade ago, when the hugely admired tech innovator largely stayed out of politics to focus intensely on building world-class businesses in sectors that others said couldn't be challenged.\nSince those days, Musk waded ever deeper into social med",
+      "source_url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-doge-politics-bets-013142887.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Tesla's China Sales Just Snapped a 2-Month Slump With a 22% Jump. Is the Turnaround Real? \u2014 China retail sales of electric vehicles made by Tesla (NASDAQ: TSLA) reached 47,281 units in May, up 22.5% year over year, according to data released Monday by the China Passenger Car Association. The figure snapped a two-month run of year-over-year declines and marked the electric-car maker's first year-over-year increase in the world's largest auto market since February.\nIt was also a steep jump from a weak April, with retail volume rising about 82% from the prior month, when Tesla's China sales had s",
+      "source_url": "https://finance.yahoo.com/m/ee6f0237-149f-3c00-84f6-f7084779f6ee/tesla%27s-china-sales-just.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Rob Arnott: Will SpaceX Create The Biggest Bubble Ever? \u2014 At this year's Basis Northwest conference, indexing veteran Rob Arnott, Founder and Chairman of Research Affiliates, sat down with ETF.com\u2019s Dave Nadig for a candid, wide-ranging conversation that touched on one of the most anticipated financial events in years: the SpaceX IPO. What started as a discussion about index mechanics quickly turned into a meditation on bubbles, valuation, and the structural pressures that passive investing has built up and may be about to unleash. To understand why SpaceX's market debut matters so much, it\u2019s ",
+      "source_url": "https://finance.yahoo.com/m/b2fe71eb-2399-37aa-b390-abe6984d4685/rob-arnott%3A-will-spacex.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "TSLA Stock: Cathie Wood Slaps $75 Robotaxi Ticket Into ARK\u2019s Bull Case \u2014 ARK Invest\u2019s Tesla robotaxi model treats autonomous ride-hailing as the company\u2019s primary value driver.\nTesla\u2019s Robotaxi fleet in Austin has recorded 17 reportable incidents with NHTSA between its June 2025 launch and March 2026, though none resulted in major injuries.\nOf the 17 low-speed collisions, five were attributed to the FSD, and the remaining to other factors.\nARK Invest\u2019s Cathie Wood has incorporated parking violation fines into the firm\u2019s Tesla Inc (TSLA) valuation model after the unsupervised Robotaxi she was r",
+      "source_url": "https://finance.yahoo.com/m/dc8b60a6-2897-3e74-bb3b-f96fb36116b1/tsla-stock%3A-cathie-wood-slaps.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "The Capex Signal That Will Make or Break IGPT in the Next 12 Months \u2014 IGPT is up 68% YTD on six mega-cap AI holdings, with late July hyperscaler capex guidance the single make-or-break signal for the next 12 months.\nNVDA reported zero China H20 revenue in Q1 versus $4.6 billion a year ago, making any U.S. export rule easing an immediate multi-billion-dollar IGPT tailwind.\nIt sounds nuts, but SoFi is giving\u00a0new active invest users up to $1,000 in stock for a limited time, and all it takes is a $50 deposit to get started. See for yourself (Sponsor)\nThe Invesco AI and Next Gen Software ETF (NASDA",
+      "source_url": "https://finance.yahoo.com/m/bb507553-9e19-3c4f-9211-59a35bf75e51/the-capex-signal-that-will.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "SpaceX, Anthropic, OpenAI Can Rewrite History for Megacap IPOs \u2014 (Bloomberg) -- The history of megacap initial public offerings shows that the stocks usually slump in the first year of trading. But upcoming listings from SpaceX, Anthropic and OpenAI are big enough and systemically important enough to the market that those analogies may not apply.\nMost Read from Bloomberg\nHouse Republican Says Hegseth\u2019s D-Day Remarks \u2018Inappropriate\u2019\nOpenAI Joins a Massive AI IPO Pipeline Now Worth $3.6 Trillion\nLA Mayor Race Flips as Socialist Beats Reality TV Star Pratt\nTrump\u2019s $100,000 H-1B Visa Application F",
+      "source_url": "https://finance.yahoo.com/markets/stocks/articles/spacex-anthropic-openai-rewrite-history-134201711.html"
+    },
+    {
+      "ticker": "TSLA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Why Elon Musk's track record of unfilled promises matters for investors \u2014 As Tesla (TSLA) CEO Elon Musk prepares to expand his corporate empire through SpaceX's IPO this Friday, June 12, should his promises and vision be met with a healthy dose of skepticism by investors?\nNew York Times investigative business reporter Kirsten Grind \u2014 who contributed to the latest article \"Elon Musk Laid Out 602 Goals. Elon Musk Laid Out 602 Goals.\" \u2014 explains why it is important for potential investors to be knowledgeable of Musk's promises and goals that didn't pan out.\nSpaceX is expected to go public on the ",
+      "source_url": "https://finance.yahoo.com/video/why-elon-musks-track-record-of-unfilled-promises-matters-for-investors-203515177.html"
+    }
+  ],
+  "signals": [
+    {
+      "label": "Other revenue (Revenue by Geography)",
+      "series": "Other revenue",
+      "metric": "revenue_geo",
+      "change_pct": 60.2,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown TSLA Revenue by Geography)"
+    },
+    {
+      "label": "Services and Other revenue (Revenue by Segment)",
+      "series": "Services and Other revenue",
+      "metric": "revenue_segment",
+      "change_pct": 42.0,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown TSLA Revenue by Segment)"
+    },
+    {
+      "label": "Auto revenue (Revenue by Segment)",
+      "series": "Auto revenue",
+      "metric": "revenue_segment",
+      "change_pct": 16.2,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown TSLA Revenue by Segment)"
     }
   ]
 }

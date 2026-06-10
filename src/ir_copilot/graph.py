@@ -109,7 +109,8 @@ def n_compare(state: IRState) -> dict:
 
 def n_predict(state: IRState) -> dict:
     qs = predict_questions(_store(state), state["sentiment"], state["peer_comparison"],
-                           wiki=_get_wiki(_wiki_tickers(state)), chat=get_chat("analyst"))
+                           wiki=_get_wiki(_wiki_tickers(state)), chat=get_chat("analyst"),
+                           signals=corpus.signals(state["ticker"]))
     return {"predicted_questions": qs, "messages": [("ai", f"Predicted {len(qs)} hard questions.")]}
 
 

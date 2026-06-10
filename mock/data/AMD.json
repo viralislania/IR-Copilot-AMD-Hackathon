@@ -138,6 +138,17 @@
     {
       "fact_id": "F-0013",
       "ticker": "AMD",
+      "metric": "price",
+      "period": "FY2026Q1",
+      "value": 475.505,
+      "unit": "USD",
+      "source": "defeatbeta-api:price.close",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "AMD",
       "metric": "gross_margin",
       "period": "FY2026Q1",
       "value": 52.82,
@@ -147,7 +158,7 @@
       "as_of": "2026-03-31"
     },
     {
-      "fact_id": "F-0014",
+      "fact_id": "F-0015",
       "ticker": "AMD",
       "metric": "revenue",
       "period": "FY2026Q1",
@@ -158,13 +169,90 @@
       "as_of": "2026-03-31"
     },
     {
-      "fact_id": "F-0015",
+      "fact_id": "F-0016",
       "ticker": "AMD",
       "metric": "operating_margin",
       "period": "FY2026Q1",
       "value": 14.399999999999999,
       "unit": "%",
       "source": "defeatbeta-api:quarterly_operating_margin",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0017",
+      "ticker": "AMD",
+      "metric": "gross_profit",
+      "period": "FY2026Q1",
+      "value": 5416000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Gross Profit]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0018",
+      "ticker": "AMD",
+      "metric": "operating_income",
+      "period": "FY2026Q1",
+      "value": 1476000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Operating Income]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0019",
+      "ticker": "AMD",
+      "metric": "net_income",
+      "period": "FY2026Q1",
+      "value": 1383000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Net Income Common Stockholders]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0020",
+      "ticker": "AMD",
+      "metric": "rnd_expense",
+      "period": "FY2026Q1",
+      "value": 2397000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Research & Development]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0021",
+      "ticker": "AMD",
+      "metric": "revenue_segment:Client and Gaming",
+      "period": "FY2026Q1",
+      "value": 3605000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0022",
+      "ticker": "AMD",
+      "metric": "revenue_segment:Data Center",
+      "period": "FY2026Q1",
+      "value": 5775000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-03-31"
+    },
+    {
+      "fact_id": "F-0023",
+      "ticker": "AMD",
+      "metric": "revenue_segment:Embedded",
+      "period": "FY2026Q1",
+      "value": 873000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
       "as_of": "2026-03-31"
     }
@@ -332,10 +420,11 @@
       "uuid": "16aa3c83-0d34-3e56-b769-fdcef689b16e"
     }
   ],
-  "transcript_chunks": [
+  "wiki_chunks": [
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -346,6 +435,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Joshua Buchalter",
@@ -356,6 +446,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Thomas O'Malley",
@@ -366,6 +457,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Thomas O'Malley",
@@ -376,6 +468,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Ross Seymore",
@@ -386,6 +479,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Jean Hu",
@@ -396,6 +490,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -406,6 +501,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Aaron Rakers",
@@ -416,6 +512,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Tim Arcuri",
@@ -426,6 +523,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -436,6 +534,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "CJ Muse",
@@ -446,16 +545,18 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
-      "speaker": "Operator",
-      "paragraph": 23,
-      "text": "Hey, CJ, do you have a follow-up question?",
-      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=Operator, para=23)"
+      "speaker": "CJ Muse",
+      "paragraph": 24,
+      "text": "I do. Maybe for Jean, if you could kind of touch on gross margins through the year and as you balance kind of strengthening service CPU with, you know, perhaps greater you know, GPU accelerating in the second half. Is there kind of a framework that we should be, working off of? Thanks so much.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2025Q4, speaker=CJ Muse, para=24)"
     },
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -466,6 +567,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -476,6 +578,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -486,6 +589,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Thomas O'Malley",
@@ -496,6 +600,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Thomas O'Malley",
@@ -506,6 +611,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q3",
       "role": "analyst",
       "speaker": "Joshua Buchalter",
@@ -516,6 +622,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Lisa T. Su",
@@ -526,6 +633,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Matthew D. Ramsay",
@@ -536,6 +644,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Thomas James O'Malley",
@@ -546,6 +655,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Thomas James O'Malley",
@@ -556,6 +666,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -566,6 +677,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q2",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -576,6 +688,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -586,6 +699,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Matt Ramsey",
@@ -596,6 +710,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Joshua Buchalter",
@@ -606,6 +721,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Joshua Buchalter",
@@ -616,6 +732,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Timothy Arcuri",
@@ -626,6 +743,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q1",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -636,6 +754,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Matt Ramsey",
@@ -646,6 +765,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Lisa Su",
@@ -656,6 +776,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Aaron Rakers",
@@ -666,6 +787,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Aaron Rakers",
@@ -676,6 +798,7 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Timothy Arcuri",
@@ -686,12 +809,207 @@
     {
       "ticker": "AMD",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2024Q4",
       "role": "analyst",
       "speaker": "Lisa Su",
       "paragraph": 19,
       "text": "Sure. So Vivek, thanks for the question. I think what we look at is certainly for the first year of the data center GPU business, we wanted to give some clear progression as it was going. The business is now at scale, actually now at over $5 billion. And as we go into 2025, I think our guidance will be more at the segment level with some color as to some qualitative color as to what's going on between the two businesses. And relative to your question about long-term growth rates, you are absolutely right. I mean I believe that the demand for AI compute is strong. And we've talked about a data ",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts AMD FY2024Q4, speaker=Lisa Su, para=19)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "financial",
+      "modality": "table",
+      "period": "FY2026Q1",
+      "text": "AMD FY2026Q1 income statement (2026-03-31): Total revenue $10.25B (+38% YoY); Gross profit $5.42B (+45% YoY); Operating income $1.48B (+83% YoY); Net income $1.38B (+95% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_income_statement AMD)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-03-31",
+      "text": "AMD Revenue by Segment (2026-03-31): Data Center revenue $5.78B (+57% YoY); Client and Gaming revenue $3.60B (+23% YoY); Embedded revenue $0.87B (+6% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown AMD Revenue by Segment)"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-13",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-15 (period 2026-05-13).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526226746"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-03-28",
+      "text": "AMD SEC 10-Q \u2014 Quarterly Report filed 2026-05-06 (period 2026-03-28).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000076"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-05",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-05 (period 2026-05-05).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-02-23",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-02-24 (period 2026-02-23).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000045"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-02-10",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-02-17 (period 2026-02-10).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000029"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-12-27",
+      "text": "AMD SEC 10-K \u2014 Annual Report filed 2026-02-04 (period 2025-12-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-02-03",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-02-03 (period 2026-02-03).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-16",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2026-01-20 (period 2026-01-16).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000002"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-12-12",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2025-12-15 (period 2025-12-12).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000182"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-09-27",
+      "text": "AMD SEC 10-Q \u2014 Quarterly Report filed 2025-11-05 (period 2025-09-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000166"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-11-04",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2025-11-04 (period 2025-11-04).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000163"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-10-27",
+      "text": "AMD SEC 8-K \u2014 Current Report (Material Events) filed 2025-10-27 (period 2025-10-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000119312525250803"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Worried About Which AI Stock to Buy? This Low-Cost ETF Lets You Own the Whole Trade. \u2014 Picking the right artificial intelligence (AI) stock is hard, and the past week made that especially clear. Chip stocks tumbled in early June, dragging the Nasdaq Composite down about 4% on June 5 for its worst session since the tariff turmoil of early 2025. Names that had carried the market higher for months -- Advanced Micro Devices, Intel, and others tied to AI hardware -- gave back chunks of enormous gains in a matter of days. And some AI stocks fell far more sharply than others.\nFor an investor trying t",
+      "source_url": "https://finance.yahoo.com/m/336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6/worried-about-which-ai-stock.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Broadcom Stock And The Ninety-Billion-Dollar Roadmap \u2014 Before the stock took off, the company was laying out an unusually specific, multi-year plan for its AI business that many investors seemed to overlook.\nIt\u2019s one of the market\u2019s great frustrations: a stock surges, and only in the rearview mirror does the reason seem obvious. But with Broadcom (AVGO)\u2019s 53.8% climb, the story was no sudden surprise. The evidence had been assembling itself in plain sight, quarter by quarter, for anyone willing to listen past the daily noise.\nThe real driver, as we now know, was a significant acceleration in i",
+      "source_url": "https://finance.yahoo.com/m/a16f5472-b066-313d-b44b-cd31e53307bd/broadcom-stock-and-the.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "AI Stocks Lead Tech Sector Slide. 'Summer Swoon Has Arrived.' \u2014 AI stocks and shares of major tech players stumbled Tuesday as an attempt to rebound from a sell-off last week fizzled.",
+      "source_url": "https://finance.yahoo.com/m/d29a483e-d9a2-3e5c-beaf-dca4cf94c36a/ai-stocks-lead-tech-sector.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "China Preps $295 Billion Plan to Fund Nationwide AI Buildout \u2014 (Bloomberg) -- China is preparing to spend around 2 trillion yuan ($295 billion) over the next five years on building data centers across the country, fueling Beijing\u2019s ambition to propel the domestic AI sector and surpass the US in a potentially game-changing technology.\nMost Read from Bloomberg\nHouse Republican Says Hegseth\u2019s D-Day Remarks \u2018Inappropriate\u2019\nLA Mayor Race Flips as Socialist Beats Reality TV Star Pratt\nTrump\u2019s $100,000 H-1B Visa Application Fee Rejected by Judge\nOpenAI Joins a Massive AI IPO Pipeline Now Worth $3.6 T",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/china-prepares-295-billion-plan-081310126.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "OpenAI\u2019s Paradox: ChatGPT Owner Files for IPO But Wants to Stay Private for \u2018A While\u2019 \u2014 OpenAI announced it plans on going public\u2014while also saying it still needs privacy to get things done. The ChatGPT parent said on Monday night that it has recently submitted a confidential S-1 to the Securities and Exchange Commission. OpenAI added that it hasn\u2019t decided on the timing of when it will officially go public and it \u201cmay be a while,\u201d as there are \u201cthings we want to do that are likely easier as a private company.\u201d",
+      "source_url": "https://finance.yahoo.com/m/5dd308d2-03bf-3acc-952c-a739ebec2ff6/openai%E2%80%99s-paradox%3A-chatgpt.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Nvidia Is Doubling Down on the CPU Market. That's Bad News for AMD and Intel Stock Investors \u2014 Nvidia (NASDAQ: NVDA) has been the top player in the artificial intelligence (AI) chip market over the years, thanks to its expertise in designing graphics processing units (GPUs).\nThese chips are ideal for processing huge amounts of data quickly. The massive parallel processing power of GPUs enables them to perform thousands of tasks simultaneously. As a result, GPUs have been widely used in gaming personal computers (PCs), content creation, AI, and machine learning. Nvidia has dominated the gaming ",
+      "source_url": "https://finance.yahoo.com/m/d9d7f571-3621-3fd8-a9ca-cb0f30ae72a3/nvidia-is-doubling-down-on.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Shoals, Rocket Lab, and Blink Charging Shares Are Soaring, What You Need To Know \u2014 A number of stocks jumped in the morning session after industrial stocks recovered, carried by the broad market rebound and a read-through from AI-driven capital expenditure commitments. AMD announced a \u00a32 billion ($2.66 billion) five-year investment in the UK for AI research and infrastructure, a signal that data-centre construction and the equipment, logistics, and grid infrastructure supporting it continues to draw major capital. Easing Middle East tensions reinforced the sector's recovery. Iran signaled its ",
+      "source_url": "https://finance.yahoo.com/markets/stocks/articles/shoals-rocket-lab-blink-charging-004550387.html"
+    },
+    {
+      "ticker": "AMD",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Tech stocks tumble again \u2014 Another sharp selloff hit tech stocks Tuesday, with some AI-related shares posting double-digit losses shortly after noon ET.\nWhy it matters: Tech shares have been the engine of a stock market rally that has driven the S&P 500 up more than 75% over the last three years through last week.\nDriving the news: Datacenter-centric stocks tumbled, without a clear catalyst.\nShares of chip giants like AMD and Intel fell more than 8%.\nOptical networking stocks \u2014 which sell the fiberoptic cables and connections needed to stitch servers together within AI data centers \u2014 were down",
+      "source_url": "https://finance.yahoo.com/m/182e30fa-96fb-39fc-91d1-0c4a111fd44b/tech-stocks-tumble-again.html"
+    }
+  ],
+  "signals": [
+    {
+      "label": "Data Center revenue (Revenue by Segment)",
+      "series": "Data Center revenue",
+      "metric": "revenue_segment",
+      "change_pct": 57.2,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown AMD Revenue by Segment)"
+    },
+    {
+      "label": "Client and Gaming revenue (Revenue by Segment)",
+      "series": "Client and Gaming revenue",
+      "metric": "revenue_segment",
+      "change_pct": 22.6,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown AMD Revenue by Segment)"
     }
   ]
 }

@@ -48,6 +48,23 @@ def _from_lags(store: FactStore, peer: PeerComparison) -> List[Question]:
     return qs
 
 
+def _from_signals(signals) -> List[Question]:
+    """Hardest questions come from big segment/geo swings — the data-driven signal (P1)."""
+    qs = []
+    for s in signals or []:
+        pct = abs(s.get("change_pct", 0))
+        verb = "rose" if s.get("direction") == "up" else "declined"
+        series = s.get("series", "a segment")
+        qs.append(Question(
+            text=f"{series} {verb} {pct:.0f}% year-over-year — what is driving that and how "
+                 f"durable is it?",
+            difficulty=round(min(1.0, 0.55 + pct / 200), 2),
+            rationale=f"{series} revenue moved {s.get('change_pct')}% YoY (segment breakdown).",
+            evidence=[s.get("evidence_url", "")],
+        ))
+    return qs
+
+
 def _from_sentiment(sentiment: SentimentSnapshot) -> List[Question]:
     qs = []
     for theme in sentiment.negative_themes:
@@ -100,8 +117,9 @@ def _attach_precedent(questions: List[Question], wiki, ticker: str) -> None:
 
 def predict_questions(store: FactStore, sentiment: SentimentSnapshot,
                       peer: PeerComparison, wiki=None, chat=None,
-                      top_k: int = 8) -> List[Question]:
-    questions = _from_lags(store, peer) + _from_sentiment(sentiment) + _from_wiki(wiki, store.ticker)
+                      signals=None, top_k: int = 8) -> List[Question]:
+    questions = (_from_signals(signals) + _from_lags(store, peer) + _from_sentiment(sentiment)
+                 + _from_wiki(wiki, store.ticker))
     _attach_precedent(questions, wiki, store.ticker)
 
     # de-dup, rank by difficulty

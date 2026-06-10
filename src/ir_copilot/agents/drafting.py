@@ -16,6 +16,26 @@ from .predictive import Question
 from .sentiment import SentimentSnapshot
 
 
+METRIC_LABELS = {
+    "gross_margin": "gross margin", "operating_margin": "operating margin", "roe": "ROE",
+    "roic": "ROIC", "roa": "ROA", "ttm_eps": "TTM EPS", "ttm_pe": "TTM P/E",
+    "revenue": "revenue", "market_cap": "market capitalization", "ps_ratio": "P/S",
+    "pb_ratio": "P/B", "peg_ratio": "PEG", "equity_multiplier": "equity multiplier",
+    "asset_turnover": "asset turnover",
+}
+
+# Standard forward-looking-statements (Safe Harbor) language read at the top of every IR call.
+SAFE_HARBOR = (
+    "Before we begin, a reminder that today's remarks contain forward-looking statements within "
+    "the meaning of the Private Securities Litigation Reform Act of 1995. Actual results may "
+    "differ materially due to risks described in our SEC filings. All figures are sourced from "
+    "reported financials; we undertake no obligation to update forward-looking statements.")
+
+
+def label(metric: str) -> str:
+    return METRIC_LABELS.get(metric, metric.replace("_", " "))
+
+
 class ScriptSection(BaseModel):
     heading: str
     text: str            # contains {{F-00xx}} slots
@@ -34,8 +54,9 @@ class DraftBundle(BaseModel):
 
 def _script(store: FactStore, peer: PeerComparison) -> List[ScriptSection]:
     s = store
-    lead = ", ".join(peer.leads) or "several metrics"
+    lead = ", ".join(label(m) for m in peer.leads) or "several metrics"
     return [
+        ScriptSection(heading="Safe Harbor", text=SAFE_HARBOR),
         ScriptSection(heading="Opening", text=(
             f"Thank you for joining our {s.period} earnings call. We delivered revenue of "
             f"{s.slot('revenue')} with TTM EPS of {s.slot('ttm_eps')}, reflecting continued "
@@ -61,7 +82,7 @@ def _deck(store: FactStore, peer: PeerComparison, sentiment: SentimentSnapshot) 
         else:
             tag = "mid-pack vs peers"
         # value comes from a verified slot; rank is described in words (no bare counts)
-        comp_bullets.append(f"{pm.metric.replace('_', ' ')}: {s.slot(pm.metric)} — {tag}")
+        comp_bullets.append(f"{label(pm.metric)}: {s.slot(pm.metric)} — {tag}")
     return [
         Slide(title="Financial Highlights", bullets=[
             f"Revenue {s.slot('revenue')}", f"TTM EPS {s.slot('ttm_eps')}",

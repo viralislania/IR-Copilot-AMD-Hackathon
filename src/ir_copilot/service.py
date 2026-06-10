@@ -52,7 +52,7 @@ def get_wiki(tickers: List[str]) -> WikiStore:
         if chunks:
             w.upsert([WikiChunk(chunk_id=str(i), **c) for i, c in enumerate(chunks)])
         _wiki_cache[key] = w
-    return w if (w := _wiki_cache[key]) else _wiki_cache[key]
+    return _wiki_cache[key]
 
 
 def search_wiki(query: str, ticker: Optional[str] = None, k: int = 5) -> List[dict]:
@@ -77,7 +77,9 @@ def get_questions(ticker: str, period: Optional[str] = None) -> List[dict]:
     snap = get_sentiment(ticker)
     pc = get_competitor(ticker, period)
     wiki = get_wiki([ticker, *settings.peers])
-    qs = predict_questions(store, snap, pc, wiki=wiki, chat=get_chat("analyst"))
+    from .corpus import signals as _signals
+    qs = predict_questions(store, snap, pc, wiki=wiki, chat=get_chat("analyst"),
+                           signals=_signals(ticker))
     return [q.model_dump() for q in qs]
 
 
@@ -87,7 +89,9 @@ def get_draft(ticker: str, period: Optional[str] = None) -> dict:
     snap = get_sentiment(ticker)
     pc = get_competitor(ticker, period)
     wiki = get_wiki([ticker, *settings.peers])
-    qs = predict_questions(store, snap, pc, wiki=wiki, chat=get_chat("analyst"))
+    from .corpus import signals as _signals
+    qs = predict_questions(store, snap, pc, wiki=wiki, chat=get_chat("analyst"),
+                           signals=_signals(ticker))
     bundle = draft(store, snap, pc, qs, chat=get_chat("drafting"))
     rendered = render_bundle(bundle, store)
     from .agents.verify import verify

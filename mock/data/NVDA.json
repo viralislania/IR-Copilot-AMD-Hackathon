@@ -138,6 +138,17 @@
     {
       "fact_id": "F-0013",
       "ticker": "NVDA",
+      "metric": "price",
+      "period": "FY2026Q2",
+      "value": 208.19,
+      "unit": "USD",
+      "source": "defeatbeta-api:price.close",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-06-09"
+    },
+    {
+      "fact_id": "F-0014",
+      "ticker": "NVDA",
       "metric": "gross_margin",
       "period": "FY2026Q2",
       "value": 74.92999999999999,
@@ -147,7 +158,7 @@
       "as_of": "2026-04-30"
     },
     {
-      "fact_id": "F-0014",
+      "fact_id": "F-0015",
       "ticker": "NVDA",
       "metric": "revenue",
       "period": "FY2026Q2",
@@ -158,7 +169,7 @@
       "as_of": "2026-04-30"
     },
     {
-      "fact_id": "F-0015",
+      "fact_id": "F-0016",
       "ticker": "NVDA",
       "metric": "operating_margin",
       "period": "FY2026Q2",
@@ -167,26 +178,131 @@
       "source": "defeatbeta-api:quarterly_operating_margin",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
       "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0017",
+      "ticker": "NVDA",
+      "metric": "gross_profit",
+      "period": "FY2026Q2",
+      "value": 61157000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Gross Profit]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0018",
+      "ticker": "NVDA",
+      "metric": "operating_income",
+      "period": "FY2026Q2",
+      "value": 53536000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Operating Income]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0019",
+      "ticker": "NVDA",
+      "metric": "net_income",
+      "period": "FY2026Q2",
+      "value": 58321000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Net Income Common Stockholders]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0020",
+      "ticker": "NVDA",
+      "metric": "rnd_expense",
+      "period": "FY2026Q2",
+      "value": 6321000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_income_statement[Research & Development]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-30"
+    },
+    {
+      "fact_id": "F-0021",
+      "ticker": "NVDA",
+      "metric": "revenue_segment:Compute and Networking",
+      "period": "FY2026Q2",
+      "value": 74550000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0022",
+      "ticker": "NVDA",
+      "metric": "revenue_segment:Graphics",
+      "period": "FY2026Q2",
+      "value": 7065000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Segment]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0023",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:China",
+      "period": "FY2026Q2",
+      "value": 4550000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0024",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Other",
+      "period": "FY2026Q2",
+      "value": 1290000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0025",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Singapore",
+      "period": "FY2026Q2",
+      "value": 0.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0026",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:Taiwan",
+      "period": "FY2026Q2",
+      "value": 12006000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
+    },
+    {
+      "fact_id": "F-0027",
+      "ticker": "NVDA",
+      "metric": "revenue_geo:United States",
+      "period": "FY2026Q2",
+      "value": 63769000000.0,
+      "unit": "USD",
+      "source": "defeatbeta-api:quarterly_revenue_by_breakdown[Revenue by Geography]",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data",
+      "as_of": "2026-04-26"
     }
   ],
   "gaps": [],
   "news": [
-    {
-      "ticker": "NVDA",
-      "text": "Why SSR Mining Stock Got Knocked Today",
-      "url": "https://finance.yahoo.com/m/74a09df1-8fb5-3922-91c6-637dc75bbce6/why-ssr-mining-stock-got.html",
-      "publisher": "Motley Fool",
-      "date": "2026-06-10",
-      "uuid": "74a09df1-8fb5-3922-91c6-637dc75bbce6"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Taiwan Eyes Curbs on AI Chip Sales to China to Align With US",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/taiwan-eyes-curbs-ai-chip-125854688.html",
-      "publisher": "Bloomberg",
-      "date": "2026-06-10",
-      "uuid": "e8b597ff-c8bd-3989-aa02-1c49e47faf91"
-    },
     {
       "ticker": "NVDA",
       "text": "Dow Jones Futures Fall On Iran News After Market Whipsaws; CPI Inflation On Tap",
@@ -205,137 +321,154 @@
     },
     {
       "ticker": "NVDA",
-      "text": "Stocks making big moves yesterday: Marvell Technology, Intel, Teradyne, JFrog, and Tesla",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-200614526.html",
-      "publisher": "StockStory",
-      "date": "2026-06-09",
-      "uuid": "c74fb64b-d5a3-39e3-b3a5-e0a4047979b7"
+      "text": "Why SSR Mining Stock Got Knocked Today",
+      "url": "https://finance.yahoo.com/m/74a09df1-8fb5-3922-91c6-637dc75bbce6/why-ssr-mining-stock-got.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-10",
+      "uuid": "74a09df1-8fb5-3922-91c6-637dc75bbce6"
     },
     {
       "ticker": "NVDA",
-      "text": "Why ConocoPhillips Stock Dropped Today",
-      "url": "https://finance.yahoo.com/m/8a06fbb8-897c-36ad-9f53-ba1476c5825d/why-conocophillips-stock.html",
+      "text": "Taiwan Eyes Curbs on AI Chip Sales to China to Align With US",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/taiwan-eyes-curbs-ai-chip-125854688.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-10",
+      "uuid": "e8b597ff-c8bd-3989-aa02-1c49e47faf91"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "What Lit a Fire Under Qualcomm Stock?",
+      "url": "https://finance.yahoo.com/m/bc430d23-0292-3507-86b3-6533d653238d/what-lit-a-fire-under.html",
+      "publisher": "Trefis",
+      "date": "2026-06-09",
+      "uuid": "bc430d23-0292-3507-86b3-6533d653238d"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Palo Alto Networks Hits $10B Revenue Run Rate Beats S&P 500 Across All Timeframes",
+      "url": "https://finance.yahoo.com/m/6ca65a27-1dfb-338b-ac7c-eab452ccb975/palo-alto-networks-hits-%2410b.html",
+      "publisher": "24/7 Wall St.",
+      "date": "2026-06-09",
+      "uuid": "6ca65a27-1dfb-338b-ac7c-eab452ccb975"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Will This Jensen Huang-Endorsed AI Chip Stock Be the Next Trillion-Dollar Company?",
+      "url": "https://finance.yahoo.com/m/9607aab0-d836-3aa2-89f5-43f03add1520/will-this-jensen.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "8a06fbb8-897c-36ad-9f53-ba1476c5825d"
+      "uuid": "9607aab0-d836-3aa2-89f5-43f03add1520"
     },
     {
       "ticker": "NVDA",
-      "text": "Applied Materials and KLA Corporation Stocks Trade Up, What You Need To Know",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-kla-corporation-stocks-031750587.html",
-      "publisher": "StockStory",
+      "text": "Nebius Shares Jump After NVIDIA-Backed AI Lab Launch",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/nebius-shares-jump-nvidia-backed-170150941.html",
+      "publisher": "GuruFocus.com",
       "date": "2026-06-09",
-      "uuid": "4c723638-98c7-3658-9de1-72ae7d1c3d17"
+      "uuid": "a491af51-5fcb-3334-891e-90e2113ed25d"
     },
     {
       "ticker": "NVDA",
-      "text": "Western Digital, Microchip Technology, and Seagate Shares Are Soaring, What You Need To Know",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-microchip-technology-seagate-022150023.html",
-      "publisher": "StockStory",
-      "date": "2026-06-09",
-      "uuid": "1f2af1e8-7ada-3ac8-ade4-4afae2bed0ea"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Is the Digital Turbine Comeback Real?",
-      "url": "https://finance.yahoo.com/m/2d5761a5-d326-3702-9a87-679cc1e27f9a/is-the-digital-turbine.html",
-      "publisher": "Motley Fool",
-      "date": "2026-06-09",
-      "uuid": "2d5761a5-d326-3702-9a87-679cc1e27f9a"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Gold is Down 23% from the Peak to $4,330 an Ounce. Time to Buy This Top Gold ETF?",
-      "url": "https://finance.yahoo.com/m/167257e5-caa8-30f8-8864-9e91bbe7eca0/gold-is-down-23%25-from-the.html",
-      "publisher": "Motley Fool",
-      "date": "2026-06-09",
-      "uuid": "167257e5-caa8-30f8-8864-9e91bbe7eca0"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Sector Update: Tech Stocks Advance Premarket Tuesday",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/sector-tech-stocks-advance-premarket-130831188.html",
+      "text": "Equities Rise Pre-Bell as Chip Stocks Extend Gains",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/equities-rise-pre-bell-chip-114027869.html",
       "publisher": "MT Newswires",
       "date": "2026-06-09",
-      "uuid": "3723e01c-418b-39e9-9d0a-29cf4a7b4e74"
+      "uuid": "b2709162-8483-3df5-b589-9d3fe5647c6c"
     },
     {
       "ticker": "NVDA",
-      "text": "3 Dirt-Cheap Stocks to Buy With $1,000 Right Now",
-      "url": "https://finance.yahoo.com/m/4c4b17df-5f5a-3e15-b371-0dad27ef8dba/3-dirt-cheap-stocks-to-buy.html",
+      "text": "This AI Storage Stock is Up 560% so Far This Year. Is it Too Late to Buy? (Hint: It's Not Sandisk)",
+      "url": "https://finance.yahoo.com/m/79ef6b22-9bf7-34de-8465-fe90d4d311bc/this-ai-storage-stock-is-up.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "4c4b17df-5f5a-3e15-b371-0dad27ef8dba"
+      "uuid": "79ef6b22-9bf7-34de-8465-fe90d4d311bc"
     },
     {
       "ticker": "NVDA",
-      "text": "SpaceX lands $30 billion Google deal a week before its IPO",
-      "url": "https://finance.yahoo.com/m/2b225105-ec28-35a1-8d16-04d44d3653eb/spacex-lands-%2430-billion.html",
-      "publisher": "TheStreet",
+      "text": "AI Stocks Lead Tech Sector Slide. 'Summer Swoon Has Arrived.'",
+      "url": "https://finance.yahoo.com/m/d29a483e-d9a2-3e5c-beaf-dca4cf94c36a/ai-stocks-lead-tech-sector.html",
+      "publisher": "Investor's Business Daily",
       "date": "2026-06-09",
-      "uuid": "2b225105-ec28-35a1-8d16-04d44d3653eb"
+      "uuid": "d29a483e-d9a2-3e5c-beaf-dca4cf94c36a"
     },
     {
       "ticker": "NVDA",
-      "text": "Goldman Sachs Just Made a Bold Statement About SpaceX. Here's Why I'm Not Buying It",
-      "url": "https://finance.yahoo.com/m/52133676-5e68-3f24-aad8-e454d00e665f/goldman-sachs-just-made-a.html",
+      "text": "Why Nio Stock Skid 12% in May Despite 129% Growth in EV Sales",
+      "url": "https://finance.yahoo.com/m/aa613c00-fcf8-379e-a044-474f0dc257dc/why-nio-stock-skid-12%25-in-may.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "52133676-5e68-3f24-aad8-e454d00e665f"
+      "uuid": "aa613c00-fcf8-379e-a044-474f0dc257dc"
     },
     {
       "ticker": "NVDA",
-      "text": "Micron Appoints\u00a0Alexis Black Bj\u00f6rlin to Board of Directors",
-      "url": "https://finance.yahoo.com/sectors/technology/articles/micron-appoints-alexis-black-bj-200500417.html",
-      "publisher": "GlobeNewswire",
+      "text": "Sector Update: Tech",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/sector-tech-125343434.html",
+      "publisher": "MT Newswires",
       "date": "2026-06-09",
-      "uuid": "8bfceffd-9acb-3423-8f37-15cba80ced40"
+      "uuid": "b6f63d27-0cb3-36c5-a680-101e28d364ee"
     },
     {
       "ticker": "NVDA",
-      "text": "Alphabet\u2019s AI Spend, Waymo Expansion And Search Shifts Weigh On Valuation",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/alphabet-ai-spend-waymo-expansion-221720812.html",
-      "publisher": "Simply Wall St.",
-      "date": "2026-06-09",
-      "uuid": "2baa243d-4892-3686-8b3b-b6cf0f25e9c3"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Bank of America aggressively revamps Oracle stock price target",
-      "url": "https://finance.yahoo.com/m/1792f513-b046-31a5-82bb-77559c6a5386/bank-of-america-aggressively.html",
-      "publisher": "TheStreet",
-      "date": "2026-06-09",
-      "uuid": "1792f513-b046-31a5-82bb-77559c6a5386"
-    },
-    {
-      "ticker": "NVDA",
-      "text": "Why Marvell Stock Popped Today",
-      "url": "https://finance.yahoo.com/m/39389e73-ac36-36d4-bef9-266722cdfcda/why-marvell-stock-popped-today.html",
+      "text": "Greg Abel Is Doing Something at Berkshire Hathaway That Warren Buffett Never Would Have",
+      "url": "https://finance.yahoo.com/m/e621e8d3-0e64-34cf-9a10-a506de69a261/greg-abel-is-doing-something.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "39389e73-ac36-36d4-bef9-266722cdfcda"
+      "uuid": "e621e8d3-0e64-34cf-9a10-a506de69a261"
     },
     {
       "ticker": "NVDA",
-      "text": "Is MercadoLibre Stock Headed to $2,800? 1 Wall Street Analyst Thinks so",
-      "url": "https://finance.yahoo.com/m/02245868-ea4f-340f-aa89-220ad8a3c9bb/is-mercadolibre-stock-headed.html",
+      "text": "Why Did Red Cat Stock Drop Today?",
+      "url": "https://finance.yahoo.com/m/d169f4ed-937e-31d0-a343-90132ef4d004/why-did-red-cat-stock-drop.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "02245868-ea4f-340f-aa89-220ad8a3c9bb"
+      "uuid": "d169f4ed-937e-31d0-a343-90132ef4d004"
     },
     {
       "ticker": "NVDA",
-      "text": "CEO Brian Chesky Just Sold More Than $24 Million in Airbnb Stock. Should Investors Follow Suit?",
-      "url": "https://finance.yahoo.com/m/282f17e7-ace8-374c-8e55-b0cb14f5ce2b/ceo-brian-chesky-just-sold.html",
+      "text": "Wall Street Just Downgraded Chipotle Stock. Here's What Investors Should Do Next.",
+      "url": "https://finance.yahoo.com/m/a1675d8a-3393-3956-81c8-fe3d998d9fc7/wall-street-just-downgraded.html",
       "publisher": "Motley Fool",
       "date": "2026-06-09",
-      "uuid": "282f17e7-ace8-374c-8e55-b0cb14f5ce2b"
+      "uuid": "a1675d8a-3393-3956-81c8-fe3d998d9fc7"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Nebius Group Launches Physical AI Living Lab for Robotics Startups in UK, Europe",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/nebius-group-launches-physical-ai-100630163.html",
+      "publisher": "MT Newswires",
+      "date": "2026-06-09",
+      "uuid": "79e5afe2-7ce8-32a0-969d-dfc7dda1e6cb"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "CoreWeave Founders Have Sold $2.3 Billion in Stock Since IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-founders-dumped-2-3-093000394.html",
+      "publisher": "Bloomberg",
+      "date": "2026-06-09",
+      "uuid": "6c111cd8-5663-32e0-95ec-fb9eb619081e"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "IBIT vs. FBTC: Which Bitcoin ETF Is Better?",
+      "url": "https://finance.yahoo.com/m/b20e02a4-4ee8-3028-8707-020b371d2185/ibit-vs.-fbtc%3A-which-bitcoin.html",
+      "publisher": "Motley Fool",
+      "date": "2026-06-09",
+      "uuid": "b20e02a4-4ee8-3028-8707-020b371d2185"
+    },
+    {
+      "ticker": "NVDA",
+      "text": "Intel Gains as Google Reportedly Eyes Major AI Chip Order",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/intel-gains-google-reportedly-eyes-122222452.html",
+      "publisher": "GuruFocus.com",
+      "date": "2026-06-09",
+      "uuid": "6de19653-1e3f-3049-a2e6-4a43711ace1d"
     }
   ],
-  "transcript_chunks": [
+  "wiki_chunks": [
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "Joseph Moore",
@@ -346,6 +479,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -356,6 +490,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "Ben Reitzes",
@@ -366,6 +501,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "CJ Muse",
@@ -376,6 +512,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "Timothy Arcuri",
@@ -386,6 +523,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2027Q1",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -396,6 +534,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -406,6 +545,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Joseph Moore",
@@ -416,6 +556,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Harlan Sur",
@@ -426,6 +567,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Christopher Muse",
@@ -436,6 +578,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Stacy Rasgon",
@@ -446,6 +589,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q4",
       "role": "analyst",
       "speaker": "Benjamin Reitzes",
@@ -456,6 +600,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "Toshiya Hari",
@@ -466,6 +611,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "Joseph Moore",
@@ -476,6 +622,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "C.J. Muse",
@@ -486,6 +633,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -496,6 +644,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -506,6 +655,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q3",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -516,6 +666,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Colette Kress",
@@ -526,6 +677,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -536,6 +688,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Joe Moore",
@@ -546,6 +699,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Aaron Rakers",
@@ -556,6 +710,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -566,6 +721,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q2",
       "role": "analyst",
       "speaker": "Stacy Rasgon",
@@ -576,6 +732,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Toshiya Hari",
@@ -586,6 +743,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Joe Moore",
@@ -596,6 +754,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -606,6 +765,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -616,6 +776,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "C.J. Muse",
@@ -626,6 +787,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2026Q1",
       "role": "analyst",
       "speaker": "Ben Reitzes",
@@ -636,6 +798,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "C.J. Muse",
@@ -646,6 +809,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Jensen Huang",
@@ -656,6 +820,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Joseph Moore",
@@ -666,6 +831,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Vivek Arya",
@@ -676,6 +842,7 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Matt Ramsay",
@@ -686,12 +853,255 @@
     {
       "ticker": "NVDA",
       "doc_type": "transcript",
+      "modality": "transcript",
       "period": "FY2025Q4",
       "role": "analyst",
       "speaker": "Jensen Huang",
       "paragraph": 17,
       "text": "Yes. Blackwell Ultra is second half. As you know, the first Blackwell was have we had a hiccup? That probably cost us a couple of months. We're fully recovered, of course. The team did an amazing job recovery. And all of our supply chain partners and just so many people helped us recover at the speed of light. And so now we've successfully ramped production of Blackwell. But that doesn't stop the next train. The next train is you know, it's on an annual rhythm. And, Blackwell Ultra with, new networking, new memories, and, of course, new processors and all of that is coming online. We've been w",
       "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (earning_call_transcripts NVDA FY2025Q4, speaker=Jensen Huang, para=17)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "financial",
+      "modality": "table",
+      "period": "FY2026Q2",
+      "text": "NVDA FY2026Q2 income statement (2026-04-30): Total revenue $81.61B (+85% YoY); Gross profit $61.16B (+129% YoY); Operating income $53.54B (+147% YoY); Net income $58.32B (+211% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_income_statement NVDA)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Segment (2026-04-26): Compute and Networking revenue $74.55B (+88% YoY); Graphics revenue $7.07B (+58% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "geo",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Geography (2026-04-26): United States revenue $63.77B (+207% YoY); Taiwan revenue $12.01B (+68% YoY); China revenue $4.55B (-18% YoY); Other revenue $1.29B (-21% YoY).",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "segment",
+      "modality": "table",
+      "period": "2026-04-26",
+      "text": "NVDA Revenue by Market Platform (2026-04-26): Data Center Revenue $75.25B (+92% YoY); Hyperscale revenue $37.87B; AI Clouds, Industrial, & Enterprise revenue $37.38B; Edge Computing revenue $6.37B.",
+      "source_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Market Platform)"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-26",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2026-05-20 (period 2026-04-26).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-20",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-20 (period 2026-05-20).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-05-07",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-05-08 (period 2026-05-07).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000028"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-04-24",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-04-27 (period 2026-04-24).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000026"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-03-02",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-03-06 (period 2026-03-02).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000024"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-25",
+      "text": "NVDA SEC 10-K \u2014 Annual Report filed 2026-02-25 (period 2026-01-25).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-02-25",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-02-25 (period 2026-02-25).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2026-01-20",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2026-01-23 (period 2026-01-20).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000003"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-11-19",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2025-11-19 (period 2025-11-19).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-10-26",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2025-11-19 (period 2025-10-26).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-07-27",
+      "text": "NVDA SEC 10-Q \u2014 Quarterly Report filed 2025-08-27 (period 2025-07-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000209"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "filing",
+      "modality": "filing",
+      "period": "2025-08-27",
+      "text": "NVDA SEC 8-K \u2014 Current Report (Material Events) filed 2025-08-27 (period 2025-08-27).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000207"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Dow Jones Futures Fall On Iran News After Market Whipsaws; CPI Inflation On Tap \u2014 The stock market had a wild Tuesday, skidding but also coming off lows on AI fears and Trump's Iran threats. CPI inflation is on tap.",
+      "source_url": "https://finance.yahoo.com/m/25a6a429-345e-3138-9f10-7360fba3d0d1/dow-jones-futures-fall-on.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Worried About Which AI Stock to Buy? This Low-Cost ETF Lets You Own the Whole Trade. \u2014 Picking the right artificial intelligence (AI) stock is hard, and the past week made that especially clear. Chip stocks tumbled in early June, dragging the Nasdaq Composite down about 4% on June 5 for its worst session since the tariff turmoil of early 2025. Names that had carried the market higher for months -- Advanced Micro Devices, Intel, and others tied to AI hardware -- gave back chunks of enormous gains in a matter of days. And some AI stocks fell far more sharply than others.\nFor an investor trying t",
+      "source_url": "https://finance.yahoo.com/m/336c5bc2-c8ad-35d7-a7a7-1c5185fd2ae6/worried-about-which-ai-stock.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Why SSR Mining Stock Got Knocked Today \u2014 Gold and silver are eternally attractive metals, but lately they haven't been ideal investments. On recent declines in the prices of the two, SSR Mining (NASDAQ: SSRM) -- which mines both metals -- saw its stock price decrease by more than 3% on Tuesday. The rout in precious metals started last Friday, just after the federal government's Bureau of Labor Statistics released its latest monthly employment report. The striking feature of this digest was the 172,000 new jobs created in May, far higher than the consensus estimate of 80,000. Immediately, and u",
+      "source_url": "https://finance.yahoo.com/m/74a09df1-8fb5-3922-91c6-637dc75bbce6/why-ssr-mining-stock-got.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-10",
+      "text": "Taiwan Eyes Curbs on AI Chip Sales to China to Align With US \u2014 (Bloomberg) -- Taiwan authorities are considering much stricter export controls on AI chip sales to China to further align with US measures, according to people familiar with the matter, an effort to address semiconductor smuggling that risks drawing a rebuke from Beijing.\nMost Read from Bloomberg\nHouse Republican Says Hegseth\u2019s D-Day Remarks \u2018Inappropriate\u2019\nStocks Pare Tech-Led Drop as Rotation Gains Speed: Markets Wrap\nUS Launches Strikes Against Iran After Helicopter Shot Down\nOpenAI Joins a Massive AI IPO Pipeline Now Worth $3.",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/taiwan-eyes-curbs-ai-chip-125854688.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "What Lit a Fire Under Qualcomm Stock? \u2014 The chipmaker has been a market laggard for years, so what suddenly convinced investors it was time to get on board?\nIf you blinked, you might have missed it. Between March 10, 2026, and June 8, 2026, shares of Qualcomm (QCOM) quietly staged a monster rally, jumping 61.7%. For perspective, that lapped the S&P 500\u2019s 9.5% return and left most of its semiconductor peers like Broadcom in the dust.\nSo, what happened? For years, the story around this company was stuck in a loop: smartphone cycles, China demand, and its complicated relationship with Apple. But ",
+      "source_url": "https://finance.yahoo.com/m/bc430d23-0292-3507-86b3-6533d653238d/what-lit-a-fire-under.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Palo Alto Networks Hits $10B Revenue Run Rate Beats S&P 500 Across All Timeframes \u2014 PANW crushed the S&P 500 over 10 years, turning $1,000 into $12,174 with a 1,117% total return.\nCyberArk (CYBR) added identity security to PANW's platformization stack, but a P/E near 191 and $183M GAAP operating loss demand cautious scaling.\nNext-Gen Security ARR surged 60% to $8B with $18.4B in RPO backlog, supporting Arora's case that AI threats expand cybersecurity's terminal value.\nAct now: the analyst who called NVIDIA in 2010 just named his top 10 AI stocks \u2014 and Palo Alto Networks didn't make the cut. G",
+      "source_url": "https://finance.yahoo.com/m/6ca65a27-1dfb-338b-ac7c-eab452ccb975/palo-alto-networks-hits-%2410b.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Will This Jensen Huang-Endorsed AI Chip Stock Be the Next Trillion-Dollar Company? \u2014 \"The next trillion-dollar company, ladies and gentlemen,\" said Nvidia CEO Jensen Huang of Marvell Technology (NASDAQ: MRVL), turning to Marvell's CEO during an onstage appearance at the Computex conference in Taipei last week. The endorsement, from arguably the most influential figure in artificial intelligence (AI), set off one of the most dramatic stretches the chip designer's stock has ever seen.\nThe day after Huang's remark, Marvell shares jumped about 32% (the biggest one-day gain in the company's history",
+      "source_url": "https://finance.yahoo.com/m/9607aab0-d836-3aa2-89f5-43f03add1520/will-this-jensen.html"
+    },
+    {
+      "ticker": "NVDA",
+      "doc_type": "news",
+      "modality": "news",
+      "period": "2026-06-09",
+      "text": "Nebius Shares Jump After NVIDIA-Backed AI Lab Launch \u2014 This article first appeared on GuruFocus.\nShares of Nebius Group (NASDAQ:NBIS) jumped more than 5% on Tuesday after the AI cloud company launched a new Physical AI Living Lab with NVIDIA (NVDA), expanding its efforts to support robotics startups across the UK and Europe.\nNebius said the six-month program will provide selected startups with access to NVIDIA's physical AI software tools and Nebius AI Cloud infrastructure. The initiative is designed to help companies accelerate the transition from virtual testing environments to real-world de",
+      "source_url": "https://finance.yahoo.com/sectors/technology/articles/nebius-shares-jump-nvidia-backed-170150941.html"
+    }
+  ],
+  "signals": [
+    {
+      "label": "Data Center Revenue (Revenue by Market Platform)",
+      "series": "Data Center Revenue",
+      "metric": "revenue_platform",
+      "change_pct": 92.4,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Market Platform)"
+    },
+    {
+      "label": "Compute and Networking revenue (Revenue by Segment)",
+      "series": "Compute and Networking revenue",
+      "metric": "revenue_segment",
+      "change_pct": 88.3,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "label": "Taiwan revenue (Revenue by Geography)",
+      "series": "Taiwan revenue",
+      "metric": "revenue_geo",
+      "change_pct": 67.7,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "label": "Graphics revenue (Revenue by Segment)",
+      "series": "Graphics revenue",
+      "metric": "revenue_segment",
+      "change_pct": 57.9,
+      "direction": "up",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Segment)"
+    },
+    {
+      "label": "Other revenue (Revenue by Geography)",
+      "series": "Other revenue",
+      "metric": "revenue_geo",
+      "change_pct": -20.7,
+      "direction": "down",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
+    },
+    {
+      "label": "China revenue (Revenue by Geography)",
+      "series": "China revenue",
+      "metric": "revenue_geo",
+      "change_pct": -17.6,
+      "direction": "down",
+      "evidence_url": "https://huggingface.co/datasets/defeatbeta/yahoo-finance-data (quarterly_revenue_by_breakdown NVDA Revenue by Geography)"
     }
   ]
 }

@@ -1,5 +1,12 @@
 # Knowledge Wiki (RAG at scale)
 
+!!! success "All data types are ingested"
+    The wiki indexes **every** source as searchable, cited chunks — not just transcripts:
+    `transcript` (analyst Q&A), `financial` (income-statement summary + YoY), `segment` / `geo`
+    (revenue breakdowns + YoY), `filing` (SEC 10-K/10-Q/8-K with sec.gov URLs), and `news`
+    (article bodies). Built by `live.fetch_wiki_chunks()` / cached in `mock/data/*.json`.
+
+
 The "IR Wiki" is a **Qdrant** collection of everything an analyst would read before a call —
 built from **API sources and custom files alike**: PDFs, images, and audio/video transcripts.
 It powers the [Predictive Analyst](agents.md) and supplies the evidence chips that make every

@@ -54,10 +54,15 @@ see [Grounding & Evidence](grounding.md).
 
 - **Python 3.11+** and network: defeatbeta-api downloads a DuckDB `cache_httpfs` extension and
   HuggingFace parquet on first use. Use a 3.12 venv (see README).
-- **Offline = real cached data.** `mock/build_mock_data.py` fetches facts + news (with real
-  article links) + analyst-Q&A transcript chunks for **NVDA / AMD / TSLA** over ~5 years into
-  `mock/data/*.json`. With `USE_MOCK_DATA=true`, IR-Copilot reads those — so even offline the
-  evidence is real, cited defeatbeta-api data (no placeholder URLs).
+- **Offline = real cached data.** `mock/build_mock_data.py` fetches everything for
+  **NVDA / AMD / TSLA** over ~5 years into `mock/data/*.json`. With `USE_MOCK_DATA=true`,
+  IR-Copilot reads those — so even offline the evidence is real, cited defeatbeta-api data (no
+  placeholder URLs). Each ticker file holds:
+    - **facts** — ratios + `price` + income-statement line items (gross profit, operating
+      income, net income) + **revenue by segment** and **by geography** (one fact per series);
+    - **wiki_chunks** — all RAG doc types: `transcript`, `financial`, `segment`, `geo`,
+      `filing` (SEC), `news` (bodies);
+    - **signals** — structured YoY movers (segment/geo) that drive question prediction.
 
 ## Persistence & caching (SQLite)
 

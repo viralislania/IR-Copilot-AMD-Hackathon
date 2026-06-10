@@ -54,6 +54,18 @@ def load_news(ticker: str) -> List[dict]:
     return list(d["news"]) if d else []
 
 
-def load_transcript_chunks(ticker: str) -> List[dict]:
+def load_wiki_chunks(ticker: str) -> List[dict]:
+    """All RAG doc types: transcript | financial | segment | geo | filing | news."""
     d = _load(ticker)
-    return list(d["transcript_chunks"]) if d else []
+    return list(d.get("wiki_chunks", [])) if d else []
+
+
+def load_transcript_chunks(ticker: str) -> List[dict]:
+    """Transcript Q&A only (used for analyst-question precedent retrieval)."""
+    return [c for c in load_wiki_chunks(ticker) if c.get("doc_type") == "transcript"]
+
+
+def load_signals(ticker: str) -> List[dict]:
+    """Structured YoY movers (segments/geo) for question prediction."""
+    d = _load(ticker)
+    return list(d.get("signals", [])) if d else []
